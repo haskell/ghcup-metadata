@@ -2115,6 +2115,10 @@ ghcupDownloads:
               dlSubdir: ghc-9.2.1
               dlHash: e37cd1fe64006dd42f418dacbae3fea0938ce0905407cfc7c3ea61054f5d5329
             '( >= 16 && < 19 )': *ghc-921-64-deb9
+            '( >= 20 )':
+              dlUri: https://downloads.haskell.org/~ghc/9.2.1/ghc-9.2.1-x86_64-ubuntu20.04-linux.tar.xz
+              dlSubdir: ghc-9.2.1
+              dlHash: 125e69abbd4ff68eb71bf8a50cf15f257027b387f4e9cd730464e7f2d7658616
           Linux_Mint:
             unknown_versioning: *ghc-921-64-deb10
           Linux_Fedora:
@@ -2206,6 +2210,10 @@ ghcupDownloads:
               dlSubdir: ghc-9.2.2
               dlHash: eab2b4e3ca99eb7cc81aa3136e9e0b245ba6b3e9057f02a2d289fbf60856eb10
             '( >= 16 && < 19 )': *ghc-922-64-deb9
+            '( >= 20 )':
+              dlUri: https://downloads.haskell.org/ghc/9.2.2/ghc-9.2.2-x86_64-ubuntu20.04-linux.tar.xz
+              dlSubdir: ghc-9.2.2
+              dlHash: fefb8c82b91d0e4c9a4b66656085a3f5e1a1575f06ad0b07d81419e24cb6b33d
           Linux_Mint:
             unknown_versioning: *ghc-922-64-deb10
           Linux_Fedora:
