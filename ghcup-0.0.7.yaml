@@ -2499,7 +2499,7 @@ ghcupDownloads:
           Linux_RedHat:
             unknown_versioning: *ghc-941-64-centos
           Linux_UnknownLinux:
-            unknown_versioning: *ghc-941-64-fedora
+            unknown_versioning: *ghc-941-64-centos
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/curated/9.4.1/ghc-9.4.1-x86_64-apple-darwin.tar.xz
@@ -2586,7 +2586,7 @@ ghcupDownloads:
           Linux_RedHat:
             unknown_versioning: *ghc-942-64-centos
           Linux_UnknownLinux:
-            unknown_versioning: *ghc-942-64-fedora
+            unknown_versioning: *ghc-942-64-centos
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~ghc/9.4.2/ghc-9.4.2-x86_64-apple-darwin.tar.xz
