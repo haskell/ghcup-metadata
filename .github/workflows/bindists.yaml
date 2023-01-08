@@ -69,7 +69,7 @@ jobs:
             toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
           - image: mageia:cauldron
             installCmd: urpmi.update -a && urpmi install --auto
-            toolRequirements: which findutils gcc gcc-g++ gmp libgmp-devel make ncurses libncurses-devel xz perl
+            toolRequirements: which findutils gcc gcc-g++ libgmp10 libgmp-devel make ncurses libncurses-devel xz perl
           - image: linuxmintd/mint19.3-amd64
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
