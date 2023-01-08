@@ -202,6 +202,7 @@ generateSystemInfo output = do
   forM_ [ Linux Debian
         , Linux Ubuntu
         , Linux Fedora
+        , Linux Mageia
         , Linux CentOS
         , Linux Alpine
         , Linux UnknownLinux
