@@ -17,6 +17,7 @@ keys=(
     7D1E8AFD1D4A16D71FADA2F2CCC85C0E40C06A8C # Julian Ospald <maerwald@hasufell.de>
     FFEB7CE81E16A36B3E2DED6F2DE04D4E97DB64AD # Ben Gamari <ben@well-typed.com>
     88B57FCF7DB53B4DB3BFA4B1588764FBE22D19C4 # Zubin Duggal <zubin@well-typed.com>
+    33C3A599DB85EA9B8BAA1866B202264020068BFB # Bryan Richter <bryan@haskell.foundation>
 )
 
 for key in "${keys[@]}" ; do
