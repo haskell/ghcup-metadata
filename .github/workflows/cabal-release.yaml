@@ -199,6 +199,7 @@ jobs:
       ARCH: ARM64
       DISTRO: Ubuntu
       GHC_VERSION: 9.2.8
+      CABAL_VER: 3.6.2.0-p1
     strategy:
       fail-fast: false
       matrix:
