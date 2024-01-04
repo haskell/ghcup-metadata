@@ -153,13 +153,6 @@ jobs:
                     , DISTRO: "Unknown"
                     , ARTIFACT: "x86_64-linux-void-glibc"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
-                    },
-                    { image: "ghcr.io/void-linux/void-musl:latest"
-                    , installCmd: "xbps-install -Sy"
-                    , toolRequirements: "ncurses-libtinfo-libs autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils findutils gcc gmp gmp-devel jq lbzip2 make ncurses ncurses-devel openssh patch perl python3 sqlite sudo wget which xz zlib-devel patchelf"
-                    , DISTRO: "Unknown"
-                    , ARTIFACT: "x86_64-linux-void-musl"
-                    , ADD_CABAL_ARGS: "--enable-split-sections"
                     }
                   ]
     container:
@@ -202,7 +195,7 @@ jobs:
       TARBALL_EXT: tar.xz
       ARCH: 32
       TZ: Asia/Singapore
-      GHC_VERSION: 9.2.8
+      GHC_VERSION: 9.2.1
       DISTRO: "Unknown"
       ARTIFACT: "i386-linux-unknown"
       ADD_CABAL_ARGS: "--enable-split-sections --enable-executable-static"
