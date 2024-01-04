@@ -70,18 +70,18 @@ jobs:
                     , ARTIFACT: "x86_64-linux-ubuntu22.04"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
                     },
-                    { image: "linuxmintd/mint19.3-amd64"
+                    { image: "linuxmintd/mint20-amd64"
                     , installCmd: "apt-get update && apt-get install -y"
                     , toolRequirements: "libnuma-dev zlib1g-dev libgmp-dev libgmp10 libssl-dev liblzma-dev libbz2-dev git wget lsb-release software-properties-common gnupg2 apt-transport-https gcc autoconf automake build-essential curl ghc gzip libffi-dev libncurses-dev libncurses5 libtinfo5 patchelf"
                     , DISTRO: "Mint"
-                    , ARTIFACT: "x86_64-linux-mint19.3"
+                    , ARTIFACT: "x86_64-linux-mint20"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
                     },
-                    { image: "linuxmintd/mint20.2-amd64"
+                    { image: "linuxmintd/mint21-amd64"
                     , installCmd: "apt-get update && apt-get install -y"
                     , toolRequirements: "libnuma-dev zlib1g-dev libgmp-dev libgmp10 libssl-dev liblzma-dev libbz2-dev git wget lsb-release software-properties-common gnupg2 apt-transport-https gcc autoconf automake build-essential curl ghc gzip libffi-dev libncurses-dev libncurses5 libtinfo5 patchelf"
                     , DISTRO: "Mint"
-                    , ARTIFACT: "x86_64-linux-mint20.2"
+                    , ARTIFACT: "x86_64-linux-mint21"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
                     },
                     { image: "fedora:27"
@@ -98,6 +98,13 @@ jobs:
                     , ARTIFACT: "x86_64-linux-fedora33"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
                     },
+                    { image: "fedora:37"
+                    , installCmd: "dnf install -y"
+                    , toolRequirements: "autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils-libs findutils gcc gcc-c++ git gmp gmp-devel jq lbzip2 make ncurses ncurses-compat-libs ncurses-devel openssh-clients patch perl pxz python3 sqlite sudo wget which xz zlib-devel patchelf"
+                    , DISTRO: "Fedora"
+                    , ARTIFACT: "x86_64-linux-fedora37"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
+                    },
                     { image: "centos:7"
                     , installCmd: "yum -y install epel-release && yum install -y"
                     , toolRequirements: "autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils-libs findutils gcc gcc-c++ git gmp gmp-devel jq lbzip2 make ncurses ncurses-compat-libs ncurses-devel openssh-clients patch perl pxz python3 sqlite sudo wget which xz zlib-devel patchelf"
@@ -112,14 +119,48 @@ jobs:
                     , ARTIFACT: "x86_64-linux-rocky8"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
                     },
+                    { image: "rockylinux:9"
+                    , installCmd: "yum -y install epel-release && yum install -y --allowerasing"
+                    , toolRequirements: "autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils-libs findutils gcc gcc-c++ git gmp gmp-devel jq lbzip2 make ncurses ncurses-compat-libs ncurses-devel openssh-clients patch perl pxz python3 sqlite sudo wget which xz zlib-devel patchelf"
+                    , DISTRO: "Unknown"
+                    , ARTIFACT: "x86_64-linux-rocky9"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
+                    },
                     { image: "alpine:latest"
                     , installCmd: "apk update && apk add"
                     , toolRequirements: "binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz autoconf automake bzip2 coreutils elfutils-dev findutils git jq bzip2-dev  patch  python3 sqlite sudo wget which zlib-dev patchelf zlib zlib-dev zlib-static"
                     , DISTRO: "Unknown"
                     , ARTIFACT: "x86_64-linux-unknown"
                     , ADD_CABAL_ARGS: "--enable-split-sections --enable-executable-static"
+                    },
+                    { image: "alpine:3.12"
+                    , installCmd: "apk update && apk add"
+                    , toolRequirements: "binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz autoconf automake bzip2 coreutils elfutils-dev findutils git jq bzip2-dev  patch  python3 sqlite sudo wget which zlib-dev patchelf zlib zlib-dev zlib-static"
+                    , DISTRO: "Unknown"
+                    , ARTIFACT: "x86_64-linux-alpine312"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
+                    },
+                    { image: "alpine:3.19"
+                    , installCmd: "apk update && apk add"
+                    , toolRequirements: "binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz autoconf automake bzip2 coreutils elfutils-dev findutils git jq bzip2-dev  patch  python3 sqlite sudo wget which zlib-dev patchelf zlib zlib-dev zlib-static"
+                    , DISTRO: "Unknown"
+                    , ARTIFACT: "x86_64-linux-alpine319"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
+                    },
+                    { image: "ghcr.io/void-linux/void-glibc:latest"
+                    , installCmd: "xbps-install -Sy"
+                    , toolRequirements: "ncurses-libtinfo-libs autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils findutils gcc gmp gmp-devel jq lbzip2 make ncurses ncurses-devel openssh patch perl python3 sqlite sudo wget which xz zlib-devel patchelf"
+                    , DISTRO: "Unknown"
+                    , ARTIFACT: "x86_64-linux-void-glibc"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
+                    },
+                    { image: "ghcr.io/void-linux/void-musl:latest"
+                    , installCmd: "xbps-install -Sy"
+                    , toolRequirements: "ncurses-libtinfo-libs autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils findutils gcc gmp gmp-devel jq lbzip2 make ncurses ncurses-devel openssh patch perl python3 sqlite sudo wget which xz zlib-devel patchelf"
+                    , DISTRO: "Unknown"
+                    , ARTIFACT: "x86_64-linux-void-musl"
+                    , ADD_CABAL_ARGS: "--enable-split-sections"
                     }
-
                   ]
     container:
       image: ${{ matrix.platform.image }}
@@ -161,7 +202,7 @@ jobs:
       TARBALL_EXT: tar.xz
       ARCH: 32
       TZ: Asia/Singapore
-      GHC_VERSION: 9.2.1
+      GHC_VERSION: 9.2.8
       DISTRO: "Unknown"
       ARTIFACT: "i386-linux-unknown"
       ADD_CABAL_ARGS: "--enable-split-sections --enable-executable-static"
