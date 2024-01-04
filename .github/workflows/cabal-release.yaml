@@ -149,7 +149,7 @@ jobs:
                     },
                     { image: "ghcr.io/void-linux/void-glibc:latest"
                     , installCmd: "xbps-install -Sy"
-                    , toolRequirements: "ncurses-libtinfo-libs autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils findutils gcc gmp gmp-devel jq lbzip2 make ncurses ncurses-devel openssh patch perl python3 sqlite sudo wget which xz zlib-devel patchelf"
+                    , toolRequirements: "ncurses-libtinfo-libs autoconf automake binutils bzip2 coreutils curl elfutils-devel elfutils findutils gcc gmp gmp-devel jq lbzip2 make ncurses ncurses-devel openssh patch perl python3 sqlite sudo wget which xz tar zlib-devel patchelf"
                     , DISTRO: "Unknown"
                     , ARTIFACT: "x86_64-linux-void-glibc"
                     , ADD_CABAL_ARGS: "--enable-split-sections"
