@@ -96,8 +96,8 @@ cat <<EOF > /dev/stdout
               dlHash: $(sha256sum "cabal-install-$VERSION-x86_64-mingw64.zip" | awk '{ print $1 }')
           FreeBSD:
             unknown_versioning:
-              dlUri: ${BASE_URL}/cabal-install-$VERSION-x86_64-freebsd.tar.xz
-              dlHash: $(sha256sum "cabal-install-$VERSION-x86_64-freebsd.tar.xz" | awk '{ print $1 }')
+              dlUri: ${BASE_URL}/cabal-install-$VERSION-x86_64-portbld-freebsd.tar.xz
+              dlHash: $(sha256sum "cabal-install-$VERSION-x86_64-portbld-freebsd.tar.xz" | awk '{ print $1 }')
         A_32:
           Linux_UnknownLinux:
             unknown_versioning: &cabal-${VERSION//./}-32-unknown
@@ -108,8 +108,8 @@ cat <<EOF > /dev/stdout
         A_ARM64:
           Linux_UnknownLinux:
             unknown_versioning:
-              dlUri: ${BASE_URL}/cabal-install-$VERSION-aarch64-linux-ubuntu20.tar.xz
-              dlHash: $(sha256sum "cabal-install-$VERSION-aarch64-linux-ubuntu20.tar.xz" | awk '{ print $1 }')
+              dlUri: ${BASE_URL}/cabal-install-$VERSION-aarch64-linux-deb10.tar.xz
+              dlHash: $(sha256sum "cabal-install-$VERSION-aarch64-linux-deb10.tar.xz" | awk '{ print $1 }')
           Darwin:
             unknown_versioning:
               dlUri: ${BASE_URL}/cabal-install-$VERSION-aarch64-apple-darwin.tar.xz
@@ -117,7 +117,7 @@ cat <<EOF > /dev/stdout
         A_ARM:
           Linux_UnknownLinux:
             unknown_versioning:
-              dlUri: ${BASE_URL}/cabal-install-$VERSION-armv7-linux-ubuntu20.tar.xz
-              dlHash: $(sha256sum "cabal-install-$VERSION-armv7-linux-ubuntu20.tar.xz" | awk '{ print $1 }')
+              dlUri: ${BASE_URL}/cabal-install-$VERSION-armv7-linux-deb10.tar.xz
+              dlHash: $(sha256sum "cabal-install-$VERSION-armv7-linux-deb10.tar.xz" | awk '{ print $1 }')
 EOF
 
