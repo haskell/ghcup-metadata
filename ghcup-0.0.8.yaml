@@ -3885,10 +3885,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.1/ghc-9.6.1-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc-961-64-centos7
           Linux_Mint:
-            < 20: &ghc-961-64-ubuntu1804
-              dlHash: 5c9dd525e2cc8a1aed75dbf0676ab51fbcf555960fca9734cbd0a39d0850f64d
-              dlSubdir: ghc-9.6.1-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.6.1/ghc-9.6.1-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-961-64-deb9
             '>= 20': &ghc-961-64-ubuntu2004
               dlHash: 95cfd9d1144eb14a01b43474c2ebfe8a50373a8d8ea53ebac461d4fa4878e4ed
               dlSubdir: ghc-9.6.1-x86_64-unknown-linux
@@ -3901,7 +3898,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-961-64-centos7
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-961-64-deb9
-            ( >= 18 && < 19 ): *ghc-961-64-ubuntu1804
+            ( >= 18 && < 19 ): &ghc-961-64-ubuntu1804
+              dlHash: 5c9dd525e2cc8a1aed75dbf0676ab51fbcf555960fca9734cbd0a39d0850f64d
+              dlSubdir: ghc-9.6.1-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.6.1/ghc-9.6.1-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-961-64-ubuntu2004
           Linux_UnknownLinux:
             unknown_versioning: *ghc-961-64-rocky8
@@ -3990,10 +3990,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.2/ghc-9.6.2-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc-962-64-centos7
           Linux_Mint:
-            < 20: &ghc-962-64-ubuntu1804
-              dlHash: e77c365f93cbf89a4079d451ba743dabc656b2c67382341f5bb0a0c00401a57e
-              dlSubdir: ghc-9.6.2-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.6.2/ghc-9.6.2-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-962-64-deb9
             '>= 20': &ghc-962-64-ubuntu2004
               dlHash: f3f71385537838c564a7a40498cc2745fd01a236e4f473b844968821e2c3a3ff
               dlSubdir: ghc-9.6.2-x86_64-unknown-linux
@@ -4002,7 +3999,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-962-64-centos7
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-962-64-deb9
-            ( >= 18 && < 19 ): *ghc-962-64-ubuntu1804
+            ( >= 18 && < 19 ): &ghc-962-64-ubuntu1804
+              dlHash: e77c365f93cbf89a4079d451ba743dabc656b2c67382341f5bb0a0c00401a57e
+              dlSubdir: ghc-9.6.2-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.6.2/ghc-9.6.2-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-962-64-ubuntu2004
           Linux_UnknownLinux:
             unknown_versioning:
@@ -4099,10 +4099,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.3/ghc-9.6.3-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc-963-64-centos7
           Linux_Mint:
-            < 20: &ghc-963-64-ubuntu1804
-              dlHash: a499c05f554b6e6b7f04c81b376f1e569614e51864672c9226a696617bc6c640
-              dlSubdir: ghc-9.6.3-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.6.3/ghc-9.6.3-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-963-64-deb9
             '>= 20': &ghc-963-64-ubuntu2004
               dlHash: d2018768b53ab2c9ab4d543d1e8d7c2b1fb78707b70c74c96ff1733e82f22b80
               dlSubdir: ghc-9.6.3-x86_64-unknown-linux
@@ -4111,7 +4108,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-963-64-centos7
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-963-64-deb9
-            ( >= 18 && < 19 ): *ghc-963-64-ubuntu1804
+            ( >= 18 && < 19 ): &ghc-963-64-ubuntu1804
+              dlHash: a499c05f554b6e6b7f04c81b376f1e569614e51864672c9226a696617bc6c640
+              dlSubdir: ghc-9.6.3-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.6.3/ghc-9.6.3-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-963-64-ubuntu2004
           Linux_UnknownLinux:
             unknown_versioning:
@@ -4205,10 +4205,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.4/ghc-9.6.4-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc-964-64-centos7
           Linux_Mint:
-            < 20: &ghc-964-64-ubuntu1804
-              dlHash: 11510a9de88f729028e2e64b97937305b11780c92777428495851d7211aa6768
-              dlSubdir: ghc-9.6.4-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.6.4/ghc-9.6.4-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-964-64-deb9
             '>= 20': &ghc-964-64-ubuntu2004
               dlHash: de1e7dc03b08e7ed0cb08c855f2791e5f8fb48ca89b2a6fdf7b53cd1df48af25
               dlSubdir: ghc-9.6.4-x86_64-unknown-linux
@@ -4217,7 +4214,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-964-64-centos7
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-964-64-deb9
-            ( >= 18 && < 19 ): *ghc-964-64-ubuntu1804
+            ( >= 18 && < 19 ): &ghc-964-64-ubuntu1804
+              dlHash: 11510a9de88f729028e2e64b97937305b11780c92777428495851d7211aa6768
+              dlSubdir: ghc-9.6.4-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.6.4/ghc-9.6.4-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-964-64-ubuntu2004
           Linux_Rocky:
             unknown_versioning: &ghc-964-64-rocky8
@@ -4317,10 +4317,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc-965-64-centos7
           Linux_Mint:
-            < 20: &ghc-965-64-ubuntu1804
-              dlHash: 01049e2a8e8e14c6599ddb7c2c3339aefc0e1f81fe281d51edcbed6b395cea7a
-              dlSubdir: ghc-9.6.5-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-965-64-deb9
             '>= 20': &ghc-965-64-ubuntu2004
               dlHash: c848b49ff356349944db32260908269e4e02663daba668b409be0717bf48f103
               dlSubdir: ghc-9.6.5-x86_64-unknown-linux
@@ -4328,7 +4325,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-965-64-ubuntu2004
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-965-64-deb9
-            ( >= 18 && < 19 ): *ghc-965-64-ubuntu1804
+            ( >= 18 && < 19 ): &ghc-965-64-ubuntu1804
+              dlHash: 01049e2a8e8e14c6599ddb7c2c3339aefc0e1f81fe281d51edcbed6b395cea7a
+              dlSubdir: ghc-9.6.5-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-965-64-ubuntu2004
           Linux_Rocky:
             unknown_versioning: &ghc-965-64-rocky8
@@ -4431,11 +4431,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.8.1/ghc-9.8.1-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc981-x86_64-centos7
           Linux_Mint:
-            < 20: &ghc981-x86_64-ubuntu18_04
-              dlHash: a9e30db7f2945ffe48de20eb32ad20a534e64f26c908d1feed2e6f3e0a3b467e
-              dlOutput: ghc-9.8.1-x86_64-linux-ubuntu18_04.tar.xz
-              dlSubdir: ghc-9.8.1-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.8.1/ghc-9.8.1-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-981-64-deb9
             '>= 20': &ghc981-x86_64-ubuntu20_04
               dlHash: 436a34dffafdd0fe2019e973805d479b6a0494f7bd1200502efa95a3c73053b1
               dlOutput: ghc-9.8.1-x86_64-linux-ubuntu20_04.tar.xz
@@ -4445,7 +4441,11 @@ ghcupDownloads:
             unknown_versioning: *ghc981-x86_64-centos7
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-981-64-deb9
-            ( >= 18 && < 19 ): *ghc981-x86_64-ubuntu18_04
+            ( >= 18 && < 19 ): &ghc981-x86_64-ubuntu18_04
+              dlHash: a9e30db7f2945ffe48de20eb32ad20a534e64f26c908d1feed2e6f3e0a3b467e
+              dlOutput: ghc-9.8.1-x86_64-linux-ubuntu18_04.tar.xz
+              dlSubdir: ghc-9.8.1-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.8.1/ghc-9.8.1-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc981-x86_64-ubuntu20_04
           Linux_UnknownLinux:
             unknown_versioning:
@@ -4542,17 +4542,17 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-fedora33-linux.tar.xz
             unknown_versioning: *ghc982-x86_64-centos7
           Linux_Mint:
-            < 20: &ghc982-x86_64-ubuntu18_04
-              dlHash: d7c473efe9ee81cbf0751b49b58eb95cb3d9a8cea0093b5cc7735d21f9301414
-              dlSubdir: ghc-9.8.2-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-982-64-deb9
             '>= 20': &ghc982-x86_64-ubuntu20_04
               dlHash: a65a4726203c606b58a7f6b714a576e7d81390158c8afa0dece3841a4c602de2
               dlSubdir: ghc-9.8.2-x86_64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-ubuntu20_04-linux.tar.xz
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-982-64-deb9
-            ( >= 18 && < 19 ): *ghc982-x86_64-ubuntu18_04
+            ( >= 18 && < 19 ): &ghc982-x86_64-ubuntu18_04
+              dlHash: d7c473efe9ee81cbf0751b49b58eb95cb3d9a8cea0093b5cc7735d21f9301414
+              dlSubdir: ghc-9.8.2-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc982-x86_64-ubuntu20_04
           Linux_UnknownLinux:
             unknown_versioning: &ghc-982-64-rocky8
@@ -4669,10 +4669,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.10.1/ghc-9.10.1-x86_64-fedora38-linux.tar.xz
             unknown_versioning: *ghc-9101-x86_64-centos7
           Linux_Mint:
-            < 20: &ghc-9101-x86_64-ubuntu18_04
-              dlHash: 228241a183e55dd7fcb3988b3f4cd19062df08ad85373b7451df03ba64eb9da2
-              dlSubdir: ghc-9.10.1-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.10.1/ghc-9.10.1-x86_64-ubuntu18_04-linux.tar.xz
+            '< 20': *ghc-9101-64-deb9
             '>= 20': &ghc-9101-x86_64-ubuntu20_04
               dlHash: ae3be406fdb73bd2b0c22baada77a8ff2f8cde6220dd591dc24541cfe9d895eb
               dlSubdir: ghc-9.10.1-x86_64-unknown-linux
@@ -4680,7 +4677,10 @@ ghcupDownloads:
             unknown_versioning: *ghc-9101-x86_64-ubuntu20_04
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc-9101-64-deb9
-            ( >= 18 && < 19 ): *ghc-9101-x86_64-ubuntu18_04
+            ( >= 18 && < 19 ): &ghc-9101-x86_64-ubuntu18_04
+              dlHash: 228241a183e55dd7fcb3988b3f4cd19062df08ad85373b7451df03ba64eb9da2
+              dlSubdir: ghc-9.10.1-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.10.1/ghc-9.10.1-x86_64-ubuntu18_04-linux.tar.xz
             unknown_versioning: *ghc-9101-x86_64-ubuntu20_04
           Linux_UnknownLinux:
             unknown_versioning: &ghc-9101-64-rocky8
