@@ -1,5 +1,9 @@
 # GHCup metadata
 
+This repo is a collection of different GHCup metadata. These are mappings from tool versions (e.g. GHC 9.6.5)
+to bindist URLs (e.g. https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-x86_64-fedora33-linux.tar.xz), depending
+on architecture (e.g. X86_64), platform (e.g Linux) and possibly distro (e.g. Fedora).
+
 ## For end users
 
 ### Metadata variants (distribution channels)
@@ -28,21 +32,37 @@ Also check the [config.yaml documentation](https://github.com/haskell/ghcup-hs/b
 
 ## For contributors
 
-### Adding a new GHC version
+Most bindists are built downstream by the GHCup developers, e.g.:
 
-1. open the latest `ghcup-<yaml-ver>.yaml`
-2. find the latest ghc version (in yaml tree e.g. `ghcupDownloads -> GHC -> 8.10.7`)
-3. copy-paste it
-4. adjust the version, tags, changelog, source url
-5. adjust the various bindist urls (make sure to also change the yaml anchors)
-6. run `cabal run ghcup-gen -- check             -f ghcup-<yaml-ver>.yaml`
-7. run `cabal run ghcup-gen -- check-tarballs    -f ghcup-<yaml-ver>.yaml -u 'ghc-8\.10\.8'`
-8. run `cabal run ghcup-gen -- generate-hls-ghcs -f ghcup-<yaml-ver>.yaml --format json -o hls-metadata-0.0.1.json`
-9. run `cabal run ghcup-gen -- generate-table    -f ghcup-<yaml-ver>.yaml --stdout` and adjust [docs/install](https://gitlab.haskell.org/haskell/ghcup-hs/-/blob/master/docs/install.md) tables
+* https://github.com/stable-haskell/haskell-language-server
+* https://github.com/stable-haskell/cabal
+* https://github.com/stable-haskell/stack
+
+For GHC bindists there is no automation yet and it is done manually (e.g. for FreeBSD and Alpine i386).
+
+That makes contributions harder, because your pull requests to the metadata will be partial.
+
+## For upstream developers
+
+GHC, Cabal, HLS and stack developers distribute their own bindists via the `ghcup-vanilla-A.B.C.yaml` files. These
+files are primarily maintained by upstream developers at their own discretion. The GHCup project will perform no QA, fixes
+etc. on these bindists.
+
+This allows a clean separation between projects. Also see
+[GHCup is not an installer](https://hasufell.github.io/posts/2023-11-14-ghcup-is-not-an-installer.html).
+
+Updates to `ghcup-A.B.C.yaml` are carried out by the GHCup project.
+
+### Understanding tags
+
+Tags are documented [here](https://github.com/haskell/ghcup-hs/blob/master/lib/GHCup/Types.hs). Search for `data Tag`.
+Some tags are unique. Uniqueness is checked by `cabal run ghcup-gen -- check -f ghcup-<yaml-ver>.yaml`.
+
+If you want to check prereleases, do: `cabal run ghcup-gen -- check -f ghcup-prereleases-<yaml-ver>.yaml --channel=prerelease`
 
 ### During a pull request
 
-* make sure to always add new versions to both `ghcup-A.B.C.yaml` and `ghcup-vanilla-A.B.C.yaml`
+* For local testing see `cabal run ghcup-gen -- --help`
 * make sure to run the bindist action to check tool installation on all platforms: https://github.com/haskell/ghcup-metadata/actions/workflows/bindists.yaml
   - this is a manual pipeline
   - set the appropriate parameters
@@ -52,11 +72,4 @@ Also check the [config.yaml documentation](https://github.com/haskell/ghcup-hs/b
   - and need to be documented on the homepage
     * https://github.com/haskell/ghcup-hs/blob/master/docs/guide.md#gpg-verification
 	* https://github.com/haskell/ghcup-hs/blob/master/docs/install.md#unix
-
-### Understanding tags
-
-Tags are documented [here](https://github.com/haskell/ghcup-hs/blob/master/lib/GHCup/Types.hs). Search for `data Tag`.
-Some tags are unique. Uniqueness is checked by `cabal run ghcup-gen -- check -f ghcup-<yaml-ver>.yaml`.
-
-If you want to check prereleases, do: `cabal run ghcup-gen -- check -f ghcup-prereleases-<yaml-ver>.yaml --channel=prerelease`
 
