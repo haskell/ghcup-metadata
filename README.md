@@ -30,9 +30,12 @@ ghcup config set url-source https://raw.githubusercontent.com/haskell/ghcup-meta
 
 Also check the [config.yaml documentation](https://github.com/haskell/ghcup-hs/blob/master/data/config.yaml).
 
-## For contributors
+## Contributions
 
-Most bindists are built downstream by the GHCup developers, e.g.:
+### The default channel (`ghcup-A.B.C.yaml`)
+
+This channel is strictly maintained by the GHCup project.
+Most bindists here are built downstream by the GHCup developers, e.g.:
 
 * https://github.com/stable-haskell/haskell-language-server
 * https://github.com/stable-haskell/cabal
@@ -40,18 +43,40 @@ Most bindists are built downstream by the GHCup developers, e.g.:
 
 For GHC bindists there is no automation yet and it is done manually (e.g. for FreeBSD and Alpine i386).
 
-That makes contributions harder, because your pull requests to the metadata will be partial.
+You can suggest updates to tool versions via raising an issue or a PR.
 
-## For upstream developers
+### The vanilla channel (`ghcup-vanilla-A.B.C.yaml`)
 
-GHC, Cabal, HLS and stack developers distribute their own bindists via the `ghcup-vanilla-A.B.C.yaml` files. These
-files are primarily maintained by upstream developers at their own discretion. The GHCup project will perform no QA, fixes
-etc. on these bindists.
+These are technically maintained by the upstream developers (GHC, HLS, cabal and stack developers).
+GHCup developers do not interfere with decisions in general and do only little QA.
 
-This allows a clean separation between projects. Also see
-[GHCup is not an installer](https://hasufell.github.io/posts/2023-11-14-ghcup-is-not-an-installer.html).
+You can suggest updates to tool versions via raising an issue or a PR, but you may also want to CC
+some of the upstream developers.
 
-Updates to `ghcup-A.B.C.yaml` are carried out by the GHCup project.
+For GHC:
+
+- @bgamari
+- @mpickering
+- @wz1000
+
+For Cabal:
+
+- @Kleidukos
+- @geekosaur
+- @Mikolaj
+
+For Stack:
+
+- @mpilgrem
+
+For HLS:
+
+- @wz1000
+- @michaelpj
+
+### Other channels
+
+Other channels are maintained in collaboration.
 
 ### Understanding tags
 
@@ -60,16 +85,43 @@ Some tags are unique. Uniqueness is checked by `cabal run ghcup-gen -- check -f 
 
 If you want to check prereleases, do: `cabal run ghcup-gen -- check -f ghcup-prereleases-<yaml-ver>.yaml --channel=prerelease`
 
-### During a pull request
+### During a PR
 
-* For local testing see `cabal run ghcup-gen -- --help`
-* make sure to run the bindist action to check tool installation on all platforms: https://github.com/haskell/ghcup-metadata/actions/workflows/bindists.yaml
-  - this is a manual pipeline
-  - set the appropriate parameters
-* make sure to sign the yaml files you edited, e.g.: `gpg --detach-sign -u <your-email> ghcup-0.0.7.yaml` or ask a GHCup developer to sign
-  - PGP pubkeys need to be cross-signed by the GHCup team
-  - they need to be added to the CI: https://github.com/haskell/ghcup-metadata/blob/develop/.github/workflows/sigs
-  - and need to be documented on the homepage
-    * https://github.com/haskell/ghcup-hs/blob/master/docs/guide.md#gpg-verification
-	* https://github.com/haskell/ghcup-hs/blob/master/docs/install.md#unix
+The following things are relevant when raising a PR.
+
+#### ghcup-gen
+
+`ghcup-gen` is a cabal project that lives in this repository to aid with various metadata tasks.
+Run `cabal run ghcup-gen -- --help` for more information.
+
+To test that the yaml is valid and certain tags are unique, you can run:
+
+```sh
+cabal run ghcup-gen -- check -f ghcup-0.0.8.yaml
+```
+
+To test that all bindists you just added are fetchable, you can run e.g.:
+
+```sh
+cabal run ghcup-gen -- check-tarballs -f ghcup-0.0.8.yaml -u 'ghc-9\.6\.6'
+```
+
+#### Bindist CI
+
+There is a manual workflow that runs smoke tests on all supported platforms against a tool version (e.g. installing GHC and compiling a
+hello world): https://github.com/haskell/ghcup-metadata/actions/workflows/bindists.yaml
+
+To execute it your branch must exist on the main repository and you must have privileges to the repository.
+If you don't, ask the ghcup maintainer or some of the listed upstream maintainers.
+
+Some of the failures are expected (e.g. armv7 on GHC).
+
+#### GPG signing
+
+- make sure to sign the yaml files you edited, e.g.: `gpg --detach-sign -u <your-email> ghcup-0.0.8.yaml` or ask a GHCup developer to sign
+- PGP pubkeys need to be cross-signed by the GHCup team
+- they need to be added to the CI: https://github.com/haskell/ghcup-metadata/blob/develop/.github/workflows/sigs
+- and need to be documented on the homepage
+  * https://github.com/haskell/ghcup-hs/blob/master/docs/guide.md#gpg-verification
+  * https://github.com/haskell/ghcup-hs/blob/master/docs/install.md#unix
 
