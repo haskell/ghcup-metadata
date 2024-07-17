@@ -55,24 +55,24 @@ some of the upstream developers.
 
 For GHC:
 
-- @bgamari
-- @mpickering
-- @wz1000
+- [bgamari](https://github.com/bgamari)
+- [mpickering](https://github.com/mpickering)
+- [wz1000](https://github.com/wz1000)
 
 For Cabal:
 
-- @Kleidukos
-- @geekosaur
-- @Mikolaj
+- [Kleidukos](https://github.com/Kleidukos)
+- [geekosaur](https://github.com/geekosaur)
+- [Mikolaj](https://github.com/Mikolaj)
 
 For Stack:
 
-- @mpilgrem
+- [mpilgrem](https://github.com/mpilgrem)
 
 For HLS:
 
-- @wz1000
-- @michaelpj
+- [wz1000](https://github.com/wz1000)
+- [michaelpj](https://github.com/michaelpj)
 
 ### Other channels
 
@@ -124,4 +124,10 @@ Some of the failures are expected (e.g. armv7 on GHC).
 - and need to be documented on the homepage
   * https://github.com/haskell/ghcup-hs/blob/master/docs/guide.md#gpg-verification
   * https://github.com/haskell/ghcup-hs/blob/master/docs/install.md#unix
+
+### Other information/help
+
+An introduction into GHCup can be found in this presentation: https://www.haskell.org/ghcup/talks/Zurihac2024/GHCup.html
+
+You can also join the [Matrix channel](https://matrix.to/#/#ghcup:matrix.org) if you need help.
 
