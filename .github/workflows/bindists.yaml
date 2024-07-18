@@ -55,15 +55,6 @@ jobs:
           - image: debian:unstable
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6 libnuma-dev
-          - image: i386/debian:10
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
-          - image: i386/debian:11
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
-          - image: i386/debian:12
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
           - image: ubuntu:20.04
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
@@ -110,20 +101,38 @@ jobs:
       - name: Install ghcup and bindist
         run: .github/workflows/install-bindist.sh
 
-  i386-alpine:
-    name: Build i386 alpine
+  # These jobs have to use checkout@v1 as later versions attempt to use a dynamically linked node
+  i386:
+    name: linux-${{ matrix.image }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - image: i386/alpine:latest
+            installCmd: apk update && apk add
+            toolRequirements: binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz
+          - image: i386/debian:10
+            installCmd: apt-get update && apt-get install -y
+            toolRequirements: build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
+          - image: i386/debian:11
+            installCmd: apt-get update && apt-get install -y
+            toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
+          - image: i386/debian:12
+            installCmd: apt-get update && apt-get install -y
+            toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
     container:
-      image: i386/alpine:latest
+      image: ${{ matrix.image }}
     steps:
-    - name: Install requirements
-      run: |
-        apk update
-        apk add curl bash git binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz
-      shell: sh
-    - uses: actions/checkout@af513c7a016048ae468971c52ed77d9562c7c819 # v1
-    - name: Install ghcup and bindist
-      run: bash .github/workflows/install-bindist.sh
+      - name: Install requirements
+        shell: sh
+        run: |
+          ${{ matrix.installCmd }} curl bash git ${{ matrix.toolRequirements }}
+
+      - uses: actions/checkout@af513c7a016048ae468971c52ed77d9562c7c819 # v1
+
+      - name: Install ghcup and bindist
+        run: .github/workflows/install-bindist.sh
 
   bindist-install-mac-win:
     name: Build non-linux
