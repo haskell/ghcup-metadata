@@ -61,6 +61,9 @@ jobs:
           - image: ubuntu:22.04
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+          - image: ubuntu:24.04
+            installCmd: apt-get update && apt-get install -y
+            toolRequirements: build-essential curl libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6
           - image: archlinux:latest
             installCmd: pacman -Syu --noconfirm
             toolRequirements: which gcc gmp libffi make ncurses perl tar xz
