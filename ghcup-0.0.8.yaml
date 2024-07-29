@@ -2991,10 +2991,15 @@ ghcupDownloads:
             unknown_versioning: *ghc-928-64-deb10
           Linux_Ubuntu:
             '< 20': *ghc-928-64-deb9
-            '>= 20': &ghc-928-64-ubuntu20
+            '( >= 20 && < 24)': &ghc-928-64-ubuntu20
               dlUri: https://downloads.haskell.org/ghc/9.2.8/ghc-9.2.8-x86_64-ubuntu20.04-linux.tar.xz
               dlSubdir: ghc-9.2.8
               dlHash: 6e4adc184a53ca9d9dd8c11c6611d0643fdc3b76550ae769e378d9edb2bda745
+            '>= 24': &ghc-928-64-ubuntu24
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/9.2.8/ghc-9.2.8-x86_64-ubuntu24.04-linux.tar.xz
+              dlSubdir: ghc-9.2.8-x86_64-unknown-linux
+              dlHash: a66077e802bbc40d9f567dce25c7ef14c6b4747d5e84671be450fd7e8e0beb5c
+            unknown_versioning: *ghc-928-64-ubuntu24
           Linux_Mint:
             '< 20': *ghc-928-64-deb9
             '>= 20': *ghc-928-64-ubuntu20
