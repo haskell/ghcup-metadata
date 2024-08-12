@@ -6975,7 +6975,7 @@ ghcupDownloads:
   Stack:
     2.5.1:
       viTags:
-        - old
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v251
       viPostInstall: &stack-post |
         Stack manages GHC versions internally by default. To improve integration, please visit:
@@ -7007,7 +7007,7 @@ ghcupDownloads:
             unknown_versioning: *stack-251-64
     2.7.1:
       viTags:
-        - old
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v271
       viPostInstall: *stack-post
       viArch:
@@ -7034,7 +7034,7 @@ ghcupDownloads:
             unknown_versioning: *stack-271-64
     2.7.3:
       viTags:
-        - old
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v273
       viPostInstall: *stack-post
       viReleaseDay: 2022-02-02
@@ -7061,7 +7061,8 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-273-64
     2.7.5:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v275
       viPostInstall: *stack-post
       viArch:
@@ -7087,7 +7088,8 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-275-64
     2.9.1:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v291
       viPostInstall: *stack-post
       viArch:
@@ -7118,7 +7120,8 @@ ghcupDownloads:
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.9.1/stack-2.9.1-linux-aarch64.tar.gz
               dlHash: 741cf6552adcd41ca0c38c4f03b1e8f244873d988f70ef5ed4b502c0df28ea5a
     2.9.3:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v293
       viPostInstall: *stack-post
       viArch:
@@ -7149,7 +7152,8 @@ ghcupDownloads:
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.9.3/stack-2.9.3-linux-aarch64.tar.gz
               dlHash: 161e1638da9efc56319f7225b3652ca3f339bcda9eadc7d6ce512f325b0f014a
     2.11.1:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2111---2023-05-18
       viPostInstall: *stack-post
       viArch:
@@ -7180,7 +7184,8 @@ ghcupDownloads:
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.11.1/stack-2.11.1-linux-aarch64.tar.gz
               dlHash: c7733d07ed78d6f4d82e0ebf6d260eb693c6c9df2208003d60caba69766f9c15
     2.13.1:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2131---2023-09-29
       viPostInstall: *stack-post
       viArch:
@@ -7223,7 +7228,8 @@ ghcupDownloads:
               dlSubdir:
                 RegexDir: "stack-.*"
     2.15.1:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2151---2024-02-09
       viPostInstall: *stack-post
       viArch:
@@ -7266,7 +7272,8 @@ ghcupDownloads:
               dlSubdir:
                 RegexDir: "stack-.*"
     2.15.3:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2153---2024-03-07
       viPostInstall: *stack-post
       viArch:
@@ -7309,7 +7316,8 @@ ghcupDownloads:
               dlSubdir:
                 RegexDir: "stack-.*"
     2.15.5:
-      viTags: []
+      viTags:
+        - Old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2155---2024-03-28
       viPostInstall: *stack-post
       viArch:
