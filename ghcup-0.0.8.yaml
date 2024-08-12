@@ -7755,7 +7755,7 @@ ghcupDownloads:
   Stack:
     2.5.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v251
       viPostInstall: &stack-post |
         Stack manages GHC versions internally by default. To improve integration, please visit:
@@ -7787,7 +7787,7 @@ ghcupDownloads:
             unknown_versioning: *stack-251-64
     2.7.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v271
       viPostInstall: *stack-post
       viArch:
@@ -7814,7 +7814,7 @@ ghcupDownloads:
             unknown_versioning: *stack-271-64
     2.7.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v273
       viPostInstall: *stack-post
       viReleaseDay: 2022-02-02
@@ -7867,7 +7867,7 @@ ghcupDownloads:
               dlHash: 3e22c66ea38525ca2ee5b0d222c8aa193c50152a53ff2c80ae179a40592512fe
     2.7.5:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v275
       viPostInstall: *stack-post
       viArch:
@@ -7919,7 +7919,7 @@ ghcupDownloads:
               dlHash: 8be2342deea5309a32e28a0c5eb341ea9557401f08484676036471250ca12e21
     2.9.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v291
       viPostInstall: *stack-post
       viArch:
@@ -7967,7 +7967,7 @@ ghcupDownloads:
               dlHash: fa53c58d8d00a6d49ec26624aa7f817f5ece3c4df339fa6e4fccf1038b7f1fa5
     2.9.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v293
       viPostInstall: *stack-post
       viArch:
@@ -8016,7 +8016,7 @@ ghcupDownloads:
               dlHash: a56d2cd37611eccf00ab8df38c3718923cf5677f3aeacd250394e79b676dcb98
     2.11.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2111---2023-05-18
       viPostInstall: *stack-post
       viArch:
@@ -8060,7 +8060,7 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     2.13.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2131---2023-09-29
       viPostInstall: *stack-post
       viArch:
@@ -8106,7 +8106,7 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     2.15.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2151---2024-02-09
       viPostInstall: *stack-post
       viArch:
@@ -8152,7 +8152,7 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     2.15.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2153---2024-03-07
       viPostInstall: *stack-post
       viArch:
@@ -8198,7 +8198,7 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     2.15.5:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2155---2024-03-28
       viPostInstall: *stack-post
       viArch:

@@ -2209,7 +2209,7 @@ ghcupDownloads:
     2.15.6.3:
       viTags:
         - Prerelease
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.15/ChangeLog.md#v21563-release-candidate
       viArch:
         A_64:
