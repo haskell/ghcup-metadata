@@ -5665,6 +5665,10 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *cabal-31030-32-unknown
         A_ARM64:
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.10.3.0/cabal-install-3.10.3.0-aarch64-alpine3_20.tar.xz
+              dlHash: 209ed05e04ce01b261a1eba12eb9e0c789246347427d352d8dffa63a2f96eb73
           Linux_UnknownLinux:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/cabal/3.10.3.0/cabal-install-3.10.3.0-aarch64-linux-deb10.tar.xz
@@ -5782,6 +5786,10 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *cabal-31210-32-unknown
         A_ARM64:
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.12.1.0/cabal-install-3.12.1.0-aarch64-alpine3_20.tar.xz
+              dlHash: 9d1556fa93dab06749810455b9ac4655499cdb62b5bdff55e0d07c91506f9721
           Linux_UnknownLinux:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.12.1.0/cabal-install-3.12.1.0-aarch64-linux-deb10.tar.xz
@@ -5833,14 +5841,16 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *ghcup-32
         A_ARM64:
-          Linux_UnknownLinux:
-            unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.30.0/aarch64-linux-ghcup-0.1.30.0
-              dlHash: 20e7d3f4e4dfd3583f3af9f37d61ca19595c4c48bc318dffcf61f425ea1eda03
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~ghcup/0.1.30.0/aarch64-apple-darwin-ghcup-0.1.30.0
               dlHash: 2c81486494136a2a105ecd8cadc13965395a48489d9bf5a0027baa40c5faf5fb
+          Linux_Alpine:
+            unknown_versioning: &ghcup-aarch64
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.30.0/aarch64-linux-static-ghcup-0.1.30.0
+              dlHash: 7aa9ed7a000e53127c1c770c0320d2f8e819bd4b37fb1f4885e8669c1b8ad16d
+          Linux_UnknownLinux:
+            unknown_versioning: *ghcup-aarch64
         A_ARM:
           Linux_UnknownLinux:
             unknown_versioning:

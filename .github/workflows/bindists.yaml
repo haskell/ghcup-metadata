@@ -173,6 +173,27 @@ jobs:
         with:
           args: sh -c '.github/workflows/install-bindist.sh'
 
+  bindist-install-arm-alpine:
+    name: Build ARM binary (alpine)
+    runs-on: [self-hosted, Linux, ARM64, maerwald]
+    steps:
+      - uses: docker://arm64v8/ubuntu:focal
+        name: Cleanup (aarch64 linux)
+        with:
+          args: "find . -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +"
+
+      - name: git config
+        run: |
+          git config --global --get-all safe.directory | grep '^\*$' || git config --global --add safe.directory "*"
+        shell: bash
+
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+
+      - uses: docker://alpine
+        name: Run build (aarch64 alpine linux)
+        with:
+          args: sh -c "apk add curl gcc g++ binutils binutils-gold coreutils bsd-compat-headers gmp-dev ncurses-dev libffi-dev make xz tar perl bash diffutils git gzip gnupg zlib zlib-dev zlib-static bzip2 bzip2-dev bzip2-static gmp gmp-dev openssl-dev openssl-libs-static xz xz-dev ncurses-static && .github/workflows/install-bindist.sh"
+
   bindist-install-freebsd:
     name: Install FreeBSD binary
     runs-on: [self-hosted, FreeBSD, X64]
