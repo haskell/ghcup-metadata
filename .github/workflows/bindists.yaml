@@ -192,7 +192,7 @@ jobs:
       - uses: docker://alpine
         name: Run build (aarch64 alpine linux)
         with:
-          args: sh -c '.github/workflows/install-bindist.sh'
+          args: sh -c "apk add curl gcc g++ binutils binutils-gold coreutils bsd-compat-headers gmp-dev ncurses-dev libffi-dev make xz tar perl bash diffutils git gzip gnupg zlib zlib-dev zlib-static bzip2 bzip2-dev bzip2-static gmp gmp-dev openssl-dev openssl-libs-static xz xz-dev ncurses-static && .github/workflows/install-bindist.sh"
 
   bindist-install-freebsd:
     name: Install FreeBSD binary
