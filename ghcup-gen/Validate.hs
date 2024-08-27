@@ -33,7 +33,7 @@ import           Data.Containers.ListUtils      ( nubOrd )
 import           Data.IORef
 import           Data.List
 import           Data.Versions
-import           Haskus.Utils.Variant.Excepts
+import           Data.Variant.Excepts
 import           Optics
 import           System.FilePath
 import           System.Exit

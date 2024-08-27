@@ -23,7 +23,7 @@ import           Data.Maybe
 import           Data.Semigroup                 ( (<>) )
 #endif
 import           Options.Applicative     hiding ( style )
-import           Haskus.Utils.Variant.Excepts
+import           Data.Variant.Excepts
 import           System.Console.Pretty
 import           System.Environment
 import           System.Exit

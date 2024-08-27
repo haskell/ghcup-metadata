@@ -36,7 +36,7 @@ import           Data.Maybe
 import           Data.List
 import           Data.Map.Strict                ( Map )
 import           Data.Versions
-import           Haskus.Utils.Variant.Excepts
+import           Data.Variant.Excepts
 import           System.Exit
 import           System.FilePath
 import           System.IO
