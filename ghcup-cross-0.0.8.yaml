@@ -148,6 +148,6 @@ ghcupDownloads:
               dlHash: 791f50ad71f28a5febd10e5b7384545c74d87805228a5e541d801aaab727448a
               dlSubdir: ghc-9.10.1-wasm32-wasi
               dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20240609T200531/wasm32-wasi-ghc-9.10.tar.xz
-              dlOutput: ghc-x86_64-linux-alpine3_18-wasm-cross_wasm32-wasi-release+fully_static.tar.xz
+              dlOutput: ghc-9.10.1-x86_64-linux-alpine3_18-wasm-cross_wasm32-wasi-release+fully_static.tar.xz
           Linux_Alpine:
             unknown_versioning: *ghc-wasm32-wasi-9101-64-static
