@@ -121,7 +121,7 @@ ghcupDownloads:
               dlHash: afef71289ef8464bb7f9c7c8face9856b4fc5e7c80a0dba45d39aa82c101b61c
     3.11.0.0.2024.4.19:
       viTags:
-        - LatestPrerelease
+        - Prerelease
       viArch:
         A_64:
           Linux_Debian:
@@ -251,6 +251,30 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.11.0.0.2024.4.19/cabal-install-3.11.0.0-armv7-linux-deb10.tar.xz
               dlHash: 90fed48d921a94bcd0830265d5ccf535a39d3a3e10fc661d9e2cb10798f1a972
               dlOutput: "cabal-install-3.11.0.0.2024.4.19-armv7-linux-deb10.tar.xz"
+    3.15.0.0.2024.10.3:
+      viTags:
+        - LatestPrerelease
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &cabal-315002024103-64
+              dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20241019T164140/cabal.tar.xz
+              dlHash: b87a3a95cf4af01f37ecdedc62efeda87520701f8d52c81ba3688a63801b939c
+          Linux_Alpine:
+            unknown_versioning: *cabal-315002024103-64
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20241019T164140/cabal-x86_64-darwin.tar.xz
+              dlHash: 1592aff47644df44e0e7e2cb55bce35a743af7cb7abc8bde1319c04df08b3c15
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20241019T164140/cabal-aarch64-linux.tar.xz
+              dlHash: 44614c9dff47de1bc507012f75a4c4d014a057a0060e24220580bdcf055e710a
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20241019T164140/cabal-aarch64-darwin.tar.xz
+              dlHash: 0713bc1ae558ed15f15763af3a88ffb83e4dbe7387e078e8b0cd52751e02948e
   GHC:
     9.4.0.20220501:
       viTags:
