@@ -70,6 +70,9 @@ jobs:
           - image: fedora:37
             installCmd: dnf install -y
             toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
+          - image: fedora:40
+            installCmd: dnf install -y
+            toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
           - image: rockylinux:8
             installCmd: dnf install -y
             toolRequirements: which findutils gcc gcc-c++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
