@@ -151,3 +151,16 @@ ghcupDownloads:
               dlOutput: ghc-9.10.1-x86_64-linux-alpine3_18-wasm-cross_wasm32-wasi-release+fully_static.tar.xz
           Linux_Alpine:
             unknown_versioning: *ghc-wasm32-wasi-9101-64-static
+    wasm32-wasi-9.10.1.20241021:
+      viTags:
+      - base-4.20.0.0
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &ghc-wasm32-wasi-9101-th-64-static
+              dlHash: 74bc9138dfc1221564a32594436f4e376887b5f2f0b86c7a3f902d98744239f3
+              dlSubdir: ghc-9.10.1.20241021-wasm32-wasi
+              dlUri: https://github.com/tweag/ghc-wasm-bindists/releases/download/20241022T075120/wasm32-wasi-ghc-9.10.tar.xz
+              dlOutput: ghc-9.10.1.20241021-x86_64-linux-alpine3_20-wasm-cross_wasm32-wasi-release+host_fully_static.tar.xz
+          Linux_Alpine:
+            unknown_versioning: *ghc-wasm32-wasi-9101-th-64-static
