@@ -154,6 +154,7 @@ ghcupDownloads:
     wasm32-wasi-9.10.1.20241021:
       viTags:
       - base-4.20.0.0
+      - TH-support
       viArch:
         A_64:
           Linux_UnknownLinux:
