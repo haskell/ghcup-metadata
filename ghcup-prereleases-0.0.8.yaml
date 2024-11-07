@@ -2235,6 +2235,8 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241031/ghc-9.12.0.20241031-x86_64-ubuntu20_04-linux.tar.xz
             unknown_versioning: *ghc9121alpha2-x86_64-ubuntu22_04
           Linux_RedHat:
+            < 9: *ghc9121alpha2-x86_64-centos7
+            '>= 9': *ghc9121alpha2-x86_64-fedora33
             unknown_versioning: *ghc9121alpha2-x86_64-fedora33
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc9121alpha2-x86_64-deb9
