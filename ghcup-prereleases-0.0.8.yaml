@@ -2216,7 +2216,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241031/ghc-9.12.0.20241031-x86_64-deb12-linux.tar.xz
             unknown_versioning: *ghc9121alpha2-x86_64-deb11
           Linux_Fedora:
-            '>= 33':
+            '>= 33': &ghc9121alpha2-x86_64-fedora33
               dlHash: 9e25d7dc3f332aa6ba45aec535ccde843b46b272407e3828f1216959e6e0e586
               dlOutput: ghc-9.12.0.20241031-x86_64-linux-fedora33.tar.xz
               dlSubdir: ghc-9.12.0.20241031-x86_64-unknown-linux
@@ -2235,7 +2235,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241031/ghc-9.12.0.20241031-x86_64-ubuntu20_04-linux.tar.xz
             unknown_versioning: *ghc9121alpha2-x86_64-ubuntu22_04
           Linux_RedHat:
-            unknown_versioning: *ghc9121alpha2-x86_64-centos7
+            unknown_versioning: *ghc9121alpha2-x86_64-fedora33
           Linux_Ubuntu:
             ( >= 16 && < 18 ): *ghc9121alpha2-x86_64-deb9
             ( >= 18 && < 19 ): *ghc9121alpha2-x86_64-ubuntu18_04
