@@ -86,8 +86,8 @@ validate distroChannel = do
     -- required platforms
     forM_ (M.toList dls) $ \(t, versions) ->
       forM_ (M.toList versions) $ \(v, vi) ->
-        forM_ (M.toList $ _viArch vi) $ \(arch, pspecs) -> do
-          checkHasRequiredPlatforms t (_tvVersion v) (_viTags vi) arch (M.keys pspecs)
+        forM_ (M.toList $ unMapIgnoreUnknownKeys $ _viArch vi) $ \(arch, pspecs) -> do
+          checkHasRequiredPlatforms t (_tvVersion v) (_viTags vi) arch (M.keys $ unMapIgnoreUnknownKeys pspecs)
 
     checkGHCVerIsValid
     forM_ (M.toList dls) $ \(t, _) -> checkMandatoryTags t
@@ -233,7 +233,7 @@ validateTarballs (TarballFilter mtool versionRegex) = do
    -- download/verify all tarballs
   let dlis = nubOrd $ dls ^.. each %& indices (maybe (const True) (==) mtool)
                     %> each %& indices (matchTest versionRegex . T.unpack . prettyVer . _tvVersion)
-                    % (viTestDL % _Just `summing` viSourceDL % _Just `summing` viArch % each % each % each)
+                    % (viTestDL % _Just `summing` viSourceDL % _Just `summing` viArch % to unMapIgnoreUnknownKeys % each % to unMapIgnoreUnknownKeys % each % each)
   when (null dlis) $ logError "no tarballs selected by filter" *> runReaderT addError ref
   forM_ dlis (downloadAll ref)
 

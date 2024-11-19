@@ -82,9 +82,9 @@ generateHLSGhc :: ( MonadFail m
 generateHLSGhc format output = do
   GHCupInfo { _ghcupDownloads = dls } <- getGHCupInfo
   let hlses = dls M.! HLS
-  r <- forM hlses $ \(_viArch -> archs) ->
+  r <- forM hlses $ \(unMapIgnoreUnknownKeys  . _viArch -> archs) ->
          forM archs $ \plats ->
-           forM plats $ \(head . M.toList -> (_, dli)) -> do
+           forM (unMapIgnoreUnknownKeys plats) $ \(head . M.toList -> (_, dli)) -> do
              VRight r <- runResourceT . runE
                     @'[DigestError
                       , GPGError
@@ -261,7 +261,7 @@ generateSystemInfoWithDistroVersion output = do
   liftIO $ traverse_ (\(key, value)  -> do
                         liftIO $ hPutStrLn handle $ "### " <> prettyPlat key <> "\n"
                         liftIO $ hPutStrLn handle $ T.unpack $ versionsAndRequirements value <> T.pack "\n")
-                      $ M.toList $ fromJust (fromJust ghcInfo)
+                      $ M.toList $ unMapIgnoreUnknownKeys $ fromJust (fromJust ghcInfo)
   pure ExitSuccess
 
   where
