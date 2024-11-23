@@ -265,7 +265,7 @@ toolRequirements:
           - gmake
           - ncurses
           - perl5
-          - pkg-config
+          - pkgconf
           - libffi
           - libiconv
           notes: ''
