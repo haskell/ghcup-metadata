@@ -4469,9 +4469,9 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.6/ghc-9.6.6-x86_64-unknown-mingw32.tar.xz
           FreeBSD:
             '>= 14': &ghc-966-64-freebsd14
-              dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/9.6.6/ghc-9.6.6-x86_64-portbld-freebsd.tar.xz
+              dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/9.6.6/ghc-9.6.6-x86_64-portbld-freebsd-p1.tar.xz
               dlSubdir: ghc-9.6.6-x86_64-portbld-freebsd
-              dlHash: 63b77d8bc5e3bcfe2959bef9f944633bf046af48f734e5b3375db0798a931580
+              dlHash: 672fd62ee4552cb623081b9493b23c4a4b2819eff38379688948195074eec241
             unknown_versioning: *ghc-966-64-freebsd14
         A_ARM64:
           Darwin:
