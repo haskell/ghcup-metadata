@@ -2769,3 +2769,4 @@ ghcupDownloads:
               dlHash: b2efb9ef99441c00b2803242382bcd61f49851cfc4a5eacfe1f52b4faf02858d
               dlSubdir:
                 RegexDir: "stack-.*"
+# Bec
