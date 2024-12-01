@@ -2444,7 +2444,7 @@ ghcupDownloads:
           Linux_UnknownLinux:
             unknown_versioning: *ghc9121rc1-aarch64-deb10
       viChangeLog: https://downloads.haskell.org/~ghc/9.12.0.20241128/docs/users_guide/9.12.1-notes.html
-      viReleaseDay: '2024-11-14'
+      viReleaseDay: '2024-11-28'
       viSourceDL:
         dlHash: 798f02772462350288f58299cf868a73def48f40b1e1b53f5e412decd976266f
         dlSubdir: ghc-9.12.0.20241128
