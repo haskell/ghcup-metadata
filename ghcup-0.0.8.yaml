@@ -4820,6 +4820,11 @@ ghcupDownloads:
               dlHash: 15cf9341437af2c6f75bbaf8222824f5b51c32f0637ed054513f165999b0a87d
               dlSubdir: ghc-9.8.4-aarch64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.8.4/ghc-9.8.4-aarch64-deb10-linux.tar.xz
+          Linux_Alpine:
+            unknown_versioning:
+              dlHash: b5c86a0cda0bd62d5eeeb52b1937c3bd00c70cd67dd74226ce787d5c429a4e62
+              dlSubdir: ghc-9.8.4-aarch64-alpine-linux
+              dlUri: https://downloads.haskell.org/ghc/9.8.4/ghc-9.8.4-aarch64-alpine3_18-linux.tar.xz
       viChangeLog: https://downloads.haskell.org/~ghc/9.8.4/docs/users_guide/9.8.4-notes.html
       viReleaseDay: '2024-11-27'
       viSourceDL:
