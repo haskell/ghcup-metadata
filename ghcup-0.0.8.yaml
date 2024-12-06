@@ -4484,6 +4484,11 @@ ghcupDownloads:
               dlHash: 58d5ce65758ec5179b448e4e1a2f835924b4ada96cf56af80d011bed87d91fef
               dlSubdir: ghc-9.6.6-aarch64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.6.6/ghc-9.6.6-aarch64-deb10-linux.tar.xz
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/9.6.6/ghc-9.6.6-aarch64-alpine-linux.tar.xz
+              dlSubdir: ghc-9.6.6-aarch64-alpine-linux
+              dlHash: 4f865bdcc71350d65a9f87e2baec1ef37fc4ed7dd6be9bba82744701664152c8
     9.8.1:
       viArch:
         A_32:
