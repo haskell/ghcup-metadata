@@ -2733,7 +2733,7 @@ ghcupDownloads:
     3.1.0.1:
       viTags:
         - Prerelease
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.1/ChangeLog.md#v3101-release-candidate
       viArch:
         A_64:
