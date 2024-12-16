@@ -5447,7 +5447,6 @@ ghcupDownloads:
     3.12.1.0:
       viTags:
         - Recommended
-        - Latest
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.12.1.0.md
       viArch:
         A_64:
@@ -5540,6 +5539,89 @@ ghcupDownloads:
             unknown_versioning: *cabal-31210-arm64
           Linux_UnknownLinux:
             unknown_versioning: *cabal-31210-arm64
+    3.14.1.0:
+      viTags:
+        - Latest
+      viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.14.1.0.md
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &cabal-31410-64
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-alpine3_12.tar.xz
+              dlHash: b314d017d7525b662d9571b0de15870882862e32948d4c5d78e209641b474279
+          Linux_Alpine:
+            unknown_versioning: *cabal-31410-64
+          Linux_CentOS:
+            unknown_versioning: &cabal-31410-64-centos7
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-centos7.tar.xz
+              dlHash: 4cdc837b23f59eb7b273dee886617dc28ea8e8ced7d89e276be2b8b95f3ba393
+          Linux_Debian:
+            '( >= 9 && < 10)': &cabal-31410-64-debian
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-deb9.tar.xz
+              dlHash: 0d7db03fe10b6ad9cd1a7cd0af891054eb1785e7437c357bf24bced69e29270f
+            '( == 10 && < 11)':
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-deb10.tar.xz
+              dlHash: d140dc3ca9881dfd705ffc2bce0c59c181768197f7c45ace6e5bd1f134ccb6cc
+            '( >= 11)':
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-deb11.tar.xz
+              dlHash: f69117813bb76993ceec150b2e5b26b8461c2b74f08b97ba88aa974021766a8c
+            unknown_versioning: *cabal-31410-64-debian
+          Linux_Fedora:
+            '>= 33':
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-fedora33.tar.xz
+              dlHash: ffe3669f350844557225225e11e109035cf80a59da77569e911c37fd3611328a
+            unknown_versioning: *cabal-31410-64-centos7
+          Linux_Ubuntu:
+            '< 20': &cabal-31410-64-ubuntu18
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-ubuntu18_04.tar.xz
+              dlHash: 54f0b5abe389a95b72a5f173cede43368c3cdc0a8ee570e8d0ba8e29c991988f
+            '>= 20': &cabal-31410-64-ubuntu20
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-linux-ubuntu20_04.tar.xz
+              dlHash: 6efa1072405a58eb1559d6b4ed5c63fec152ff0248d6711b3ba3c5dca7b46f29
+            unknown_versioning: *cabal-31410-64-ubuntu18
+          Linux_Mint:
+            '< 20': *cabal-31410-64-ubuntu18
+            '>= 20': *cabal-31410-64-ubuntu20
+            unknown_versioning: *cabal-31410-64-ubuntu18
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-darwin.tar.xz
+              dlHash: 891eb626508beb8da06b6eeeefccb7ead22d1f6c94dea479cd4e74d5f5e14fbb
+          Windows:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-windows.zip
+              dlHash: 846abae8446880f11ebf2bafddb533f510285918ae8089afec77c1525825b8b2
+          FreeBSD:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-x86_64-freebsd-14.tar.xz
+              dlHash: 20bc5cf77de46181ae925830ebe252253ad0df10919c8b35a729d28c02819b43
+        A_32:
+          Linux_UnknownLinux:
+            unknown_versioning: &cabal-31410-32
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-i386-linux-alpine3_12.tar.xz
+              dlHash: aeff8b622c18a8dc2cb6adc5b7e90fd807a92b51a9f689fc5804c2b91675b1b8
+          Linux_Alpine:
+            unknown_versioning: *cabal-31410-32
+          Linux_Debian:
+            '( >= 9 )':
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-i386-linux-deb9.tar.xz
+              dlHash: ada1f56013aee1a8e21d025c055516b6984fd6744ab9b9904fccc9c7247f5e76
+            unknown_versioning: *cabal-31410-32
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-aarch64-darwin.tar.xz
+              dlHash: 7f9e33c9328c43b961716ff5c6bce09ff5027991a5af0997f5a0fbd5567993ac
+          Linux_Debian:
+            '( >= 10 && < 11)': &cabal-31410-arm64
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-aarch64-linux-deb10.tar.xz
+              dlHash: ef39d92d87b40eb6855f932d39022dc5720bb45b3bdd2ecf51200f5583dff1e4
+            '( >= 11)':
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-aarch64-linux-deb11.tar.xz
+              dlHash: db68429b1f2b54a802617d65a2ce78c33cfb23426e10fbc8079001f77dbd3f8d
+            unknown_versioning: *cabal-31410-arm64
+          Linux_UnknownLinux:
+            unknown_versioning: *cabal-31410-arm64
   GHCup:
     0.1.22.0:
       viTags:
