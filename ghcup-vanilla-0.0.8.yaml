@@ -5445,8 +5445,7 @@ ghcupDownloads:
           Linux_UnknownLinux:
             unknown_versioning: *cabal-31030-arm64
     3.12.1.0:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.12.1.0.md
       viArch:
         A_64:
@@ -5542,6 +5541,7 @@ ghcupDownloads:
     3.14.1.0:
       viTags:
         - Latest
+        - Recommended
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.14.1.0.md
       viArch:
         A_64:
@@ -5620,6 +5620,10 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-aarch64-linux-deb11.tar.xz
               dlHash: db68429b1f2b54a802617d65a2ce78c33cfb23426e10fbc8079001f77dbd3f8d
             unknown_versioning: *cabal-31410-arm64
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.14.1.0/cabal-install-3.14.1.0-aarch64-linux-alpine3_18.tar.xz
+              dlHash: 87b7189cac623646883f8a71a5e53802a835dac62b44951575d7886782a6ee31
           Linux_UnknownLinux:
             unknown_versioning: *cabal-31410-arm64
   GHCup:
