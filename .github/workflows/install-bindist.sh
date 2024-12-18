@@ -123,9 +123,9 @@ case $TOOL in
 				cabal install --lib --package-env=. --allow-newer --constraint='filepath <1.5' hashable
 				;;
 			*)
-				cabal install --lib --package-env=. clock
+				cabal install --lib --package-env=. --allow-newer clock
 				# https://github.com/haskell/ghcup-hs/issues/966
-				cabal install --lib --package-env=. hashable
+				cabal install --lib --package-env=. --allow-newer hashable
 				;;
 		esac
 		case "$(uname -s)" in
