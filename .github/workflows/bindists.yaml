@@ -232,6 +232,9 @@ jobs:
     steps:
       - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
+      - name: Install prerequisites
+        run: sudo pkg install -y curl gcc gmp gmake ncurses perl5 pkgconf libffi libiconv
+
       - name: Run build
         run: .github/workflows/install-bindist.sh
 
