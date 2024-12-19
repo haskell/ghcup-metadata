@@ -97,6 +97,7 @@ ghcupDownloads:
     3.9.0.0:
       viTags:
         - Prerelease
+        - old
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -122,6 +123,7 @@ ghcupDownloads:
     3.11.0.0.2024.4.19:
       viTags:
         - Prerelease
+        - old
       viArch:
         A_64:
           Linux_Debian:
@@ -699,6 +701,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.0.20230111
         dlUri: https://downloads.haskell.org/~ghc/9.6.0.20230111/ghc-9.6.0.20230111-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.18.0.0
     9.6.0.20230128:
@@ -792,6 +795,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.0.20230128/testsuite
         dlHash: ea1b8f07026183c72ced88433789e487dc5f3499f37f5798e19c8940a4844b24
       viTags:
+      - old
       - Prerelease
       - base-4.18.0.0
     9.6.0.20230210:
@@ -891,6 +895,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.0.20230210
         dlUri: https://downloads.haskell.org/~ghc/9.6.0.20230210/ghc-9.6.0.20230210-testsuite.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.18.0.0
 
@@ -987,6 +992,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.0.20230302
         dlUri: https://downloads.haskell.org/~ghc/9.6.0.20230302/ghc-9.6.0.20230302-src.tar.xz
       viTags:
+      - old
       - base-4.18.0.0
       - Prerelease
       viTestDL:
@@ -1101,6 +1107,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.0.20230727
         dlUri: https://downloads.haskell.org/~ghc/9.8.0.20230727/ghc-9.8.0.20230727-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.19.0.0
       viTestDL:
@@ -1216,6 +1223,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.0.20230809
         dlUri: https://downloads.haskell.org/~ghc/9.8.0.20230809/ghc-9.8.0.20230809-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.19.0.0
       viTestDL:
@@ -1331,6 +1339,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.0.20230822
         dlUri: https://downloads.haskell.org/~ghc/9.8.0.20230822/ghc-9.8.0.20230822-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.19.0.0
       viTestDL:
@@ -1446,6 +1455,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.0.20230919
         dlUri: https://downloads.haskell.org/~ghc/9.8.0.20230919/ghc-9.8.0.20230919-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.19.0.0
       viTestDL:
@@ -1562,6 +1572,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.0.20230929
         dlUri: https://downloads.haskell.org/~ghc/9.8.0.20230929/ghc-9.8.0.20230929-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.19.0.0
       viTestDL:
@@ -1660,6 +1671,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.10.0.20240313
         dlUri: https://downloads.haskell.org/~ghc/9.10.0.20240313/ghc-9.10.0.20240313-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.20.0.0
       viTestDL:
@@ -1773,6 +1785,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.10.0.20240328
         dlUri: https://downloads.haskell.org/~ghc/9.10.0.20240328/ghc-9.10.0.20240328-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.20.0.0
       viTestDL:
@@ -1888,6 +1901,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.10.0.20240413
         dlUri: https://downloads.haskell.org/~ghc/9.10.0.20240413/ghc-9.10.0.20240413-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.20.0.0
       viTestDL:
@@ -1989,6 +2003,8 @@ ghcupDownloads:
         dlSubdir: ghc-9.10.0.20240426
         dlUri: https://downloads.haskell.org/~ghc/9.10.0.20240426/ghc-9.10.0.20240426-src.tar.xz
       viTags:
+      - old
+      - Prerelease
       - base-4.20.0.0
       viTestDL:
         dlHash: 0598a8466df0a41bb2a26e973d7ae52ab74a6d87643beb22a16e4acce9cb0db1
@@ -2142,6 +2158,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.12.0.20241031
         dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241031/ghc-9.12.0.20241031-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.21.0.0
       viTestDL:
@@ -2296,6 +2313,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.12.0.20241114
         dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241114/ghc-9.12.0.20241114-src.tar.xz
       viTags:
+      - old
       - Prerelease
       - base-4.21.0.0
       viTestDL:
