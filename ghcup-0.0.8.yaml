@@ -5018,9 +5018,9 @@ ghcupDownloads:
             unknown_versioning: *ghc9121-x86_64-linux-alpine3_12
           Linux_CentOS:
             ( >= 7 && < 8 ): &ghc9121-x86_64-linux-centos7
-              dlHash: 13b211eaacb85a3579e3523b0178ecc41a95486edd2fb7c82edcbb71981ffdc9
+              dlHash: 49509117c488e4ae3c710276cab14a157b4e3799aa6e3dbf85f9dba118f110c7
               dlSubdir: ghc-9.12.1-x86_64-unknown-linux
-              dlUri: https://downloads.haskell.org/~ghc/9.12.1/ghc-9.12.1-x86_64-centos7-linux.tar.xz
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/9.12.1/ghc-9.12.1-x86_64-centos7-linux.tar.xz
             unknown_versioning: *ghc9121-x86_64-linux-centos7
           Linux_Debian:
             ( >= 10 && < 11 ):
