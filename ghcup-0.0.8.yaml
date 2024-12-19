@@ -5041,10 +5041,14 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.12.1/ghc-9.12.1-x86_64-deb12-linux.tar.xz
             unknown_versioning: *ghc9121-x86_64-linux-deb12
           Linux_Fedora:
-            '>= 33': &ghc9121-x86_64-linux-fedora33
+            '(>= 33 && < 38)': &ghc9121-x86_64-linux-fedora33
               dlHash: a60c5754621c535293779dbcd53b698bb21780e498cf5dbd721e8361c392e791
               dlSubdir: ghc-9.12.1-x86_64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.12.1/ghc-9.12.1-x86_64-fedora33-linux.tar.xz
+            '>= 38':
+              dlHash: b7e31bf2f7036cd8f81f5cb51ffe5a830ecf023ff634f21e9b435c2152a4548a
+              dlSubdir: ghc-9.12.1-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/ghc/9.12.1/ghc-9.12.1-x86_64-fedora38-linux.tar.xz
             unknown_versioning: *ghc9121-x86_64-linux-centos7
           Linux_Mint:
             < 20: &ghc9121-x86_64-linux-ubuntu18_04
