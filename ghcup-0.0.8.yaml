@@ -8702,11 +8702,13 @@ ghcupDownloads:
             unknown_versioning: *stack-311-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-311-arm64
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/3.1.1/stack-3.1.1-linux-aarch64.tar.gz
               dlHash: 6ad3ceb1b5a0d6cfd3b2bc16dd4c422658c39a6bd23586f4902fcb5e7f9085b4
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-311-arm64
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/3.1.1/stack-3.1.1-osx-aarch64.tar.gz

@@ -7868,11 +7868,13 @@ ghcupDownloads:
             unknown_versioning: *stack-311-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-311-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.1.1/stack-3.1.1-linux-aarch64.tar.gz
               dlHash: 033cb75bad3a5299b522c99e8056915bd081879f5df312e6d44d7511fc567455
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-311-arm64
           Darwin:
             unknown_versioning:
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.1.1/stack-3.1.1-osx-aarch64.tar.gz
