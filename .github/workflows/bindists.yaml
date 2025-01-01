@@ -16,7 +16,7 @@ on:
       metadataFile:
         description: Metadata file
         required: true
-        default: ghcup-0.0.8.yaml
+        default: ghcup-0.0.9.yaml
         type: string
       channel:
         description: Distribution channel (main|prerelease|nightly)

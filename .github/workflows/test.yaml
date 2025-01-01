@@ -11,13 +11,13 @@ jobs:
     name: Test metadata
     runs-on: ${{ matrix.os }}
     env:
-      YAML_VER: 0.0.7
+      YAML_VER: 0.0.9
     strategy:
       matrix:
         ghc:
-          - '8.10.7'
+          - '9.8.4'
         cabal:
-          - '3.6.2.0'
+          - '3.12.1.0'
         os:
           - ubuntu-22.04
     steps:
