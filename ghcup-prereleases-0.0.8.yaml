@@ -1,4 +1,5 @@
 ---
+metadataUpdate: https://raw.githubusercontent.com/haskell/ghcup-metadata/refs/heads/master/ghcup-prereleases-0.0.9.yaml
 globalTools:
   ShimGen:
     dlUri: https://downloads.haskell.org/~ghcup/shimgen/shim-2.exe
