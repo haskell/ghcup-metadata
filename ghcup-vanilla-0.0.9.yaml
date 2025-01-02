@@ -7550,9 +7550,11 @@ ghcupDownloads:
             unknown_versioning: *stack-291-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-291-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.9.1/stack-2.9.1-linux-aarch64.tar.gz
               dlHash: 741cf6552adcd41ca0c38c4f03b1e8f244873d988f70ef5ed4b502c0df28ea5a
+          Linux_Alpine:
+            unknown_versioning: *stack-291-arm64
     2.9.3:
       viTags:
         - old
@@ -7582,9 +7584,11 @@ ghcupDownloads:
             unknown_versioning: *stack-293-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-293-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.9.3/stack-2.9.3-linux-aarch64.tar.gz
               dlHash: 161e1638da9efc56319f7225b3652ca3f339bcda9eadc7d6ce512f325b0f014a
+          Linux_Alpine:
+            unknown_versioning: *stack-293-arm64
     2.11.1:
       viTags:
         - old
@@ -7614,9 +7618,11 @@ ghcupDownloads:
             unknown_versioning: *stack-2111-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2111-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.11.1/stack-2.11.1-linux-aarch64.tar.gz
               dlHash: c7733d07ed78d6f4d82e0ebf6d260eb693c6c9df2208003d60caba69766f9c15
+          Linux_Alpine:
+            unknown_versioning: *stack-2111-arm64
     2.13.1:
       viTags:
         - old
@@ -7650,7 +7656,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2131-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2131-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.13.1/stack-2.13.1-linux-aarch64.tar.gz
               dlHash: 37b1dbf39131eea629a6e3685fd1153fdfd2f0cd2179db92bb33784987b4ddb8
               dlSubdir:
@@ -7661,6 +7667,8 @@ ghcupDownloads:
               dlHash: 18ececd7112b1aad01ab0f88cb68ae63f2dc74aa9b8b5319828979f43cba9907
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2131-arm64
     2.15.1:
       viTags:
         - old
@@ -7694,7 +7702,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2151-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2151-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.15.1/stack-2.15.1-linux-aarch64.tar.gz
               dlHash: 450126245044aa37ea8ba33f70c3c5bad331a3b4d3138f7b7ad0dee2a4ca1613
               dlSubdir:
@@ -7705,6 +7713,8 @@ ghcupDownloads:
               dlHash: ae799042e60ede5ff3113b07f351ee9fd6c7ad38ca7387a2c23316a494256b06
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2151-arm64
     2.15.3:
       viTags:
         - old
@@ -7738,7 +7748,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2153-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2153-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.15.3/stack-2.15.3-linux-aarch64.tar.gz
               dlHash: 1543ca505fded34a665e003b6b380b569cffe0963b0409525d4e50e7c8940726
               dlSubdir:
@@ -7749,6 +7759,8 @@ ghcupDownloads:
               dlHash: 5c58259df44b9f2f1210244b1971ce3c6939325528aaa8be76f1c9652c6aad2f
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2153-arm64
     2.15.5:
       viTags:
         - old
@@ -7782,7 +7794,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2155-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2155-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.15.5/stack-2.15.5-linux-aarch64.tar.gz
               dlHash: 52cd9d9c2ee4dbf2841bba856f5fca15fbf6ba23fced7256aa3f7c8b76381c91
               dlSubdir:
@@ -7793,6 +7805,8 @@ ghcupDownloads:
               dlHash: a239372325bacddae4a8132993abe4424aecb1b88d620099555cfc8b02cdca01
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2155-arm64
     2.15.7:
       viTags: []
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2157---2024-05-12
@@ -7825,7 +7839,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2157-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning:  &stack-2157-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.15.7/stack-2.15.7-linux-aarch64.tar.gz
               dlHash: f0c4b038c7e895902e133a2f4c4c217e03c4be44aa5da48aec9f7947f4af090b
               dlSubdir:
@@ -7836,6 +7850,8 @@ ghcupDownloads:
               dlHash: fc963f041fbe3ddf3ff12271c74334846a583a0714ce808d8a2d2c91de4a3968
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2157-arm64
     3.1.1:
       viTags: []
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v311---2024-07-28
