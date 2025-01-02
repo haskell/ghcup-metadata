@@ -7915,8 +7915,8 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-331-64
         A_ARM64:
-          Linux_UnknownLinux: &stack-331-arm64
-            unknown_versioning:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-331-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.3.1/stack-3.3.1-linux-aarch64.tar.gz
               dlHash: bdd618ea5a9c921417727011f2ecd78987dffa5cee5e741108baf65a9b5b58ab
               dlSubdir:
