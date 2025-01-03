@@ -51,7 +51,7 @@ executable ghcup-gen
     , containers            ^>=0.6
     , deepseq               ^>=1.4 || ^>=1.5
     , filepath               >=1.4.101.0
-    , ghcup                 ^>=0.1.19.0
+    , ghcup                 >=0.1.40.0
     , variant               ^>=1.0
     , libarchive            ^>=3.0.3.0
     , megaparsec            >=8.0.0      && <9.8
