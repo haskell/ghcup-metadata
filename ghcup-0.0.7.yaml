@@ -7619,7 +7619,7 @@ ghcupDownloads:
   Stack:
     2.5.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v251
       viPostInstall: &stack-post |
         Stack manages GHC versions internally by default. To improve integration, please visit:
@@ -7651,7 +7651,7 @@ ghcupDownloads:
             unknown_versioning: *stack-251-64
     2.7.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v271
       viPostInstall: *stack-post
       viArch:
@@ -7678,7 +7678,7 @@ ghcupDownloads:
             unknown_versioning: *stack-271-64
     2.7.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v273
       viPostInstall: *stack-post
       viReleaseDay: 2022-02-02
@@ -7731,7 +7731,7 @@ ghcupDownloads:
               dlHash: 3e22c66ea38525ca2ee5b0d222c8aa193c50152a53ff2c80ae179a40592512fe
     2.7.5:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v275
       viPostInstall: *stack-post
       viArch:
@@ -7783,7 +7783,7 @@ ghcupDownloads:
               dlHash: 8be2342deea5309a32e28a0c5eb341ea9557401f08484676036471250ca12e21
     2.9.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v291
       viPostInstall: *stack-post
       viArch:
@@ -7817,13 +7817,15 @@ ghcupDownloads:
             unknown_versioning: *stack-291-32
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-291-arm64
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.9.1/stack-2.9.1-linux-aarch64.tar.gz
               dlHash: bd9704ff22bceb8de8635e392ab19f49aaa56929be15e1ccbfc511b555164219
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.9.1/stack-2.9.1-osx-aarch64.tar.gz
               dlHash: 632d51877a86235d4300c254e85353166def5b71b394e5db56c25cdf9dee6e98
+          Linux_Alpine:
+            unknown_versioning: *stack-291-arm64
         A_ARM:
           Linux_UnknownLinux:
             unknown_versioning:
@@ -7831,7 +7833,7 @@ ghcupDownloads:
               dlHash: fa53c58d8d00a6d49ec26624aa7f817f5ece3c4df339fa6e4fccf1038b7f1fa5
     2.9.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v293
       viPostInstall: *stack-post
       viArch:
@@ -7869,18 +7871,20 @@ ghcupDownloads:
             unknown_versioning: *stack-293-32
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-293-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.9.3/stack-2.9.3-linux-aarch64.tar.gz
               dlHash: 161e1638da9efc56319f7225b3652ca3f339bcda9eadc7d6ce512f325b0f014a
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-293-arm64
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.9.3/stack-2.9.3-osx-aarch64.tar.gz
               dlHash: a56d2cd37611eccf00ab8df38c3718923cf5677f3aeacd250394e79b676dcb98
     2.11.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2111---2023-05-18
       viPostInstall: *stack-post
       viArch:
@@ -7911,11 +7915,13 @@ ghcupDownloads:
             unknown_versioning: *stack-2111-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2111-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.11.1/stack-2.11.1-linux-aarch64.tar.gz
               dlHash: c7733d07ed78d6f4d82e0ebf6d260eb693c6c9df2208003d60caba69766f9c15
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2111-arm64
           Darwin:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.11.1/stack-2.11.1-osx-aarch64.tar.gz
@@ -7924,7 +7930,7 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     2.13.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2131---2023-09-29
       viPostInstall: *stack-post
       viArch:
@@ -7957,7 +7963,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2131-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2131-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.13.1/stack-2.13.1-linux-aarch64.tar.gz
               dlHash: 37b1dbf39131eea629a6e3685fd1153fdfd2f0cd2179db92bb33784987b4ddb8
               dlSubdir:
@@ -7968,9 +7974,11 @@ ghcupDownloads:
               dlHash: 18ececd7112b1aad01ab0f88cb68ae63f2dc74aa9b8b5319828979f43cba9907
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2131-arm64
     2.15.1:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2151---2024-02-09
       viPostInstall: *stack-post
       viArch:
@@ -8003,7 +8011,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2151-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2151-arm64
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/2.15.1/stack-2.15.1-linux-aarch64.tar.gz
               dlHash: 57f3eb7c28275c53b12e5be7a94af280ab38392db5772379066e88fb114ff041
               dlSubdir:
@@ -8014,9 +8022,11 @@ ghcupDownloads:
               dlHash: 3644a3825124c7275c1e77c609c4ad96f1175083750fea2665c438c5a093c1ec
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2151-arm64
     2.15.3:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2153---2024-03-07
       viPostInstall: *stack-post
       viArch:
@@ -8049,7 +8059,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2153-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2153-arm64
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/2.15.3/stack-2.15.3-linux-aarch64.tar.gz
               dlHash: ce7e2dab7fff39071e43825d577f721f42d25376b31155f981b52623dd1a4983
               dlSubdir:
@@ -8060,9 +8070,11 @@ ghcupDownloads:
               dlHash: 70403629a22f5f4c9b3b87385b3d31a8a035598ec84c81f3c9326d762da04a17
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2153-arm64
     2.15.5:
       viTags:
-        - Old
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v2155---2024-03-28
       viPostInstall: *stack-post
       viArch:
@@ -8095,7 +8107,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2155-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2155-arm64
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/2.15.5/stack-2.15.5-linux-aarch64.tar.gz
               dlHash: 92aaa25efd1e66b354790457451fd4872b583ba82c28bc0f79aafdfddc2f1f80
               dlSubdir:
@@ -8106,6 +8118,8 @@ ghcupDownloads:
               dlHash: 275dea9983b298b421a49aa89cac707375112d7e5e7f9a793e6ff0427c02c36b
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2155-arm64
     2.15.7:
       viTags:
         - Latest
@@ -8142,7 +8156,7 @@ ghcupDownloads:
             unknown_versioning: *stack-2157-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:
+            unknown_versioning: &stack-2157-arm64
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/stack/2.15.7/stack-2.15.7-linux-aarch64.tar.gz
               dlHash: fb15835bc985d3ddb64db9d968bff519e40be5c15d3c75009bb6fab5a3e89bff
               dlSubdir:
@@ -8153,3 +8167,5 @@ ghcupDownloads:
               dlHash: d46149e7f26c5ca53d60fc51a0928e4ccb0561ea380070942b689af0a842f766
               dlSubdir:
                 RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-2157-arm64
