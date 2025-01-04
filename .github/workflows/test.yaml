@@ -9,64 +9,53 @@ on:
 jobs:
   test:
     name: Test metadata
-    runs-on: ${{ matrix.os }}
+    runs-on: [self-hosted, Linux, X64]
     env:
       YAML_VER: 0.0.9
-    strategy:
-      matrix:
-        ghc:
-          - '9.8.4'
-        cabal:
-          - '3.12.1.0'
-        os:
-          - ubuntu-22.04
+      GHC_VER: 9.8.4
+      CABAL_VER: 3.12.1.0
+      CACHE_BUST: 1
+    container:
+      image: rockylinux:9
     steps:
       - name: Checkout code
-        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
+        uses: actions/checkout@v4
 
-      - uses: haskell-actions/setup@ec49483bfc012387b227434aba94f59a6ecd0900 # v2.7.5
+      - name: Disable cabal XDG
+        run: |
+          echo "CABAL_DIR=${GITHUB_WORKSPACE}/.cabal" >> "$GITHUB_ENV"
+
+      - name: Prerequisites
+        run: |
+          export TZ=Asia/Singapore
+          dnf install -y --allowerasing which findutils gcc gcc-c++ gmp gmp-devel make ncurses xz perl curl bash git nodejs zstd pkg-config pip libarchive-devel zlib-devel
+          mkdir -p "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          pip install yamllint
+        shell: bash
+
+      - uses: haskell/ghcup-setup@v1
         with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
+          ghc: ${{ env.GHC_VER }}
+          cabal: ${{ env.CABAL_VER }}
 
       - name: Cache Cabal
-        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # v2.1.7
+        uses: actions/cache@v4
         env:
           cache-name: cache-cabal
         with:
           path: |
-            ~/.cabal/store
-            ~/.cabal/packages
-          key: v2-${{ runner.os }}-${{ matrix.ghc }}-${{ matrix.cabal }}-build-${{ hashFiles('cabal.project') }}
+            .cabal/store
+            .cabal/packages
+          key: v${{ env.CACHE_BUST }}-${{ runner.os }}-${{ env.GHC_VER }}-${{ env.CABAL_VER }}-build-${{ hashFiles('cabal.project') }}
           restore-keys: |
-            v2-${{ runner.os }}-${{ matrix.ghc }}-${{ matrix.cabal }}-build-${{ hashFiles('cabal.project') }}
-            v2-${{ runner.os }}-${{ matrix.ghc }}-${{ matrix.cabal }}-build-
-            v2-${{ runner.os }}-${{ matrix.ghc }}
-
-      - name: create ~/.local/bin
-        run: mkdir -p "$HOME/.local/bin"
-        shell: bash
-
-      - name: Add ~/.local/bin to PATH
-        run: echo "$HOME/.local/bin" >> $GITHUB_PATH
-        shell: bash
-
-      - name: install yamllint
-        run: pip install yamllint
-
-      - name: Update cabal cache
-        run: cabal update
-        shell: bash
-
-      - name: Install some deps
-        run: |
-          export DEBIAN_FRONTEND=noninteractive
-          export TZ=Asia/Singapore
-          sudo apt install -y libarchive-dev
-        shell: bash
+            v${{ env.CACHE_BUST }}-${{ runner.os }}-${{ env.GHC_VER }}-${{ env.CABAL_VER }}-build-${{ hashFiles('cabal.project') }}
+            v${{ env.CACHE_BUST }}-${{ runner.os }}-${{ env.GHC_VER }}-${{ env.CABAL_VER }}-build-
+            v${{ env.CACHE_BUST }}-${{ runner.os }}-${{ env.GHC_VER }}
 
       - name: Install ghcup-gen
         run: |
+          cabal update
           cabal install --installdir="$HOME/.local/bin" --overwrite-policy=always --install-method=copy ghcup-gen
         shell: bash
 
