@@ -206,6 +206,19 @@ toolRequirements:
           - perl
           - pkg-config
           notes: ''
+      Linux_OpenSUSE:
+        unknown_versioning:
+          distroPKGs:
+          - gcc
+          - gcc-c++
+          - libgmp10
+          - gmp-devel
+          - make
+          - ncurses
+          - xz
+          - perl
+          - pkg-config
+          notes: ''
       Linux_Alpine:
         unknown_versioning:
           distroPKGs:
