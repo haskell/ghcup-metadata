@@ -69,6 +69,27 @@ ghcupDownloads:
               dlHash: d5cb272048ac8107504ceadb03e660048a6427b1bd85fac936d53279c978de64
               dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-x86_64-linux-rocky-8.10-2025-01-07-d5cb2720.tar.xz
+          FreeBSD:
+            unknown_versioning:
+              dlHash: 8249de6d38ceb6304d42bdf3abe5735275e34317a9ece7acb5375d3ff1c3b4c2
+              dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-x86_64-freebsd-14.2-RELEASE-2025-01-12-8249de6d.tar.xz
+          Darwin:
+            unknown_versioning:
+              dlHash: 2877606d4c8e1983076447a0af9d8c7f44439ad24b2294eb4f87243862271e53
+              dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-x86_64-darwin-2025-01-12-2877606d.tar.xz
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 8757258cda3f366d2f559a0ec7c000ab338d70f855a2332da53c33d708b2685e
+              dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-aarch64-darwin-2025-01-12-8757258c.tar.xz
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: 25991a4a9881faab1ac301ba1ba6bf1009929c8513235901c6be58b11fa88abf
+              dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-aarch64-linux-rocky-8.9-2025-01-12-25991a4a.tar.xz
     wasm32-wasi-9.6.3.20230927:
       viTags:
       - base-4.18.1.0
