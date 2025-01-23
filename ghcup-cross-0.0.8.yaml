@@ -97,6 +97,8 @@ ghcupDownloads:
       viPreInstall: &old-wasm-pre-install |
         To use this bindist, you need to use the commit c0aa3bb7d88bb6ec809210e17658dd1ed64ba66c of ghc-wasm-meta repository.
         Also see: https://www.haskell.org/ghcup/guide/#ghc-wasm-cross-bindists-experimental
+
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -110,6 +112,8 @@ ghcupDownloads:
     wasm32-wasi-9.6.4:
       viTags:
       - base-4.18.2.0
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -137,6 +141,8 @@ ghcupDownloads:
     wasm32-wasi-9.8.1:
       viTags:
       - base-4.19.0.0
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -150,6 +156,8 @@ ghcupDownloads:
     wasm32-wasi-9.10.0.20240313:
       viTags:
       - base-4.20.0.0
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -163,6 +171,8 @@ ghcupDownloads:
     wasm32-wasi-9.10.0.20240412:
       viTags:
       - base-4.20.0.0
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -176,6 +186,8 @@ ghcupDownloads:
     wasm32-wasi-9.10.1:
       viTags:
       - base-4.20.0.0
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -190,6 +202,8 @@ ghcupDownloads:
       viTags:
       - base-4.20.0.0
       - TH-support
+      viPreInstall: |
+        Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
           Linux_UnknownLinux:
