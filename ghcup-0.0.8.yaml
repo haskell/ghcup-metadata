@@ -8788,8 +8788,7 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-2157-arm64
     3.1.1:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v311---2024-07-28
       viPostInstall: *stack-post
       viArch:
@@ -8838,6 +8837,7 @@ ghcupDownloads:
     3.3.1:
       viTags:
         - Latest
+        - Recommended
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v331---2024-12-28
       viPostInstall: *stack-post
       viArch:
