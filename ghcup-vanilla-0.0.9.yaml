@@ -4808,6 +4808,7 @@ ghcupDownloads:
         dlUri: https://downloads.haskell.org/~ghc/9.10.1/ghc-9.10.1-src.tar.xz
       viTags:
       - base-4.20.0.0
+      - Recommended
       viTestDL:
         dlHash: bc03b1ec1f843bb5471003678f3d8de6d6625ee6a67db8c6cc2efaaea55206e1
         dlSubdir: ghc-9.10.1/testsuite
@@ -4941,7 +4942,6 @@ ghcupDownloads:
         dlUri: https://downloads.haskell.org/~ghc/9.12.1/ghc-9.12.1-src.tar.xz
       viTags:
       - Latest
-      - Recommended
       - base-4.21.0.0
       viTestDL:
         dlHash: c6f1503dd0dc392285f9da7371822ce4ec42d1af96c7802669e0c220462460c5
