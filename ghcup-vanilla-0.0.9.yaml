@@ -4814,6 +4814,11 @@ ghcupDownloads:
         dlSubdir: ghc-9.10.1/testsuite
         dlUri: https://downloads.haskell.org/~ghc/9.10.1/ghc-9.10.1-testsuite.tar.xz
     9.12.1:
+      viPreInstall: &ghc-bug-25653 |
+        !!! This release is considered broken due to a correctness bug affecting sub-word division !!!
+        !!! See https://gitlab.haskell.org/ghc/ghc/-/issues/25653 !!!
+        !!! Please update to 9.12.2 !!!
+      viPostInstall: *ghc-bug-25653
       viArch:
         A_32:
           Linux_Debian:
