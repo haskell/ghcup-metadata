@@ -92,6 +92,7 @@ generateHLSGhc format output = do
                       , UnknownArchive
                       , ArchiveResult
                       , ContentLengthError
+                      , URIParseError
                       ] $ do
                fp <- liftE $ downloadCached dli Nothing
                let subd = _dlSubdir dli

@@ -15,6 +15,7 @@ import           GHCup.Errors
 import           GHCup.Types
 import           GHCup.Types.Optics
 import           GHCup.Utils
+import           GHCup.Prelude (lE)
 import           GHCup.Prelude.Logger
 import           GHCup.Prelude.Version.QQ
 
@@ -267,12 +268,14 @@ validateTarballs (TarballFilter mtool versionRegex) = do
                , UnknownArchive
                , ArchiveResult
                , ContentLengthError
+               , URIParseError
                ]
       $ do
         case mtool of
           (Just GHCup) -> do
             tmpUnpack <- lift mkGhcupTmpDir
-            _ <- liftE $ download (_dlUri dli) Nothing (Just (_dlHash dli)) Nothing (fromGHCupPath tmpUnpack) Nothing False
+            dlu <- lE $ parseURI' (_dlUri dli)
+            _ <- liftE $ download dlu Nothing (Just (_dlHash dli)) Nothing (fromGHCupPath tmpUnpack) Nothing False
             pure Nothing
           _ -> do
             p <- liftE $ downloadCached dli Nothing
