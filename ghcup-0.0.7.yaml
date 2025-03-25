@@ -5695,53 +5695,53 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.12.1.0/cabal-install-3.12.1.0-armv7-linux-deb10.tar.xz
               dlHash: 40faab60fd03bb75c1651fb9255f715336087d5ad79f9e502df824ca339b45db
   GHCup:
-    0.1.50.0:
+    0.1.50.1:
       viTags:
       - Recommended
       - Latest
       viChangeLog: https://github.com/haskell/ghcup-hs/blob/master/CHANGELOG.md
       viSourceDL:
-        dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/ghcup-0.1.50.0-src.tar.gz
-        dlSubdir: ghcup-0.1.50.0
-        dlHash: f2433409c8e25106f0f5c1acc65fd0e86fe74ce922d8d4d54d1046b00ab781c1
+        dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/ghcup-0.1.50.1-src.tar.gz
+        dlSubdir: ghcup-0.1.50.1
+        dlHash: 9066402b96efa588eeee3a4a03ea30c23aa11b645547245fee5804ed770e4f96
       viArch:
         A_64:
           Linux_UnknownLinux:
             unknown_versioning: &ghcup-64
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/x86_64-linux-ghcup-0.1.50.0
-              dlHash: 1e4b9e1814ff0542c8d6cc6a16884098dcbdc7bc8e6007156b35e879015d7b79
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/x86_64-linux-ghcup-0.1.50.1
+              dlHash: b3486feede578fecb04275a45d8187088c3fdc596d6f40aab214c215eabdb223
           Darwin:
             unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/x86_64-apple-darwin-ghcup-0.1.50.0
-              dlHash: 66f61ea5d0c6bd92cde891b1baff813a8901946c22a294d61c5e1008d979ba7a
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/x86_64-apple-darwin-ghcup-0.1.50.1
+              dlHash: 9b394452a8b3bfef48eaae7c7f904cbcb0202fe7067156882d4d7e7d02603074
           FreeBSD:
             unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/x86_64-portbld-freebsd-ghcup-0.1.50.0
-              dlHash: e2d00bd92971a3730fdcb1d0a64a013d114d68d96d90278fb1ce2f300b80f466
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/x86_64-portbld-freebsd-ghcup-0.1.50.1
+              dlHash: 943a231eb37eda542390b2f69623a5541885ad63fddd391da351451444322933
           Windows:
             unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/x86_64-mingw64-ghcup-0.1.50.0.exe
-              dlHash: 3cc015b88223330118cb529428469cd70e03f098abd79d252bd0b59f24836d83
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/x86_64-mingw64-ghcup-0.1.50.1.exe
+              dlHash: 6945ecd1740903269392969894d64dcccc1586d3d883cfed6ec2a586c016877f
           Linux_Alpine:
             unknown_versioning: *ghcup-64
         A_32:
           Linux_UnknownLinux:
             unknown_versioning: &ghcup-32
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/i386-linux-ghcup-0.1.50.0
-              dlHash: 898123e70f8cf76682862cc45d8f965a413be8e4199f85b28eec8a394de90bb4
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/i386-linux-ghcup-0.1.50.1
+              dlHash: c266ee62acb85091acbbe6a05f588ef05f8275279f98aa0c6deea26cbff86aa0
           Linux_Alpine:
             unknown_versioning: *ghcup-32
         A_ARM64:
           Linux_UnknownLinux:
             unknown_versioning: &ghcup-aarch64
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/aarch64-linux-ghcup-0.1.50.0
-              dlHash: b6ed742e27e0c4f8b9f9256d1433e8e98e584233874b2c86ddb4ddfd3de8a727
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/aarch64-linux-ghcup-0.1.50.1
+              dlHash: 877a1b66b94d00235e4d645c6fe0de26c0661a0b897cc4d2a2cf98fba74afe65
           Linux_Alpine:
             unknown_versioning: *ghcup-aarch64
           Darwin:
             unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.0/aarch64-apple-darwin-ghcup-0.1.50.0
-              dlHash: 60e5fdab8c9b5fbeae028dad81fc3ae767167711b9cc085c9622de91797c100b
+              dlUri: https://downloads.haskell.org/~ghcup/0.1.50.1/aarch64-apple-darwin-ghcup-0.1.50.1
+              dlHash: 8f3cbe9e276637d014d1abc08c659154a9a1846ab2f940e1dba648274cade444
   HLS:
     1.1.0:
       viTags:
