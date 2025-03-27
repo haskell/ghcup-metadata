@@ -4232,7 +4232,6 @@ ghcupDownloads:
           Linux_Debian:
             <10: &ghc967-i386-linux-deb9
               dlHash: a1f59f25d6f1accf3bb521d6b623c8a062313baaa1679dd304437bbc381dce51
-              dlOutput: ghc-9.6.7-i386-linux-deb9.tar.xz
               dlSubdir: ghc-9.6.7-i386-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.6.7/ghc-9.6.7-i386-deb9-linux.tar.xz
             unknown_versioning: *ghc967-i386-linux-deb9
