@@ -4584,9 +4584,9 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.7/ghc-9.6.7-x86_64-ubuntu20_04-linux.tar.xz
           FreeBSD:
             '>= 14': &ghc-967-64-freebsd14
-              dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/9.6.7/ghc-9.6.7-x86_64-portbld-freebsd.tar.xz
+              dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/ghc/9.6.7/ghc-9.6.7-r2-x86_64-portbld-freebsd.tar.xz
               dlSubdir: ghc-9.6.7-x86_64-portbld-freebsd
-              dlHash: 7eec94be4cc96b5d3ae927cdb7b9f5c5af39985fb7325dcac7052341ada2d92c
+              dlHash: 0b21b0cc0c69b2a11c984b6a1e86839c06d2b2ceedb6f68138f699f134777736
             unknown_versioning: *ghc-967-64-freebsd14
           Linux_RedHat:
             < 9: *ghc-967-64-centos7
@@ -5374,9 +5374,9 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.12.2/ghc-9.12.2-x86_64-unknown-mingw32.tar.xz
           FreeBSD:
             unknown_versioning:
-              dlHash: 168fc7a6dffa8231aa6b84c7bc5e37af6082486f6c97b8ffecaca02bd873f8ba
+              dlHash: bdbcdc5e2b6b8c53f0c1ee51587d217e02d74f71855a7bccdd509872ddfd23a2
               dlSubdir: ghc-9.12.2-x86_64-portbld-freebsd
-              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/9.12.2/ghc-9.12.2-x86_64-portbld-freebsd.tar.xz
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/9.12.2/ghc-9.12.2-r2-x86_64-portbld-freebsd.tar.xz
         A_ARM64:
           Darwin:
             unknown_versioning:
