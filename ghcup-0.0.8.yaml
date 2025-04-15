@@ -3737,7 +3737,6 @@ ghcupDownloads:
     9.4.8:
       viTags:
       - base-4.17.2.1
-      - Recommended
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.8/docs/users_guide/9.4.8-notes.html
       viSourceDL:
         dlUri: https://downloads.haskell.org/~ghc/9.4.8/ghc-9.4.8-src.tar.xz
@@ -4493,6 +4492,7 @@ ghcupDownloads:
     9.6.7:
       viTags:
       - base-4.18.3.0
+      - Recommended
       viTestDL:
         dlHash: c9b78315c924fcced2cc99e9bc8c6e91fcbb7e0aedfdd10246a91e663f21b5c0
         dlSubdir: ghc-9.6.7/testsuite
@@ -8606,8 +8606,7 @@ ghcupDownloads:
               dlSubdir: haskell-language-server-2.9.0.0
               dlHash: 36339f20c12bf54aa4a55c2d0e706a0d41ebdc20780ab5a4b890ad8f019dae16
     2.9.0.1:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
       viPostInstall: *hls-post-install
       viSourceDL:
@@ -8706,6 +8705,7 @@ ghcupDownloads:
     2.10.0.0:
       viTags:
         - Latest
+        - Recommended
       viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
       viPostInstall: *hls-post-install
       viSourceDL:
