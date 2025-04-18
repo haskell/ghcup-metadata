@@ -2680,7 +2680,8 @@ ghcupDownloads:
         dlSubdir: ghc-9.12.0.20241128
         dlUri: https://downloads.haskell.org/~ghc/9.12.0.20241128/ghc-9.12.0.20241128-src.tar.xz
       viTags:
-      - LatestPrerelease
+      - old
+      - Prerelease
       - base-4.21.0.0
       viTestDL:
         dlHash: 633dc6537832480434d4ce64f126b7147c3de8b568e78a7e5dbcf65f85aa005c
