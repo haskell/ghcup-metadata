@@ -2931,7 +2931,7 @@ ghcupDownloads:
               dlSubdir: ghc-9.10.1.20250417-aarch64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.10.1.20250417/ghc-9.10.1.20250417-x86_64-alpine3_18-linux.tar.xz
           Linux_Debian:
-            ( >= 10 && < 11 ): &ghc9102rc1-x86_64-deb10
+            ( >= 10 && < 11 ): &ghc9102rc1-aarch64-deb10
               dlHash: 842dd35e2cde6e266c9867b517c5b4124329724a28d76c73c403f4f04e1e7211
               dlSubdir: ghc-9.10.1.20250417-aarch64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.10.1.20250417/ghc-9.10.1.20250417-aarch64-deb10-linux.tar.xz
@@ -2939,9 +2939,9 @@ ghcupDownloads:
               dlHash: 5fa9c167d5bad469fdf2d10c880faf8bad2e2643bdb1836e4473368de35df44f
               dlSubdir: ghc-9.10.1.20250417-aarch64-unknown-linux
               dlUri: https://downloads.haskell.org/~ghc/9.10.1.20250417/ghc-9.10.1.20250417-aarch64-deb11-linux.tar.xz
-            unknown_versioning: *ghc9102rc1-x86_64-deb10
+            unknown_versioning: *ghc9102rc1-aarch64-deb10
           Linux_UnknownLinux:
-            unknown_versioning: *ghc9102rc1-x86_64-deb10
+            unknown_versioning: *ghc9102rc1-aarch64-deb10
       viChangeLog: https://downloads.haskell.org/~ghc/9.10.1.20250417/docs/users_guide/9.10.2-notes.html
       viReleaseDay: '2025-04-17'
       viSourceDL:
