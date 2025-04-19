@@ -1,8 +1,4 @@
 ---
-globalTools:
-  ShimGen:
-    dlUri: https://downloads.haskell.org/~ghcup/shimgen/shim-2.exe
-    dlHash: 7c55e201f71860c5babea886007c8fa44b861abf50d1c07e5677eb0bda387a70
 toolRequirements: {}
 ghcupDownloads:
   GHC:
@@ -111,7 +107,7 @@ ghcupDownloads:
     wasm32-wasi-9.6.4:
       viTags:
       - base-4.18.2.0
-      viPreInstall: |
+      viPreInstall: &wasm-pre-install |
         Note that WASM is a technology preview and is not in sync with GHC release branches.
       viArch:
         A_64:
@@ -140,8 +136,7 @@ ghcupDownloads:
     wasm32-wasi-9.8.1:
       viTags:
       - base-4.19.0.0
-      viPreInstall: |
-        Note that WASM is a technology preview and is not in sync with GHC release branches.
+      viPreInstall: *wasm-pre-install
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -155,8 +150,7 @@ ghcupDownloads:
     wasm32-wasi-9.10.0.20240313:
       viTags:
       - base-4.20.0.0
-      viPreInstall: |
-        Note that WASM is a technology preview and is not in sync with GHC release branches.
+      viPreInstall: *wasm-pre-install
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -170,8 +164,7 @@ ghcupDownloads:
     wasm32-wasi-9.10.0.20240412:
       viTags:
       - base-4.20.0.0
-      viPreInstall: |
-        Note that WASM is a technology preview and is not in sync with GHC release branches.
+      viPreInstall: *wasm-pre-install
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -185,8 +178,7 @@ ghcupDownloads:
     wasm32-wasi-9.10.1:
       viTags:
       - base-4.20.0.0
-      viPreInstall: |
-        Note that WASM is a technology preview and is not in sync with GHC release branches.
+      viPreInstall: *wasm-pre-install
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -201,8 +193,7 @@ ghcupDownloads:
       viTags:
       - base-4.20.0.0
       - TH-support
-      viPreInstall: |
-        Note that WASM is a technology preview and is not in sync with GHC release branches.
+      viPreInstall: *wasm-pre-install
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -213,3 +204,31 @@ ghcupDownloads:
               dlOutput: ghc-9.10.1.20241021-x86_64-linux-alpine3_20-wasm-cross_wasm32-wasi-release+host_fully_static.tar.xz
           Linux_Alpine:
             unknown_versioning: *ghc-wasm32-wasi-9101-th-64-static
+    wasm32-wasi-9.12.2.20250327:
+      viTags:
+      - base-4.21.0.0
+      - TH-support
+      viPreInstall: *wasm-pre-install
+      viArch:
+        A_64:
+          Linux_UnknownLinux: &ghc-wasm32-wasi-9_12_2_20250327-th-64-static
+            unknown_versioning:
+              dlHash: 410cf532da919b6277c814f82c5631722d5ff85bf1b1019dcd2572a0c4ceb193
+              dlSubdir: ghc-9.12.2.20250327-wasm32-wasi
+              dlUri: 'https://github.com/haskell-wasm/ghc-wasm-bindists/releases/download/20250327T193751/wasm32-wasi-ghc-9.12.tar.xz'
+              dlOutput: ghc-9.12.2.20250327-x86_64-linux-unknown-wasm32-wasi.tar.xz
+          Linux_Alpine: *ghc-wasm32-wasi-9_12_2_20250327-th-64-static
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 369e9e841d00fc4341b014b5df05806f82097e5b37fdef0b19fc407c0af0e2ee
+              dlSubdir: ghc-9.12.2.20250327-wasm32-wasi
+              dlUri: 'https://github.com/haskell-wasm/ghc-wasm-bindists/releases/download/20250327T193751/wasm32-wasi-ghc-gmp-aarch64-darwin-9.12.tar.xz'
+              dlOutput: ghc-9.12.2.20250327-arm64-darwin-wasm32-wasi.tar.xz
+          Linux_UnknownLinux: &ghc-wasm32-wasi-9_12_2_20250327-th-arm64-static
+            unknown_versioning:
+              dlHash: adbab74774e589a124ec56032bcf270c30b60c0aa3c5994f1aa3726015bf5ecf
+              dlSubdir: ghc-9.12.2.20250327-wasm32-wasi
+              dlUri: 'https://github.com/haskell-wasm/ghc-wasm-bindists/releases/download/20250327T193751/wasm32-wasi-ghc-gmp-aarch64-linux-9.12.tar.xz'
+              dlOutput: ghc-9.12.2.20250327-arm64-linux-unknown-wasm32-wasi.tar.xz
+          Linux_Alpine: *ghc-wasm32-wasi-9_12_2_20250327-th-arm64-static
