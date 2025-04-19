@@ -1,8 +1,4 @@
 ---
-globalTools:
-  ShimGen:
-    dlUri: https://downloads.haskell.org/~ghcup/shimgen/shim-2.exe
-    dlHash: 7c55e201f71860c5babea886007c8fa44b861abf50d1c07e5677eb0bda387a70
 toolRequirements:
   GHC:
     unknown_version:
