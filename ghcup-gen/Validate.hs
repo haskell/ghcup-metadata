@@ -233,7 +233,7 @@ validateTarballs (TarballFilter mtool versionRegex) = do
 
    -- download/verify all tarballs
   let dlis = nubOrd $ dls ^.. each %& indices (maybe (const True) (==) mtool)
-                    %> each %& indices (matchTest versionRegex . T.unpack . prettyVer . _tvVersion)
+                    %> each %& indices (matchTest versionRegex . T.unpack . tVerToText)
                     % (viTestDL % _Just `summing` viSourceDL % _Just `summing` viArch % to unMapIgnoreUnknownKeys % each % to unMapIgnoreUnknownKeys % each % each)
   when (null dlis) $ logError "no tarballs selected by filter" *> runReaderT addError ref
   forM_ dlis (downloadAll ref)
