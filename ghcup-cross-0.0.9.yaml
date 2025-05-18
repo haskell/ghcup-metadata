@@ -86,6 +86,40 @@ ghcupDownloads:
               dlHash: 25991a4a9881faab1ac301ba1ba6bf1009929c8513235901c6be58b11fa88abf
               dlSubdir: ghc-9.12.1-javascript-unknown-ghcjs
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.1/ghc-javascript-unknown-ghcjs-9.12.1-aarch64-linux-rocky-8.9-2025-01-12-25991a4a.tar.xz
+    javascript-unknown-ghcjs-9.12.2:
+      viPreInstall: |
+        To use this bindist, you have to use emscripten version 3.1.74
+        Also see: https://www.haskell.org/ghcup/guide/#ghc-js-cross-bindists-experimental
+      viTags:
+      - base-4.21.0.0
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: 953bc9e76583ada1be8f05a33954227a9e16525e3d456d55de33d8d7d517deb5
+              dlSubdir: ghc-9.12.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.2/ghc-javascript-unknown-ghcjs-9.12.2-x86_64-linux-rocky-8.tar.xz
+          FreeBSD:
+            unknown_versioning:
+              dlHash: 50a734055dec06601fe9db740397aea963d3e246f3677890f66293121b184b50
+              dlSubdir: ghc-9.12.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.2/ghc-javascript-unknown-ghcjs-9.12.2-x86_64-freebsd-14.2.tar.xz
+          Darwin:
+            unknown_versioning:
+              dlHash: d3c1abb6db4008b8ad247763b996cd79f49483369286fb2040c069c86e14bfee
+              dlSubdir: ghc-9.12.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.2/ghc-javascript-unknown-ghcjs-9.12.2-x86_64-darwin.tar.xz
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 7807dd0a84f9fba12ee4e9cded3dccba3704090d64cc37bae65e9723e50cd500
+              dlSubdir: ghc-9.12.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.2/ghc-javascript-unknown-ghcjs-9.12.2-aarch64-darwin.tar.xz
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: 681e71b9fdaa3a1a142a91bcae61c226dc83cac1fad764fe718bf8c63feb78ca
+              dlSubdir: ghc-9.12.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.12.2/ghc-javascript-unknown-ghcjs-9.12.2-aarch64-linux-rocky-8.tar.xz
     wasm32-wasi-9.6.3.20230927:
       viTags:
       - base-4.18.1.0
