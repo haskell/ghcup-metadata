@@ -23,6 +23,35 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.6.2/ghc-javascript-unknown-ghcjs-9.6.2-aarch64-apple-darwin.tar.xz
               dlHash: 0d65bb3940a820d95b4b33ea0cd61bf39670d48c4d8f747153ded01a7ef34821
               dlSubdir: ghc-9.6.2-javascript-unknown-ghcjs
+    javascript-unknown-ghcjs-9.6.7:
+      viPreInstall: |
+        To use this bindist, you have to use emscripten version 3.1.74
+        Also see: https://www.haskell.org/ghcup/guide/#ghc-js-cross-bindists-experimental
+      viTags:
+      - base-4.18.3.0
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: efc47c6f9f19a48ea2f7eb2f1921524e7c165630b943f452fc3ca14aca56ad3b
+              dlSubdir: ghc-9.6.7-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.6.7/ghc-javascript-unknown-ghcjs-9.6.7-x86_64-linux-rocky-8.10.tar.xz
+          Darwin:
+            unknown_versioning:
+              dlHash: 3a3544a0452dda81b93152d6269aca34e8895b0753bec607c51f0f420330517c
+              dlSubdir: ghc-9.6.7-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.6.7/ghc-javascript-unknown-ghcjs-9.6.7-x86_64-darwin.tar.xz
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 9d7ce22ee821ca052a830cbe66cbf6d5577f3bffca5b4be9963ca5e7588176bf
+              dlSubdir: ghc-9.6.7-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.6.7/ghc-javascript-unknown-ghcjs-9.6.7-aarch64-darwin.tar.xz
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: 7d4127a38f3b93c0591997285d347f34dbeba1314f0270714c2a2bc747e11663
+              dlSubdir: ghc-9.6.7-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.6.7/ghc-javascript-unknown-ghcjs-9.6.7-aarch64-linux-rocky-8.10.tar.xz
     javascript-unknown-ghcjs-9.10.0.20240413:
       viPreInstall: |
         To use this bindist, you have to use emscripten version 3.1.57
@@ -52,6 +81,40 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.0.20240413/ghc-javascript-unknown-ghcjs-9.10.0.20240413-aarch64-linux-debian-12-2024-04-16-5f63452c.tar.xz
               dlSubdir: ghc-9.10.0.20240413-javascript-unknown-ghcjs
               dlHash: 5f63452c8bee2fcc1282645158bcd20bae7ff93181f3e5d5dc8b2aa8d15f4696
+    javascript-unknown-ghcjs-9.10.2:
+      viPreInstall: |
+        To use this bindist, you have to use emscripten version 3.1.74
+        Also see: https://www.haskell.org/ghcup/guide/#ghc-js-cross-bindists-experimental
+      viTags:
+      - base-4.20.1.0
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: d27b81bcecdb7474ecfbc22b1e6b1d69c5b2b11615be6924545e66f54a71f8a5
+              dlSubdir: ghc-9.10.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.2/ghc-javascript-unknown-ghcjs-9.10.2-x86_64-linux-rocky-8.10.tar.xz
+          FreeBSD:
+            unknown_versioning:
+              dlHash: 2afcf41dfd5d1fd895d458ded7db6c5c31d4fef3474bbbcf1069ee5b7170cb19
+              dlSubdir: ghc-9.10.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.2/ghc-javascript-unknown-ghcjs-9.10.2-x86_64-freebsd-14.2-RELEASE.tar.xz
+          Darwin:
+            unknown_versioning:
+              dlHash: 8499e5ea97edd95f373cff2b56db875685616c84db4031992721c7fb26b84dfe
+              dlSubdir: ghc-9.10.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.2/ghc-javascript-unknown-ghcjs-9.10.2-x86_64-darwin.tar.xz
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 27acded8f6efe09bd37bfa2bbf001c3661421cdc271ca3fc8dcc4a320bfe71a8
+              dlSubdir: ghc-9.10.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.2/ghc-javascript-unknown-ghcjs-9.10.2-aarch64-darwin.tar.xz
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlHash: 9cc3acbe0742e1ea60c83a716e8e94b7097344d6901a6bb31987ff9e9234590b
+              dlSubdir: ghc-9.10.2-javascript-unknown-ghcjs
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/ghc/javascript-unknown-ghcjs-9.10.2/ghc-javascript-unknown-ghcjs-9.10.2-aarch64-linux-rocky-8.10.tar.xz
     javascript-unknown-ghcjs-9.12.1:
       viPreInstall: |
         To use this bindist, you have to use emscripten version 3.1.74
