@@ -5229,13 +5229,13 @@ ghcupDownloads:
             unknown_versioning: *ghc-9102-aarch64-deb10
       viChangeLog: https://downloads.haskell.org/~ghc/9.10.2/docs/users_guide/9.10.2-notes.html
       viSourceDL:
-        dlHash: bf386a302d4ee054791ffd51748900f15d71760fd199157922d120cc1f89e2f7
+        dlHash: 55fd40a005575ac6b33ea928beda81e8c56ffea354b6ac474ee9f9911f23a8de
         dlSubdir: ghc-9.10.2
         dlUri: https://downloads.haskell.org/~ghc/9.10.2/ghc-9.10.2-src.tar.xz
       viTags:
       - base-4.20.1.0
       viTestDL:
-        dlHash: bc03b1ec1f843bb5471003678f3d8de6d6625ee6a67db8c6cc2efaaea55206e1
+        dlHash: 9dcbee5ec42097d937be666e7d2179fce7119282b8f8cc60d286c9f108737190
         dlSubdir: ghc-9.10.2/testsuite
         dlUri: https://downloads.haskell.org/~ghc/9.10.2/ghc-9.10.2-testsuite.tar.xz
     9.12.1:
