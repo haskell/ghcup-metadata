@@ -18,14 +18,14 @@ on architecture (e.g. X86_64), platform (e.g Linux) and possibly distro (e.g. Fe
 If you want access to both pre-releases and cross compilers, run:
 
 ```
-ghcup config add-release-channel https://raw.githubusercontent.com/haskell/ghcup-metadata/master/ghcup-prereleases-0.0.7.yaml
-ghcup config add-release-channel https://raw.githubusercontent.com/haskell/ghcup-metadata/master/ghcup-cross-0.0.8.yaml
+ghcup config add-release-channel prereleases
+ghcup config add-release-channel cross
 ```
 
 If you want **only** vanilla upstream bindists and opt out of all unofficial stuff, you'd run:
 
 ```sh
-ghcup config set url-source https://raw.githubusercontent.com/haskell/ghcup-metadata/master/ghcup-vanilla-0.0.8.yaml
+ghcup config set url-source vanilla
 ```
 
 Also check the [config.yaml documentation](https://github.com/haskell/ghcup-hs/blob/master/data/config.yaml).
