@@ -21,7 +21,7 @@ toolRequirements:
           - libtinfo5
           - pkg-config
           notes: ''
-        ">= 12":
+        "( >= 12 && < 13 )":
           distroPKGs:
           - build-essential
           - curl
@@ -32,6 +32,19 @@ toolRequirements:
           - libncurses-dev
           - libncurses5
           - libtinfo5
+          - pkg-config
+          notes: ''
+        ">= 13":
+          distroPKGs:
+          - build-essential
+          - curl
+          - libffi-dev
+          - libffi8
+          - libgmp-dev
+          - libgmp10
+          - libncurses-dev
+          - libncurses6
+          - libtinfo6
           - pkg-config
           notes: ''
         unknown_versioning:
