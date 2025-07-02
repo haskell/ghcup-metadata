@@ -3307,7 +3307,8 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
     3.5.0.1:
       viTags:
-        - LatestPrerelease
+        - Prerelease
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.5/ChangeLog.md#v3501-release-candidate---2025-03-15
       viArch:
         A_64:
@@ -3346,4 +3347,45 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
           Linux_Alpine:
             unknown_versioning: *stack-3501-arm64
+    3.7.0.1:
+      viTags:
+        - LatestPrerelease
+      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.7/ChangeLog.md#v3701-release-candidate---2025-06-15
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-3701-64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.7.0.1/stack-3.7.0.1-linux-x86_64.tar.gz
+              dlHash: 209a15e501dc51cfffa501a7009e567dd663974e9bb53f3dd0374dfeeeb12e21
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.7.0.1/stack-3.7.0.1-osx-x86_64.tar.gz
+              dlHash: c0ac8c293476e202c65d1c07b9014cf78b02ac609a5cceac3680e1351ae46e9b
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.7.0.1/stack-3.7.0.1-windows-x86_64.tar.gz
+              dlHash: ba36531cf371ca7fffaafecceb70cff9e531e69a75ac604a8eeabe71dbf35061
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-3701-64
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-3701-arm64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.7.0.1/stack-3.7.0.1-linux-aarch64.tar.gz
+              dlHash: f53ced1da915ce6ada4fd189e2e2b5ec9a52c55a248c9da9e3a3d82150e8add4
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.7.0.1/stack-3.7.0.1-osx-aarch64.tar.gz
+              dlHash: 20ed7d1ff63375e1ebe92b82c9b361bfe9f37c5796916f16f275646fa641f319
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-3701-arm64
 # Bec
