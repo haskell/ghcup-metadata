@@ -43,9 +43,6 @@ jobs:
           - image: alpine:latest
             installCmd: apk update && apk add
             toolRequirements: binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz
-          - image: debian:10
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
           - image: debian:11
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
@@ -71,6 +68,9 @@ jobs:
             installCmd: dnf install -y
             toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
           - image: fedora:40
+            installCmd: dnf install -y
+            toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
+          - image: fedora:42
             installCmd: dnf install -y
             toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
           - image: rockylinux:8
@@ -121,9 +121,6 @@ jobs:
           - image: i386/alpine:latest
             installCmd: apk update && apk add
             toolRequirements: binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz
-          - image: i386/debian:10
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
           - image: i386/debian:11
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
