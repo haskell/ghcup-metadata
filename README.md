@@ -13,6 +13,8 @@ on architecture (e.g. X86_64), platform (e.g Linux) and possibly distro (e.g. Fe
 * `ghcup-prereleases-A.B.C.yaml`: this contains pre-releases of all tools
 * `ghcup-cross-A.B.C.yaml`: this contains experimental cross compilers. See https://www.haskell.org/ghcup/guide/#cross-support for details.
 
+For use with the latest version of `ghcup`, pick the latest `A.B.C` versions of these metadata files.
+
 ### Using the metadata
 
 If you want access to both pre-releases and cross compilers, run:
