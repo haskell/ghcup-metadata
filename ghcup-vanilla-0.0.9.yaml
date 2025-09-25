@@ -8326,9 +8326,7 @@ ghcupDownloads:
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 83aa6a9aabb4553df4621bc263d8aff40d84b91224edb7ab5c88cab340219d8a
     2.11.0.0:
-      viTags:
-        - Latest
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
       viPostInstall: *hls-post-install
       viSourceDL:
@@ -8421,6 +8419,101 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.11.0.0/haskell-language-server-2.11.0.0-aarch64-apple-darwin.tar.xz
               dlSubdir: haskell-language-server-2.11.0.0
               dlHash: f96ce6b7e8478907d486cfc001dc2571beb289dde4b892dc072e9370f2d35104
+    2.12.0.0:
+      viTags:
+        - Latest
+        - Recommended
+      viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
+      viPostInstall: *hls-post-install
+      viSourceDL:
+        dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-src.tar.gz
+        dlSubdir: haskell-language-server-2.12.0.0
+        dlHash: eeb1f8edac25602fbd63db6bac399d4aabecf47db25a2e30596aa646630b87b9
+      viArch:
+        A_64:
+            '< 11': &hls-21200-64-deb10
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb10.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 5903880619f3fb04c76d0070dacc47d477d65624eb4b2498af087156ad0696f4
+            '(>= 11 && < 12)': &hls-21200-64-deb11
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb11.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 969e004653b79b52e61e15e07860747ef992f63948f52ffb7b5bcad55f35f9dd
+            '>= 12': &hls-21200-64-deb12
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb12.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 70db0087446d24d97686d39998827bb6b8d4bfb1dde4f040b1acbc0814188edd
+            '>= 13': &hls-21200-64-deb13
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb13.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 323843a517cf6b08482572b2fbdd955ddadc54bd2d2949d44114a0ad08dc7a07
+            unknown_versioning: &hls-21200-64-deb11
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb11.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 969e004653b79b52e61e15e07860747ef992f63948f52ffb7b5bcad55f35f9dd
+          Linux_Ubuntu:
+            '( >= 16 && < 19 )': &hls-21200-64-ubuntu18
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-ubuntu1804.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: d1bdfdfaf1d7f98da642e0e44c472d6b9d8ca4074fc4b0950349c487d1cad441
+            '( >= 20 && < 22 )': &hls-21200-64-ubuntu20
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-ubuntu2004.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 3fb7fe4b9bee3f45300d5c1ef64c4b53f2a9aa87878587f33100dbab2566ca1e
+            unknown_versioning: &hls-21200-64-ubuntu22
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-ubuntu2204.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: ce097b7ceebd5ab5465eae41f50551cb3b12cee5483832cd1b69d1b6df0411bd
+          Linux_Mint:
+            '< 20':
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-mint193.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 97cc0551ff634d7ee0fe4d80ef3e64c3eb216765883dd3334c515817c791ca1e
+            '(>= 20 && < 21)':
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-mint202.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 908ce0bf7f57c210eaa327e8179e0b25f897a223bd184323b86dbcf315b22b86
+            '>= 21':
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-mint213.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 6a97fd88cf9ddcb99bd1498146c18c22fe3b7a2f663de493eaa963546c581595
+          Linux_Fedora:
+            '(>= 33 && < 40)': &hls-21200-64-fedora33
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-fedora33.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 7dfba6528e042861691bc610c6a1ef6d032779a7716bcf75aece9b6de02fe489
+            '>= 40': &hls-21200-64-fedora40
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-fedora40.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: a17d58e3915d370571c208f5df1ee7f48749a7d3bebc647e3447f94bed6f5337
+            unknown_versioning: *hls-21200-64-unknown
+          Linux_UnknownLinux:
+            unknown_versioning: &hls-21200-64-unknown
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-unknown.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: a8ddd99463013913bf82bc06559f636757acd378272185a79ae6b741f175deb1
+          Linux_RedHat:
+            unknown_versioning: *hls-21200-64-unknown
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-apple-darwin.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: 10f977c0a3748b4d4f92ecc2ee795f837e9edbe1b8242cf4a335517f078ef14d
+          Windows:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-mingw64.zip
+              dlHash: 898d72d48c88d3967ac125a6755b9c992b8d988e9971b89fb471fb98ccaf1ecd
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-aarch64-linux-ubuntu2004.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: fc26383f4c2f1145e28d794626a5857393ed679f754836e18d279bdad123ead3
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-aarch64-apple-darwin.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: baf1d4988f175228778f7cdb67bb855abd9fb38002cec6a2edf1d12204b9f4ab
   Stack:
     2.5.1:
       viTags:
