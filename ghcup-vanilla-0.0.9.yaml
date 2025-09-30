@@ -8439,7 +8439,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb11.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 969e004653b79b52e61e15e07860747ef992f63948f52ffb7b5bcad55f35f9dd
-            '>= 12': &hls-21200-64-deb12
+            '(>= 12 && < 13)': &hls-21200-64-deb12
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb12.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 70db0087446d24d97686d39998827bb6b8d4bfb1dde4f040b1acbc0814188edd
