@@ -8126,6 +8126,7 @@ ghcupDownloads:
         dlHash: eeb1f8edac25602fbd63db6bac399d4aabecf47db25a2e30596aa646630b87b9
       viArch:
         A_64:
+          Linux_Debian:
             '< 11': &hls-21200-64-deb10
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb10.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
@@ -8142,7 +8143,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb13.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 323843a517cf6b08482572b2fbdd955ddadc54bd2d2949d44114a0ad08dc7a07
-            unknown_versioning: &hls-21200-64-deb11
+            unknown_versioning: &hls-21200-64-unknown
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb11.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 969e004653b79b52e61e15e07860747ef992f63948f52ffb7b5bcad55f35f9dd
