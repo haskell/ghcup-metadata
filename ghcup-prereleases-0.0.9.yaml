@@ -3856,7 +3856,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.14.0.20250908
         dlUri: https://downloads.haskell.org/~ghc/9.14.0.20250908/ghc-9.14.0.20250908-src.tar.xz
       viTags:
-      - LatestPrerelease
+      - Prerelease
       - base-4.22.0
       viTestDL:
         dlHash: 102494b0f5056ab20c240add212f378b45833ea150b102767bcd71a688185ab5
