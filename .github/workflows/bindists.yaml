@@ -85,13 +85,10 @@ jobs:
           - image: registry.access.redhat.com/ubi9/ubi
             installCmd: dnf install -y --allowerasing
             toolRequirements: gcc gcc-c++ gmp gmp-devel make ncurses xz perl pkgconfig
-          - image: linuxmintd/mint20.3-amd64
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
           - image: linuxmintd/mint21.3-amd64
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
-          - image: linuxmintd/mint22.1-amd64
+          - image: linuxmintd/mint22.2-amd64
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6
           - image: ghcr.io/void-linux/void-glibc-full:latest
