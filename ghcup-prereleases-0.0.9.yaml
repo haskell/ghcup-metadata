@@ -4012,6 +4012,7 @@ ghcupDownloads:
         dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251007/ghc-9.14.0.20251007-src.tar.xz
       viTags:
       - base-4.22.0
+      - Prerelease
       viTestDL:
         dlHash: a1cd1bbecda1bb9fbc0cc925b5fe3678dc8d6fe5cd6d460643949e931b8f611e
         dlSubdir: ghc-9.14.0.20251007/testsuite
