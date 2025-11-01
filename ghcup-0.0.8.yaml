@@ -9331,7 +9331,7 @@ ghcupDownloads:
               dlHash: d4ba2d0a1415bcb346e9c0faaee33612f66fae338baf696f9f2f728daa27f282
           Windows:
             unknown_versioning:
-              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.11.0.0/haskell-language-server-2.11.0.0-x86_64-mingw64.zip
+              dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.12.0.0/haskell-language-server-2.12.0.0-x86_64-mingw64.zip
               dlHash: 4adfa5210a9760f11c8809f1a997db6ce02ce512724b2192d5a50cb0c50122ec
           FreeBSD:
             unknown_versioning:
