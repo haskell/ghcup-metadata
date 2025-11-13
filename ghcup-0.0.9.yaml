@@ -4523,9 +4523,6 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.7
         dlUri: https://downloads.haskell.org/~ghc/9.6.7/ghc-9.6.7-src.tar.xz
       viChangeLog: https://downloads.haskell.org/~ghc/9.6.7/docs/users_guide/9.6.7-notes.html
-      viPostInstall: |
-        HLS is not supported for 9.6.7 yet. To build from source, run:
-          ghcup compile hls -g 2.9.0.1 --ghc 9.6.7 --cabal-update -- --constraint="ghc-lib-parser == 9.8.5.20250214" --index-state="2025-02-14T12:50:38Z"
       viArch:
         A_32:
           Linux_Debian:
