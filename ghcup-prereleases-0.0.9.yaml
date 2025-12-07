@@ -4454,12 +4454,167 @@ ghcupDownloads:
         dlSubdir: ghc-9.14.0.20251104
         dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251104/ghc-9.14.0.20251104-src.tar.xz
       viTags:
-      - LatestPrerelease
+      - Prerelease
       - base-4.22.0.0
       viTestDL:
         dlHash: 46679d9e3ebecc7f84c08e660abb68aaa8249c3ac1c63489825d1cacfc8a0ff1
         dlSubdir: ghc-9.14.0.20251104/testsuite
         dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251104/ghc-9.14.0.20251104-testsuite.tar.xz
+    9.14.0.20251128:
+      viArch:
+        A_32:
+          Linux_Alpine:
+            unknown_versioning:
+              dlHash: 4af4cb85503ff1269ff5cab5e9ea377cae1848fd762b1ba2290cec3fb8ec710c
+              dlOutput: ghc-9.14.0.20251128-i386-linux-alpine3_22.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-i386-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-i386-alpine3_22-linux.tar.xz
+          Linux_Debian:
+            ( >= 10 && < 12 ): &ghc914020251128-i386-linux-deb10
+              dlHash: 8d86f4cb7642c84c54536ad7a40f1eaf9ba256ee5e6b13e30c4f37a191cfcd1a
+              dlOutput: ghc-9.14.0.20251128-i386-linux-deb10.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-i386-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-i386-deb10-linux.tar.xz
+            '>= 12':
+              dlHash: d6d5e452e56297c47350e92dee63fd45e708b593e62832f03de39a474df45cc3
+              dlOutput: ghc-9.14.0.20251128-i386-linux-deb12.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-i386-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-i386-deb12-linux.tar.xz
+            unknown_versioning: *ghc914020251128-i386-linux-deb10
+          Linux_Mint:
+            unknown_versioning: *ghc914020251128-i386-linux-deb10
+          Linux_Ubuntu:
+            unknown_versioning: *ghc914020251128-i386-linux-deb10
+          Linux_UnknownLinux:
+            unknown_versioning: *ghc914020251128-i386-linux-deb10
+        A_64:
+          Darwin:
+            unknown_versioning:
+              dlHash: f459f5ed143f30904271e4021f1336d6299448a5a0680c9caba63457290eea60
+              dlOutput: ghc-9.14.0.20251128-x86_64-darwin.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-apple-darwin
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-apple-darwin.tar.xz
+          Linux_Alpine:
+            unknown_versioning:
+              dlHash: 666f5a3db1323069a5ab38c3a801f5951bb96803801a49e8255025840075a5ad
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-alpine3_22.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-alpine3_22-linux.tar.xz
+          Linux_CentOS:
+            ( >= 8 && < 9 ): &ghc914020251128-x86_64-linux-rocky8
+              dlHash: f0d028d008999f64ddc77aca3bab8590def1562a86f715d2770ec037c07d32c4
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-rocky8.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-rocky8-linux.tar.xz
+            unknown_versioning: *ghc914020251128-x86_64-linux-rocky8
+          Linux_Debian:
+            ( >= 10 && < 11 ):
+              dlHash: 793f8ea21c221b6b8cafebf0c463e3aa4023b3348d7d48d844da62e237a2610c
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-deb10.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-deb10-linux.tar.xz
+            ( >= 11 && < 12 ): &ghc914020251128-x86_64-linux-deb11
+              dlHash: 5ba02146fd76942c71daa501c542277bac84c44008ac0649c1948e257be3e930
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-deb11.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-deb11-linux.tar.xz
+            < 10: &ghc914020251128-x86_64-linux-deb9
+              dlHash: 341127f3de1cfdbb64df749fb9582ee3d1bd6c5f21fb9b045b7a44ce35404b0f
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-deb9.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-deb9-linux.tar.xz
+            '>= 12':
+              dlHash: dcd0b6d70a0ee6d4a4170bc5bbdd04a55fdadd26e3924323fa77dc2a089470e0
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-deb12.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-deb12-linux.tar.xz
+            unknown_versioning: *ghc914020251128-x86_64-linux-deb11
+          Linux_Fedora:
+            '>= 33': &ghc914020251128-x86_64-linux-fedora33
+              dlHash: 0d62cecd4748c51d5317f852415ff4412f476fc54e17347152be508372c0c848
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-fedora33.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-fedora33-linux.tar.xz
+            unknown_versioning: *ghc914020251128-x86_64-linux-rocky8
+          Linux_Mint:
+            < 20: &ghc914020251128-x86_64-linux-ubuntu18_04
+              dlHash: f748bf0179f0fb3d8eabfb5e18905c56c455104a32398c80274a324e47a999f0
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-ubuntu18_04.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-ubuntu18_04-linux.tar.xz
+            '>= 20': &ghc914020251128-x86_64-linux-ubuntu20_04
+              dlHash: b6fce58de594c0e60d85fe482d5ae9f9fa5774531d6d7e7d6d990962932bf012
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-ubuntu20_04.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-ubuntu20_04-linux.tar.xz
+            unknown_versioning: *ghc914020251128-x86_64-linux-ubuntu20_04
+          Linux_RedHat:
+            < 9: *ghc914020251128-x86_64-linux-rocky8
+            '>= 9': *ghc914020251128-x86_64-linux-fedora33
+            unknown_versioning: *ghc914020251128-x86_64-linux-fedora33
+          Linux_Ubuntu:
+            ( >= 16 && < 18 ): *ghc914020251128-x86_64-linux-deb9
+            ( >= 18 && < 19 ): *ghc914020251128-x86_64-linux-ubuntu18_04
+            ( >= 19 && < 21 ): *ghc914020251128-x86_64-linux-ubuntu20_04
+            ( >= 21 && < 24 ):
+              dlHash: 9899ced6a13cef6522e081695d57f8846ec70f0e9344dabacbfa4ac066faccc7
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-ubuntu22_04.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-ubuntu22_04-linux.tar.xz
+            ( >= 24 ):
+              dlHash: 05936cbc471d878a32f840cdbaeb057b8db4ca953b2e87fbf592f18dba8a8bf8
+              dlOutput: ghc-9.14.0.20251128-x86_64-linux-ubuntu24_04.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-ubuntu24_04-linux.tar.xz
+            unknown_versioning: *ghc914020251128-x86_64-linux-ubuntu20_04
+          Linux_UnknownLinux:
+            unknown_versioning: *ghc914020251128-x86_64-linux-rocky8
+          Windows:
+            unknown_versioning:
+              dlHash: 43fef1a80caef652e0465c0a4ee86efdc1fd3c2693686bd14845f5dae3792a26
+              dlOutput: ghc-9.14.0.20251128-x86_64-windows.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-x86_64-unknown-mingw32
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-x86_64-unknown-mingw32.tar.xz
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlHash: 798aca545bc6bf0dc20496f22c8f92308e7ceef1a2e277bf7ab584735f7af709
+              dlOutput: ghc-9.14.0.20251128-aarch64-darwin.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-aarch64-apple-darwin
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-aarch64-apple-darwin.tar.xz
+          Linux_Alpine:
+            unknown_versioning:
+              dlHash: 1486d4ca3ef1e4172b5ec60f1ac4a59c80a390b4604706a64d6c8e3c9e76c836
+              dlOutput: ghc-9.14.0.20251128-aarch64-linux-alpine3_22.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-aarch64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-aarch64-alpine3_22-linux.tar.xz
+          Linux_Debian:
+            ( >= 10 && < 12 ): &ghc914020251128-aarch64-linux-deb10
+              dlHash: e44ad0834900b5a0a75079282f83c6a3a93eb6c3aad8acaf08a443168e9e2310
+              dlOutput: ghc-9.14.0.20251128-aarch64-linux-deb10.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-aarch64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-aarch64-deb10-linux.tar.xz
+            ( >= 12 ):
+              dlHash: c69837f6811d7bcbdeee221af321da379069e629f29ba45c62a9b69aa1034193
+              dlOutput: ghc-9.14.0.20251128-aarch64-linux-deb12.tar.xz
+              dlSubdir: ghc-9.14.0.20251128-aarch64-unknown-linux
+              dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-aarch64-deb12-linux.tar.xz
+            unknown_versioning: *ghc914020251128-aarch64-linux-deb10
+          Linux_UnknownLinux:
+            unknown_versioning: *ghc914020251128-aarch64-linux-deb10
+      viChangeLog: https://downloads.haskell.org/~ghc/9.14.0.20251128/docs/users_guide/9.14.1-notes.html
+      viReleaseDay: '2025-11-28'
+      viSourceDL:
+        dlHash: b069521ed87fac9b8501c595e49b90b72032c0f771d479cae6525bddf4591df1
+        dlSubdir: ghc-9.14.0.20251128
+        dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-src.tar.xz
+      viTags:
+      - LatestPrerelease
+      - base-4.22.0.0
+      viTestDL:
+        dlHash: df9053d87aad7ca3474412ff4b6e43d50019819e5a95c936edd25075b724ded0
+        dlSubdir: ghc-9.14.0.20251128/testsuite
+        dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-testsuite.tar.xz
   Stack:
     2.9.2.1:
       viTags:
