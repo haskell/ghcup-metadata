@@ -48,3 +48,44 @@ ghcupDownloads:
               dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.0/cabal-install-3.17.0.0-i386-linux-unknown.tar.xz
               dlSubdir:
               dlHash: 8b9609870f25322d80cc410a49c5d2f8632836737b4462c4d559032226303469
+    3.17.0.1:
+      viTags: []
+      viPostInstall: *cabal-stable-haskell
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-linux-glibc.tar.xz
+              dlHash: 3f2447f04c9675d983b7f17a0927461d734bb45d086fb66a0f648852f2479f78
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-linux-musl-static.tar.xz
+              dlHash: d5739b5bcdcaa13b70f4c9efe2607c942874a77e1836a92bfc28ca14910ba19d
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-mingw64.zip
+              dlHash: af8aba642319c737c90ae54776e115530c964c01da4a00dd1478abb9ba0e83b6
+          FreeBSD:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-portbld-freebsd.tar.xz
+              dlHash: 10427652a76a318a715f739e2c6deb2af942373dc072b5cfcc713892b1bbe056
+        A_32:
+          Linux_UnknownLinux:
+            unknown_versioning: &cabal-31701-32
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-i386-linux-unknown.tar.xz
+              dlHash: 48732eb3f76384f3b9cff783635a894447d57980f46b01f98139807310e9b6d6
+          Linux_Alpine:
+            unknown_versioning: *cabal-31701-32
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-aarch64-apple-darwin.tar.xz
+              dlHash: fa7e7da74e97aa5874ea86cf596ee3365374d160c6bc591d6270f69b118bf4ed
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-aarch64-linux-deb10.tar.xz
+              dlHash: 6fda865a0ab5a98ba4ccdec39ea1521b2b8f095819999ee24e940662d245e6fd
+          Linux_Alpine:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-aarch64-linux-alpine.tar.xz
+              dlHash: 73a8c6a822577f7a37cf6e9640e41de6e0fbcd64e01377067037c211b1bd39ca
