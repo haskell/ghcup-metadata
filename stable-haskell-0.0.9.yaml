@@ -57,6 +57,10 @@ ghcupDownloads:
             unknown_versioning:
               dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-linux-glibc.tar.xz
               dlHash: 3f2447f04c9675d983b7f17a0927461d734bb45d086fb66a0f648852f2479f78
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-apple-darwin.tar.xz
+              dlHash: 4960d3ceeadbae6b4ff9da6fb07db3e1f1508db64299d8e08e98547d7923eaa8
           Linux_Alpine:
             unknown_versioning:
               dlUri: https://github.com/stable-haskell/cabal/releases/download/cabal-install-v3.17.0.1/cabal-install-3.17.0.1-x86_64-linux-musl-static.tar.xz
