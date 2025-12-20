@@ -9263,7 +9263,7 @@ ghcupDownloads:
       viPostInstall: *hls-post-install
       viSourceDL:
         dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.12.0.0/haskell-language-server-2.12.0.0-src.tar.gz
-        dlSubdir: haskell-language-server-2.12.0.0
+        dlSubdir: haskell-language-server-v2.12.0.0
         dlHash: 09a35e82f716ab7df8b020ca0b6fba05de1ce43d7f2ac7eaa76f139b4fc1f662
       viArch:
         A_64:
