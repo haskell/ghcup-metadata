@@ -8147,7 +8147,10 @@ ghcupDownloads:
     2.10.0.0:
       viTags: []
       viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
-      viPostInstall: *hls-post-install
+      viPostInstall: |
+        The 2.10.0.0 HLS release binaries for ubuntu and linux mint contain old binaries.
+        Please upgrade to '2.10.0.0-p1' at your earliest convenience.
+        See https://discourse.haskell.org/t/ann-haskell-language-server-2-10-0-0/11738/6 for details.
       viSourceDL:
         dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-src.tar.gz
         dlSubdir: haskell-language-server-2.10.0.0
@@ -8236,10 +8239,7 @@ ghcupDownloads:
     2.10.0.0-p1:
       viTags: []
       viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
-      viPostInstall: &hls-post-install |
-        The 2.10.0.0 HLS release binaries for ubuntu and linux mint contain old binaries.
-        Please upgrade to '2.10.0.0-p1' at your earliest convenience.
-        See https://discourse.haskell.org/t/ann-haskell-language-server-2-10-0-0/11738/6 for details.
+      viPostInstall: *hls-post-install
       viSourceDL:
         dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-src.tar.gz
         dlSubdir: haskell-language-server-2.10.0.0
