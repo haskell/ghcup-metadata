@@ -9060,10 +9060,10 @@ ghcupDownloads:
               dlHash: 728be2371e257c6960341167192fa704ff1f92ab61657dd4781710a257fae7c1
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.13.1/stack-2.13.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.13.1/stack-2.13.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-2131-64
         A_ARM64:
@@ -9106,10 +9106,10 @@ ghcupDownloads:
               dlHash: 26e0ee636ab4c860563176b0335238988068d61f4f3a60168557e338881865ea
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.1/stack-2.15.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.1/stack-2.15.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-2151-64
         A_ARM64:
@@ -9152,10 +9152,10 @@ ghcupDownloads:
               dlHash: 210ea1f9a0903b9da87c29a9f4342f4d11212c9d87a0bfaf277ef252f316d1f9
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.3/stack-2.15.3-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.3/stack-2.15.3-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-2153-64
         A_ARM64:
@@ -9198,10 +9198,10 @@ ghcupDownloads:
               dlHash: 6d439c0d31cd10e9e955e45742b494bd51f200e2678efcee75e5599d8164bbcc
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.5/stack-2.15.5-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.5/stack-2.15.5-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-2155-64
         A_ARM64:
@@ -9243,15 +9243,15 @@ ghcupDownloads:
               dlHash: 0e051f44aadcec138ffc1c1056bfec5c8216f0d256413c2e3a60ce55fe2db0ba
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.5/stack-2.15.5-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/2.15.5/stack-2.15.5-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-2157-64
         A_ARM64:
           Linux_UnknownLinux:
-            unknown_versioning:  &stack-2157-arm64
+            unknown_versioning: &stack-2157-arm64
               dlUri: https://github.com/commercialhaskell/stack/releases/download/v2.15.7/stack-2.15.7-linux-aarch64.tar.gz
               dlHash: f0c4b038c7e895902e133a2f4c4c217e03c4be44aa5da48aec9f7947f4af090b
               dlSubdir:
@@ -9288,10 +9288,10 @@ ghcupDownloads:
               dlHash: 717c45155b7ebab4e020734fd66370ae33246bebc5fec43e27309d857980a713
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.1.1/stack-3.1.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.1.1/stack-3.1.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-311-64
         A_ARM64:
@@ -9333,10 +9333,10 @@ ghcupDownloads:
               dlHash: 75712f997ceaf53fc01295046946b713f008be8e9c7654132445a4385300ef65
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.3.1/stack-3.3.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.3.1/stack-3.3.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-331-64
         A_ARM64:
@@ -9378,10 +9378,10 @@ ghcupDownloads:
               dlHash: 310a7dc4847dbfd4f07d0938474163100e7ee450461dda822731bcac13fea1c0
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.5.1/stack-3.5.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.5.1/stack-3.5.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-351-64
         A_ARM64:
@@ -9425,10 +9425,10 @@ ghcupDownloads:
               dlHash: 44a51881cbd6e6810568d8851b7bd6f4b2912b814496b8f4639b195eabea298a
               dlSubdir:
                 RegexDir: "stack-.*"
-        # FreeBSD:
-        #   unknown_versioning:
-        #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.7.1/stack-3.7.1-freebsd-x86_64.tar.xz
-        #     dlHash: <replace_me>
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.7.1/stack-3.7.1-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
           Linux_Alpine:
             unknown_versioning: *stack-371-64
         A_ARM64:
