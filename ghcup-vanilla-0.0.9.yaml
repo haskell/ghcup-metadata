@@ -5581,6 +5581,9 @@ ghcupDownloads:
         dlHash: 89b49fe2baca6a83f8711b45dfcc8d7362649c7ac85338b7b0aa34d0379d6b2e
         dlSubdir: ghc-9.12.3/testsuite
         dlUri: https://downloads.haskell.org/~ghc/9.12.3/ghc-9.12.3-testsuite.tar.xz
+      viPostInstall: |
+        GHC 9.12.3 is broken due to a sub-word division bug.
+        See https://gitlab.haskell.org/ghc/ghc/-/issues/26711
     9.14.1:
       viArch:
         A_32:
