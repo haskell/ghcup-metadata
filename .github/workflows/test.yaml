@@ -32,6 +32,8 @@ jobs:
           mkdir -p "$HOME/.local/bin"
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           pip install yamllint
+          dnf -y install https://extras.getpagespeed.com/release-latest.rpm
+          dnf install -y --allowerasing yq
         shell: bash
 
       - uses: haskell/ghcup-setup@v1
@@ -62,8 +64,12 @@ jobs:
       - name: Check yaml
         run: |
           ghcup-gen -- check -f ghcup-${{ env.YAML_VER }}.yaml
-          yamllint ghcup-${{ env.YAML_VER }}.yaml
-          python3 -c "import yaml ; stream = open('ghcup-${{ env.YAML_VER }}.yaml', 'r') ; yaml.safe_load(stream)"
+
+          for yaml in ghcup ghcup-cross ghcup-prereleases ghcup-vanilla ; do
+            yamllint ${yaml}-${{ env.YAML_VER }}.yaml
+            yq '.' ${yaml}-${{ env.YAML_VER }}.yaml
+            python3 -c "import yaml ; stream = open('${yaml}-${{ env.YAML_VER }}.yaml', 'r') ; yaml.safe_load(stream)"
+          done
         shell: bash
 
       - name: Check tarballs
