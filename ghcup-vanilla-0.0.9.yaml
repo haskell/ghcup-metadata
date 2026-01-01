@@ -8247,28 +8247,28 @@ ghcupDownloads:
       viArch:
         A_64:
           Linux_Debian:
-            '< 10': &hls-21000-64-deb9
+            '< 10': &hls-21000p1-64-deb9
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-deb9.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 9a7c01ed3b0f4afd56c48196f0a27d0024ae950ba1c395089a4f63403414c253
-            '(>= 10 && < 11)': &hls-21000-64-deb10
+            '(>= 10 && < 11)': &hls-21000p1-64-deb10
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-deb10.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: abc89b6c360aafa538bbd3499bd1a663a9c2b00ef4bfc44a82bfa8ad0b66ce4a
-            unknown_versioning: &hls-21000-64-deb11
+            unknown_versioning: &hls-21000p1-64-deb11
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-deb11.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 24f27de172359386820c6482cdbf086ad2974ee92808e5893c657a1050f4901e
           Linux_Ubuntu:
-            '( >= 16 && < 19 )': &hls-21000-64-ubuntu18
+            '( >= 16 && < 19 )': &hls-21000p1-64-ubuntu18
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-ubuntu1804.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 2735bc6573f973b70bb02d1f741446552776fcf97c769791c3fd27fe6e4651b0
-            '( >= 20 && < 22 )': &hls-21000-64-ubuntu20
+            '( >= 20 && < 22 )': &hls-21000p1-64-ubuntu20
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-ubuntu2004.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 3f8538d69095570923cfe32306aa9089a8ef7772f12a0c721262d01cfa1cf75e
-            unknown_versioning: &hls-21000-64-ubuntu22
+            unknown_versioning: &hls-21000p1-64-ubuntu22
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-ubuntu2204.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: e0d9051d984283f64866de8bd822ad64b22618f3360f87e9773225f0f49ec9cc
@@ -8281,25 +8281,25 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-mint202.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: c26ca32eb035fa60890ffc516f2fdd5557424ee7924efde02aa61260cd8b1eb5
-            '>= 21': *hls-21000-64-ubuntu22
+            '>= 21': *hls-21000p1-64-ubuntu22
           Linux_Fedora:
-            '< 33': &hls-21000-64-fedora27
+            '< 33': &hls-21000p1-64-fedora27
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-fedora27.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 0ea33ad7bda7e0cda8e7ca614f937ff6d3e096ad6c5aa614030ba1e4162079f6
-            '>= 33': &hls-21000-64-fedora33
+            '>= 33': &hls-21000p1-64-fedora33
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-fedora33.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 7054b87d2dbd07002a229a14d35025ffc0d3fab1ca2a72afbc4c2aa266d946c9
-            unknown_versioning: *hls-21000-64-fedora27
+            unknown_versioning: *hls-21000p1-64-fedora27
           Linux_CentOS:
-            '( >= 7 && < 8 )': &hls-21000-64-centos
+            '( >= 7 && < 8 )': &hls-21000p1-64-centos
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-centos7.tar.xz
               dlSubdir: haskell-language-server-2.10.0.0
               dlHash: 9858466f6a2f9fff7dcfe2741152c1c05f123b6d3158a213c6c2fa4e37198160
-            unknown_versioning: *hls-21000-64-centos
+            unknown_versioning: *hls-21000p1-64-centos
           Linux_RedHat:
-            unknown_versioning: *hls-21000-64-centos
+            unknown_versioning: *hls-21000p1-64-centos
           Linux_UnknownLinux:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.10.0.0/haskell-language-server-2.10.0.0-x86_64-linux-unknown.tar.xz
@@ -8352,10 +8352,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.11.0.0/haskell-language-server-2.11.0.0-x86_64-linux-deb12.tar.xz
               dlSubdir: haskell-language-server-2.11.0.0
               dlHash: 731afff5832397edaebf74b0b8421752735c4b2a8f753b46fbdd63876d5fcdb1
-            unknown_versioning: &hls-21100-64-deb11
-              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.11.0.0/haskell-language-server-2.11.0.0-x86_64-linux-deb11.tar.xz
-              dlSubdir: haskell-language-server-2.11.0.0
-              dlHash: 2920b2f09f7529315a1b8a5795a82649387280dea336ec4b9b8cee29fff07b2b
+            unknown_versioning: *hls-21100-64-deb11
           Linux_Ubuntu:
             '( >= 16 && < 19 )': &hls-21100-64-ubuntu18
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.11.0.0/haskell-language-server-2.11.0.0-x86_64-linux-ubuntu1804.tar.xz
@@ -8448,10 +8445,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb13.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 323843a517cf6b08482572b2fbdd955ddadc54bd2d2949d44114a0ad08dc7a07
-            unknown_versioning: &hls-21200-64-unknown
-              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-deb11.tar.xz
-              dlSubdir: haskell-language-server-2.12.0.0
-              dlHash: 969e004653b79b52e61e15e07860747ef992f63948f52ffb7b5bcad55f35f9dd
+            unknown_versioning: *hls-21200-64-deb11
           Linux_Ubuntu:
             '( >= 16 && < 19 )': &hls-21200-64-ubuntu18
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-ubuntu1804.tar.xz
@@ -8478,6 +8472,11 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-mint213.tar.xz
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: 6a97fd88cf9ddcb99bd1498146c18c22fe3b7a2f663de493eaa963546c581595
+          Linux_UnknownLinux:
+            unknown_versioning: &hls-21200-64-unknown
+              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-unknown.tar.xz
+              dlSubdir: haskell-language-server-2.12.0.0
+              dlHash: a8ddd99463013913bf82bc06559f636757acd378272185a79ae6b741f175deb1
           Linux_Fedora:
             '(>= 33 && < 40)': &hls-21200-64-fedora33
               dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-fedora33.tar.xz
@@ -8488,11 +8487,6 @@ ghcupDownloads:
               dlSubdir: haskell-language-server-2.12.0.0
               dlHash: a17d58e3915d370571c208f5df1ee7f48749a7d3bebc647e3447f94bed6f5337
             unknown_versioning: *hls-21200-64-unknown
-          Linux_UnknownLinux:
-            unknown_versioning: &hls-21200-64-unknown
-              dlUri: https://downloads.haskell.org/~hls/haskell-language-server-2.12.0.0/haskell-language-server-2.12.0.0-x86_64-linux-unknown.tar.xz
-              dlSubdir: haskell-language-server-2.12.0.0
-              dlHash: a8ddd99463013913bf82bc06559f636757acd378272185a79ae6b741f175deb1
           Linux_RedHat:
             unknown_versioning: *hls-21200-64-unknown
           Darwin:
