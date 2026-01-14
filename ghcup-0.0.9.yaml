@@ -10159,8 +10159,7 @@ ghcupDownloads:
               dlSubdir:
                 RegexDir: "stack-.*"
     3.3.1:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v331---2024-12-28
       viPostInstall: *stack-post
       viArch:
@@ -10254,7 +10253,8 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-351-arm64
     3.7.1:
-      viTags: []
+      viTags:
+        - Recommended
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v371---2025-06-28
       viPostInstall: *stack-post
       viArch:
