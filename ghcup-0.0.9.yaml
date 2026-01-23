@@ -6634,8 +6634,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/cabal/3.10.3.0/cabal-install-3.10.3.0-armv7-linux-deb10.tar.xz
               dlHash: 8131b0984e6f7a7776f66fcd1f4357a8af00741aa085e194217ae10ab8609130
     3.12.1.0:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.12.1.0.md
       viArch:
         A_64:
@@ -7066,7 +7065,8 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/cabal/3.14.1.1-p1/cabal-install-3.14.1.1-p1-aarch64-apple-darwin.tar.xz
               dlHash: e75915b6508952b612900b1ac6d0ee11c828aaaad0cec1dafc1216b250ef33e5
     3.14.2.0:
-      viTags: []
+      viTags:
+        - Recommended
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.14.2.0.md
       viArch:
         A_64:
