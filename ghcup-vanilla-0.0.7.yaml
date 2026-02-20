@@ -7615,9 +7615,7 @@ ghcupDownloads:
           Linux_Alpine:
             unknown_versioning: *stack-371-arm64
     3.9.1:
-      viTags:
-        - Latest
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v391---2026-01-04
       viPostInstall: *stack-post
       viArch:
@@ -7661,3 +7659,50 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
           Linux_Alpine:
             unknown_versioning: *stack-391-arm64
+    3.9.3:
+      viTags:
+        - Latest
+        - Recommended
+      viChangeLog: https://github.com/commercialhaskell/stack/blob/master/ChangeLog.md#v393---2026-02-19
+      viPostInstall: *stack-post
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-393-64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.9.3/stack-3.9.3-linux-x86_64.tar.gz
+              dlHash: bc45cf6e1d00910348dcceb510a469056f6d9c63997230f901c22cf997598b05
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.9.3/stack-3.9.3-osx-x86_64.tar.gz
+              dlHash: e9139c80dc0e2d5df6bef45d40e20c8ac9ca2dbd1bb31358782fa5446d0df38c
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.9.3/stack-3.9.3-windows-x86_64.tar.gz
+              dlHash: 5c4746d140b366b9e9a8a3347aa91216a5cd6e2c44c79a720b8c70601a5a9c0f
+              dlSubdir:
+                RegexDir: "stack-.*"
+          # FreeBSD:
+          #   unknown_versioning:
+          #     dlUri: https://downloads.haskell.org/ghcup/unofficial-bindists/stack/3.9.3/stack-3.9.3-freebsd-x86_64.tar.xz
+          #     dlHash: <replace_me>
+          Linux_Alpine:
+            unknown_versioning: *stack-393-64
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-393-arm64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.9.3/stack-3.9.3-linux-aarch64.tar.gz
+              dlHash: c94360be1fe851c6e9f82089e93c8a4937ca536d42abccac908749e5a74220aa
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/v3.9.3/stack-3.9.3-osx-aarch64.tar.gz
+              dlHash: 2e3b49767a41b9238afd9e2fa62f79860b2993b186db89debcd259e3a608955d
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-393-arm64
