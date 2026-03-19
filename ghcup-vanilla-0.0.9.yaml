@@ -2478,6 +2478,7 @@ ghcupDownloads:
               dlHash: 56a03022703e4305020a267105bd5ebfb1bcb8e7eed33261b3987f79445bcc3a
     9.2.4:
       viTags:
+      - old
       - base-4.16.3.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.2.4/docs/html/users_guide/index.html
       viSourceDL:
@@ -2569,6 +2570,7 @@ ghcupDownloads:
               dlHash: 8cf8408544a1a43adf1bbbb0dd6b074efadffc68bfa1a792947c52e825171224
     9.2.5:
       viTags:
+      - old
       - base-4.16.4.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.2.5/docs/html/users_guide/index.html
       viSourceDL:
@@ -2745,6 +2747,7 @@ ghcupDownloads:
               dlHash: 68e54fd1af808395584e73b6a9a5b6c7dd85d451da00429aa124a821f4e96ad0
     9.2.7:
       viTags:
+      - old
       - base-4.16.4.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.2.7/docs/html/users_guide/index.html
       viSourceDL:
@@ -3010,6 +3013,7 @@ ghcupDownloads:
               dlHash: 4bf84448690d5b75ab92cf45db12b6cf53fa8cfc427a5b002b73a1b94b251c07
     9.4.2:
       viTags:
+      - old
       - base-4.17.0.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.2/docs/users_guide/9.4.2-notes.html
       viSourceDL:
@@ -3100,6 +3104,7 @@ ghcupDownloads:
               dlHash: 3f38808ac6b47631487b37535b6792d6594f5e2fbb5204bb9573ed528748e736
     9.4.3:
       viTags:
+      - old
       - base-4.17.0.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.3/docs/users_guide/9.4.3-notes.html
       viSourceDL:
@@ -3190,6 +3195,7 @@ ghcupDownloads:
               dlHash: 531c0a4708655bc8707ba88b8a72d34b5958fddc519a12359613f6db62f0eb82
     9.4.4:
       viTags:
+      - old
       - base-4.17.0.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.4/docs/users_guide/9.4.4-notes.html
       viSourceDL:
@@ -3280,6 +3286,7 @@ ghcupDownloads:
               dlHash: b50507b229e0c418b32e4b6cc060288ba9497fdd912962e3b0707d0a2b003658
     9.4.5:
       viTags:
+      - old
       - base-4.17.1.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.5/docs/users_guide/9.4.5-notes.html
       viSourceDL:
@@ -3374,6 +3381,7 @@ ghcupDownloads:
               dlHash: edd28a261f4d608be59000fb4c4a4d37b2cc825e6d46aded6612661de7d066a0
     9.4.6:
       viTags:
+      - old
       - base-4.17.2.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.6/docs/users_guide/9.4.6-notes.html
       viSourceDL:
@@ -3468,6 +3476,7 @@ ghcupDownloads:
               dlHash: 0be43adf6449d010a8d0f4c66353eff7faae0570554fa25e411c579102923dfb
     9.4.7:
       viTags:
+      - old
       - base-4.17.2.0
       viChangeLog: https://downloads.haskell.org/~ghc/9.4.7/docs/users_guide/9.4.7-notes.html
       viSourceDL:
@@ -3752,6 +3761,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.1
         dlUri: https://downloads.haskell.org/~ghc/9.6.1/ghc-9.6.1-src.tar.xz
       viTags:
+      - old
       - base-4.18.0.0
       viTestDL:
         dlHash: 8bfa74d102da570cb87fbbc3465c7f778a4e6dc76606fef80207de7e8b64114f
@@ -3850,6 +3860,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.2
         dlUri: https://downloads.haskell.org/~ghc/9.6.2/ghc-9.6.2-src.tar.xz
       viTags:
+      - old
       - base-4.18.0.0
       viTestDL:
         dlHash: e4ffbc2d6db720fba30f8e7e12214522c470d1cfc0ee69f7997782b0ae20abbf
@@ -3948,6 +3959,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.3
         dlUri: https://downloads.haskell.org/~ghc/9.6.3/ghc-9.6.3-src.tar.xz
       viTags:
+      - old
       - base-4.18.1.0
       viTestDL:
         dlHash: b0f92579288adf2320206627248d80d2abfe0e1b9ad2a22cf8f889bbe6806448
@@ -4046,6 +4058,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.4
         dlUri: https://downloads.haskell.org/~ghc/9.6.4/ghc-9.6.4-src.tar.xz
       viTags:
+      - old
       - base-4.18.2.0
       viTestDL:
         dlHash: 6e13282fbebffdbfa0a49889437444c9a90cfe5760c47969cd4245854c338d73
@@ -4144,6 +4157,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.5
         dlUri: https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-src.tar.xz
       viTags:
+      - old
       - base-4.18.2.1
       viTestDL:
         dlHash: dca3df48975cf7917db4e3ff6212e9478ce48337cb1a13e3007a3d1a8009a24c
@@ -4242,6 +4256,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.6.6
         dlUri: https://downloads.haskell.org/~ghc/9.6.6/ghc-9.6.6-src.tar.xz
       viTags:
+      - old
       - base-4.18.2.1
       viTestDL:
         dlHash: dd91c6b65bc4b424de273072fb6ae8782a6efa861cf36445cc88fc383455b209
@@ -4461,6 +4476,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.1
         dlUri: https://downloads.haskell.org/~ghc/9.8.1/ghc-9.8.1-src.tar.xz
       viTags:
+      - old
       - base-4.19.0.0
       viTestDL:
         dlHash: 2626f3bb974428cbb795c5433017e18088f0d8de8a66d5a23ff4776847a5bec3
@@ -4580,6 +4596,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.2
         dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-src.tar.xz
       viTags:
+      - old
       - base-4.19.1.0
       viTestDL:
         dlHash: e1e35736205f555bceeecd3a78b9e8f0710c51a875149ebf5795eb88deb38a60
@@ -4694,6 +4711,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.3
         dlUri: https://downloads.haskell.org/~ghc/9.8.3/ghc-9.8.3-src.tar.xz
       viTags:
+      - old
       - base-4.19.2.0
       viTestDL:
         dlHash: d2a3929d4071dc5b699e35259a2545a39b1bd46ed1e0e26ea42f10cfbc4ed315
