@@ -4289,6 +4289,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.4/ghc-9.6.4-aarch64-deb10-linux.tar.xz
     9.6.5:
       viTags:
+      - old
       - base-4.18.2.1
       viChangeLog: https://downloads.haskell.org/~ghc/9.6.5/docs/users_guide/9.6.5-notes.html
       viSourceDL:
@@ -4398,6 +4399,7 @@ ghcupDownloads:
               dlUri: https://downloads.haskell.org/~ghc/9.6.5/ghc-9.6.5-aarch64-deb10-linux.tar.xz
     9.6.6:
       viTags:
+      - old
       - base-4.18.2.1
       viChangeLog: https://downloads.haskell.org/~ghc/9.6.6/docs/users_guide/9.6.6-notes.html
       viSourceDL:
@@ -4867,6 +4869,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.8.2
         dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-src.tar.xz
       viTags:
+      - old
       - base-4.19.1.0
       viTestDL:
         dlHash: e1e35736205f555bceeecd3a78b9e8f0710c51a875149ebf5795eb88deb38a60
