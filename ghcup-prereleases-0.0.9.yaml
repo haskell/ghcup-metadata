@@ -1101,6 +1101,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.18.3.0
+      - old
     9.6.7.20250131:
       viTestDL:
         dlHash: 9006dfa85f604f788d10b08cf1e26647b41989c81a54f50e97fc2e9a45459e36
@@ -1207,6 +1208,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.18.3.0
+      - old
     9.8.1-alpha1:
       viArch:
         A_32:
@@ -2331,6 +2333,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.20.2.0
+      - old
       viTestDL:
         dlHash: f095cb949bc21b7ff2f2027431aad953869d3d072d49c1aef022bee4de94c025
         dlSubdir: ghc-9.10.2.20250725/testsuite
@@ -2448,6 +2451,7 @@ ghcupDownloads:
       viTags:
       - base-4.20.2.0
       - Prerelease
+      - old
       viTestDL:
         dlHash: 2927594f753669bb34f4890d943e43a7d538323235eee2e17778872d7671ac07
         dlSubdir: ghc-9.10.2.20250804/testsuite
@@ -2565,6 +2569,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.20.2.0
+      - old
       viTestDL:
         dlHash: 1ccf16a5101e2a8914b8bcc590f4848c72a8f4d0ee495dea1858ee83a7eb64fb
         dlSubdir: ghc-9.10.2.20250807/testsuite
@@ -2682,6 +2687,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.20.2.0
+      - old
       viTestDL:
         dlHash: 90c75abf3254aa8c15ae02523349887d2b30922ffc6b992e339aa3b7635da962
         dlSubdir: ghc-9.10.2.20250817/testsuite
@@ -3298,6 +3304,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.21.0.0
+      - old
       viTestDL:
         dlHash: 814407f3ae7c08dfb62f9dd0c95b40f3291201837e63b9f272ba43949f40d972
         dlSubdir: ghc-9.12.1.20250219/testsuite
@@ -3451,6 +3458,7 @@ ghcupDownloads:
       viTags:
       - base-4.21.1.0
       - Prerelease
+      - old
       viTestDL:
         dlHash: e0ed56043cfdf56a7a66eb3696468bde32bff3248f37dcf28adef262e20c77ee
         dlSubdir: ghc-9.12.2.20250919/testsuite
@@ -3604,6 +3612,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.21.1.0
+      - old
       viTestDL:
         dlHash: a508a549ad87784dd3880f02d88b01167196501b8c9065a923eadaf1fd09f570
         dlSubdir: ghc-9.12.2.20251110/testsuite
@@ -3757,6 +3766,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.21.1.0
+      - old
       viTestDL:
         dlHash: a9c20e66a9c64245bde45d8f8ea7ce4db7e4701cb5e42051f28c9b60646792c7
         dlSubdir: ghc-9.12.2.20251209/testsuite
@@ -3908,7 +3918,7 @@ ghcupDownloads:
         dlSubdir: ghc-9.12.3.20260311
         dlUri: https://downloads.haskell.org/~ghc/9.12.3.20260311/ghc-9.12.3.20260311-src.tar.xz
       viTags:
-      - Prerelease
+      - LatestPrerelease
       - base-4.21.2.0
       viTestDL:
         dlHash: d479fb766d87489c8bd7de7a6fd27ef98b44635549257e00c684a84b84e3985e
@@ -4027,6 +4037,7 @@ ghcupDownloads:
       viTags:
       - base-4.20.0.0
       - Prerelease
+      - old
       viTestDL:
         dlHash: 4abb685df4c576a7c783672b61a8eed26882281e6e5168461ca978d1a399caee
         dlSubdir: ghc-9.10.1.20250417/testsuite
@@ -4162,6 +4173,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.22.0
+      - old
       viTestDL:
         dlHash: c677cc447ff6e5bd28d80f13f7cb661c1011f729cf44dbc53af6e5381df0818b
         dlSubdir: ghc-9.14.0.20250819/testsuite
@@ -4317,6 +4329,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.22.0
+      - old
       viTestDL:
         dlHash: 102494b0f5056ab20c240add212f378b45833ea150b102767bcd71a688185ab5
         dlSubdir: ghc-9.14.0.20250908/testsuite
@@ -4472,6 +4485,7 @@ ghcupDownloads:
       viTags:
       - base-4.22.0
       - Prerelease
+      - old
       viTestDL:
         dlHash: a1cd1bbecda1bb9fbc0cc925b5fe3678dc8d6fe5cd6d460643949e931b8f611e
         dlSubdir: ghc-9.14.0.20251007/testsuite
@@ -4607,6 +4621,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.22.0
+      - old
       viTestDL:
         dlHash: 79d4545ce026b7bf63ee62da1185ffa5186242cd601d5fe861ad96147d11ba44
         dlSubdir: ghc-9.14.0.20251028/testsuite
@@ -4762,6 +4777,7 @@ ghcupDownloads:
       viTags:
       - Prerelease
       - base-4.22.0.0
+      - old
       viTestDL:
         dlHash: 46679d9e3ebecc7f84c08e660abb68aaa8249c3ac1c63489825d1cacfc8a0ff1
         dlSubdir: ghc-9.14.0.20251104/testsuite
@@ -4915,8 +4931,9 @@ ghcupDownloads:
         dlSubdir: ghc-9.14.0.20251128
         dlUri: https://downloads.haskell.org/~ghc/9.14.0.20251128/ghc-9.14.0.20251128-src.tar.xz
       viTags:
-      - LatestPrerelease
+      - Prerelease
       - base-4.22.0.0
+      - old
       viTestDL:
         dlHash: df9053d87aad7ca3474412ff4b6e43d50019819e5a95c936edd25075b724ded0
         dlSubdir: ghc-9.14.0.20251128/testsuite
