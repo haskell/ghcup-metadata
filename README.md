@@ -57,13 +57,11 @@ some of the upstream developers.
 
 For GHC:
 
-- [bgamari](https://github.com/bgamari)
-- [mpickering](https://github.com/mpickering)
+- [AndreasPK](https://github.com/AndreasPK)
 - [wz1000](https://github.com/wz1000)
 
 For Cabal:
 
-- [Kleidukos](https://github.com/Kleidukos)
 - [geekosaur](https://github.com/geekosaur)
 - [Mikolaj](https://github.com/Mikolaj)
 
