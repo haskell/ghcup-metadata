@@ -4290,6 +4290,7 @@ ghcupDownloads:
     9.6.5:
       viTags:
       - base-4.18.2.1
+      - old
       viChangeLog: https://downloads.haskell.org/~ghc/9.6.5/docs/users_guide/9.6.5-notes.html
       viSourceDL:
         dlHash: 87b389924f98c1a26c205122757338c8dab33ad1fcf670faa22622742432b93c
@@ -4399,6 +4400,7 @@ ghcupDownloads:
     9.6.6:
       viTags:
       - base-4.18.2.1
+      - old
       viChangeLog: https://downloads.haskell.org/~ghc/9.6.6/docs/users_guide/9.6.6-notes.html
       viSourceDL:
         dlHash: 008f7a04d89ad10baae6486c96645d7d726aaac7e1476199f6dd86c6bd9977ad
@@ -4868,6 +4870,7 @@ ghcupDownloads:
         dlUri: https://downloads.haskell.org/~ghc/9.8.2/ghc-9.8.2-src.tar.xz
       viTags:
       - base-4.19.1.0
+      - old
       viTestDL:
         dlHash: e1e35736205f555bceeecd3a78b9e8f0710c51a875149ebf5795eb88deb38a60
         dlSubdir: ghc-9.8.2/testsuite
