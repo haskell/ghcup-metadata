@@ -1,2 +1,3 @@
 - [ ] I have read https://github.com/haskell/ghcup-metadata?tab=readme-ov-file#contributions and https://www.haskell.org/ghcup/dev/
 - [ ] I did not use an LLM to generate this patch or parts of it
+- [ ] I understand that PRs may take 1-2 weeks to be reviewed and merged
