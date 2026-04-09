@@ -126,10 +126,10 @@ validate distroChannel = do
         -- (although it could be static)
         when (Linux Alpine `notElem` pspecs) $
           case t of
-            GHCup | arch `elem` [A_64, A_32] -> lift (logError $ "Linux Alpine missing for " <> T.pack (prettyShow t) <> " " <> v' <> " " <> T.pack (prettyShow arch)) >> addError
-            Cabal | v > [vver|2.4.1.0|]
+            Tool "ghcup" | arch `elem` [A_64, A_32] -> lift (logError $ "Linux Alpine missing for " <> T.pack (prettyShow t) <> " " <> v' <> " " <> T.pack (prettyShow arch)) >> addError
+            Tool "cabal" | v > [vver|2.4.1.0|]
                   , arch `elem` [A_64, A_32] -> lift (logError $ "Linux Alpine missing for " <> T.pack (prettyShow t) <> " " <> v' <> " " <> T.pack (prettyShow arch)) >> addError
-            GHC | Latest `elem` tags || Recommended `elem` tags
+            Tool "ghc" | Latest `elem` tags || Recommended `elem` tags
                 , arch `elem` [A_64, A_32] -> lift (logError $ "Linux Alpine missing for " <> T.pack (prettyShow t) <> " " <> v' <> " " <> T.pack (prettyShow arch))
             _ -> lift $ logWarn $ "Linux Alpine missing for " <> T.pack (prettyShow t) <> " " <> v' <> " " <> T.pack (prettyShow arch)
 
@@ -167,7 +167,7 @@ validate distroChannel = do
 
   checkGHCVerIsValid = do
     GHCupInfo { _ghcupDownloads = dls } <- lift getGHCupInfo
-    let ghcVers = toListOf (ix GHC % to M.keys % to (map _tvVersion) % folded) dls
+    let ghcVers = toListOf (ix ghc % to M.keys % to (map _tvVersion) % folded) dls
     forM_ ghcVers $ \v ->
       case [ x | (x,"") <- readP_to_S V.parseVersion (T.unpack . prettyVer $ v) ] of
         [_] -> pure ()
@@ -188,7 +188,7 @@ validate distroChannel = do
   mandatoryTags tool
     -- due to a quirk, even for ghcup prereleases we need the 'latest' tag
     -- https://github.com/haskell/ghcup-hs/issues/891
-    | tool == GHCup = [Latest, Recommended]
+    | tool == Tool "ghcup" = [Latest, Recommended]
     | otherwise = case distroChannel of
                     MainChan       -> [Latest, Recommended]
                     PrereleaseChan -> [LatestPrerelease]
@@ -197,7 +197,7 @@ validate distroChannel = do
   -- all GHC versions must have a base tag
   checkGHCHasBaseVersion = do
     GHCupInfo { _ghcupDownloads = dls } <- lift getGHCupInfo
-    let allTags = M.toList $ availableToolVersions dls GHC
+    let allTags = M.toList $ availableToolVersions dls ghc
     forM allTags $ \(ver, _viTags -> tags) -> case any isBase tags of
       False -> do
         lift $ logError $ "Base tag missing from GHC ver " <> prettyVer (_tvVersion ver)
@@ -272,7 +272,7 @@ validateTarballs (TarballFilter mtool versionRegex) = do
                ]
       $ do
         case mtool of
-          (Just GHCup) -> do
+          (Just (Tool "ghcup")) -> do
             tmpUnpack <- lift mkGhcupTmpDir
             dlu <- lE $ parseURI' (_dlUri dli)
             _ <- liftE $ download dlu Nothing (Just (_dlHash dli)) Nothing (fromGHCupPath tmpUnpack) Nothing False

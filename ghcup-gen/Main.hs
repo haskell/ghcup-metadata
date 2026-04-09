@@ -64,6 +64,7 @@ formatParser =
 data Command = ValidateYAML ValidateYAMLOpts
              | ValidateTarballs ValidateYAMLOpts TarballFilter
              | GenerateHlsGhc ValidateYAMLOpts Format Output
+             | GenerateHlsGhcInstallInfo Input Output
              | GenerateToolTable ValidateYAMLOpts Output
              | GenerateSystemDepsInfo ValidateYAMLOpts Output
 
@@ -140,7 +141,7 @@ tarballFilterP = option readm $
       s <- str
       case span (/= '-') s of
         (_, []) -> fail "invalid format, missing '-' after the tool name"
-        (t, v) | [tool] <- [ tool | tool <- [minBound..maxBound], low (show tool) == low t ] ->
+        (t, v) | [tool] <- [ tool | tool <- [ghc,cabal,hls,stack], low (show tool) == low t ] ->
           pure (TarballFilter $ Just tool) <*> makeRegexOptsM compIgnoreCase execBlank (drop 1 v)
         _ -> fail "invalid tool"
     low = fmap toLower
@@ -170,6 +171,12 @@ com = subparser
          (progDesc "Generate a list of HLS-GHC support")
        )
   <> command
+       "generate-hls-ghcs-install-info"
+       (info
+         ((GenerateHlsGhcInstallInfo <$> inputP <*> outputP) <**> helper)
+         (progDesc "Generate a list of HLS-GHC installation info")
+       )
+  <> command
        "generate-tool-table"
        (info
          ((GenerateToolTable <$> validateYAMLOpts <*> outputP) <**> helper)
@@ -188,23 +195,21 @@ com = subparser
 main :: IO ()
 main = do
   no_color <- isJust <$> lookupEnv "NO_COLOR"
-  let loggerConfig = LoggerConfig { lcPrintDebug  = True
+  let loggerConfig = LoggerConfig { lcPrintDebugLvl = Just 1
                                   , consoleOutter = T.hPutStr stderr
                                   , fileOutter    = \_ -> pure ()
                                   , fancyColors   = not no_color
                                   }
   dirs <- liftIO getAllDirs
-  let leanAppstate = LeanAppState (Settings True 0 Lax False Never Curl True [NewGHCupURL] False GPGNone True Nothing (DM mempty) [] defaultPagerConfig True) dirs defaultKeyBindings loggerConfig
-
   pfreq <- (
-    flip runReaderT leanAppstate . runE @'[NoCompatiblePlatform, NoCompatibleArch, DistroNotFound] $ platformRequest
+    flip runReaderT loggerConfig . runE @'[NoCompatiblePlatform, NoCompatibleArch, DistroNotFound] $ platformRequest
     ) >>= \case
             VRight r -> pure r
             VLeft e -> do
-              flip runReaderT leanAppstate $ logError $ T.pack $ prettyShow e
+              flip runReaderT loggerConfig $ logError $ T.pack $ prettyShow e
               liftIO $ exitWith (ExitFailure 2)
 
-  let appstate = AppState (Settings True 0 Lax False Never Curl True [NewGHCupURL] False GPGNone True Nothing (DM mempty) [] defaultPagerConfig True) dirs defaultKeyBindings (GHCupInfo mempty mempty Nothing) pfreq loggerConfig
+  let appstate = AppState (Settings True 0 Lax False Never Curl 1 [NewGHCupURL] False GPGNone True Nothing (DM mempty) [] defaultPagerConfig True) dirs defaultKeyBindings (GHCupInfo mempty mempty Nothing) pfreq loggerConfig
 
   let withValidateYamlOpts vopts f = case vopts of
         ValidateYAMLOpts { vInput = Nothing } ->
@@ -225,6 +230,12 @@ main = do
           ValidateYAML vopts@ValidateYAMLOpts{ .. } -> withValidateYamlOpts vopts (validate vChannel)
           ValidateTarballs vopts tarballFilter -> withValidateYamlOpts vopts (validateTarballs tarballFilter)
           GenerateHlsGhc vopts format output -> withValidateYamlOpts vopts (generateHLSGhc format output)
+          GenerateHlsGhcInstallInfo input output -> do
+            c <- case input of
+              StdInput -> B.getContents
+              FileInput f -> B.readFile f
+            r <- generateHLSGhcInstallInfo output c
+            exitWith r
           GenerateToolTable vopts output -> withValidateYamlOpts vopts (generateTable output)
           GenerateSystemDepsInfo vopts output -> withValidateYamlOpts vopts (generateSystemInfoWithDistroVersion output)
   pure ()

@@ -17,6 +17,8 @@ import           GHCup.Errors
 import           GHCup.Types
 import           GHCup.Types.Optics
 import           GHCup.Utils
+import           GHCup.Prelude
+import           GHCup.Prelude.Version.QQ
 
 
 import           Codec.Archive
@@ -24,15 +26,19 @@ import           Control.DeepSeq
 import           Control.Exception              ( evaluate )
 import           Control.Exception.Safe      hiding ( handle )
 import           Control.Monad
+import           Control.Monad.State.Lazy
 import           Control.Monad.IO.Class
 import           Control.Monad.Reader.Class
 import           Control.Monad.Trans.Resource   ( runResourceT
                                                 , MonadUnliftIO
                                                 )
+import qualified Data.Aeson                   as Aeson
 import qualified Data.Aeson.Encode.Pretty     as Aeson
 import           Data.ByteString                ( ByteString )
 import           Data.Either
+import           Data.Functor
 import           Data.Maybe
+import           Data.List.NonEmpty (NonEmpty((:|)))
 import           Data.List
 import           Data.Map.Strict                ( Map )
 import           Data.Versions
@@ -44,6 +50,7 @@ import           Text.Regex.Posix
 import           GHCup.Prelude.String.QQ
 
 import qualified Data.ByteString.Lazy          as BSL
+import qualified Data.ByteString.UTF8 as UTF8
 import qualified Data.Map.Strict               as M
 import qualified Data.Text                     as T
 import qualified Data.Yaml.Pretty              as YAML
@@ -53,7 +60,8 @@ import           Data.Bifoldable                (bifoldMap)
 import           Data.Foldable                  (traverse_)
 import           Data.Text                      (Text)
 
-import           Text.PrettyPrint.HughesPJClass (pPrint)
+import           Text.PrettyPrint.HughesPJClass (pPrint, prettyShow)
+
 
 data Format = FormatJSON
             | FormatYAML
@@ -63,6 +71,87 @@ data Output
   | StdOut
 
 type HlsGhcVersions = Map Version (Map Architecture (Map Platform Version))
+
+type HlsGhcInstallSpec = Map Version (Map Architecture (Map Platform [Version]))
+
+generateHLSGhcInstallInfo ::
+  ( MonadFail m
+  , MonadMask m
+  , Monad m
+  , MonadThrow m
+  , MonadIO m
+  , MonadUnliftIO m
+  )
+  => Output
+  -> ByteString
+  -> m ExitCode
+generateHLSGhcInstallInfo output data' = do
+  handle <- case output of
+              StdOut -> pure stdout
+              FileOutput fp -> liftIO $ openFile fp WriteMode
+  a <- either fail pure $ Aeson.eitherDecodeStrict @HlsGhcInstallSpec data'
+  r <- forM (M.toList a) $ \(hlsVer, mArch) -> flip evalStateT [] $
+    forM (M.toList mArch) $ \(arch, mPlat) ->
+      forM (M.toList mPlat) $ \(plat, ghcVers) -> do
+        let exeExt = if plat == Windows then ".exe" else ""
+        let exeGhcRules = ghcVers <&> \ghcVer -> InstallFileRule ("haskell-language-server-" <> T.unpack (prettyVer ghcVer) <.> exeExt) Nothing
+        let symlinkGhcRules = ghcVers <&> \ghcVer ->
+               SymlinkSpec {
+                 _slTarget = "haskell-language-server-" <> T.unpack (prettyVer ghcVer) <.> exeExt
+               , _slLinkName = "haskell-language-server-" <> T.unpack (prettyVer ghcVer) <> "~${PKGVER}" <.> exeExt
+               , _slPVPMajorLinks = False
+               , _slSetName = Just $ "haskell-language-server-" <> T.unpack (prettyVer ghcVer) <.> exeExt
+               }
+
+        installInfo <- if hlsVer >= [vver|1.7.0.0|]
+        then do
+          pure $ InstallBindistMake $
+                InstallMakeInfo {
+                  _imiConfigArgs = []
+                , _imiConfigEnv  = []
+                , _imiConfigFile = Nothing
+                , _imiMakeArgs   = ["DESTDIR=${TMPDIR}", "PREFIX=${PREFIX}", "install"]
+                , _imiMakeEnv    = []
+                , _imiPreserveMtimes = False
+                , _imiExeSymLinked = SymlinkSpec {
+                                       _slTarget = "haskell-language-server-wrapper" <.> exeExt
+                                     , _slLinkName = "haskell-language-server-wrapper-${PKGVER}" <.> exeExt
+                                     , _slPVPMajorLinks = False
+                                     , _slSetName = Just $ "haskell-language-server-wrapper" <.> exeExt
+                                     } : symlinkGhcRules
+                }
+        else do
+          pure $ InstallBindistFiles $
+                InstallExecutablesInfo
+                (InstallFileRule ("haskell-language-server-wrapper" <.> exeExt) Nothing :| exeGhcRules)
+                []
+                ((SymlinkSpec {
+                  _slTarget = "haskell-language-server-wrapper" <.> exeExt
+                , _slLinkName = "haskell-language-server-wrapper-${PKGVER}" <.> exeExt
+                , _slPVPMajorLinks = False
+                , _slSetName = Just $ "haskell-language-server-wrapper" <.> exeExt
+                }) : symlinkGhcRules
+                )
+                False
+
+        s <- get
+        if installInfo `elem` s
+        then pure ()
+        else do
+          let vcute = T.unpack $ T.replace "." "" $ prettyVer hlsVer
+          modify (installInfo:)
+          let header = if null s
+                       then "hls-" <> vcute <> "-install-info"
+                       else "hls-" <> vcute <> "-" <> prettyShow arch <> "-" <> prettyShow plat <> "-install-info"
+          liftIO $ hPutStrLn handle $ "." <> header <> ":"
+          liftIO $ hPutStrLn handle $ "  dlInstallInfo: &" <> header
+          liftIO $ hPutStrLn handle $ encode' $ installInfo
+
+  pure ExitSuccess
+ where
+  yamlConfig = YAML.setConfDropNull True YAML.defConfig
+  indent i = unlines . map (replicate i ' ' ++) . lines
+  encode' = indent 4 . UTF8.toString . YAML.encodePretty yamlConfig
 
 generateHLSGhc :: ( MonadFail m
                   , MonadMask m
@@ -81,7 +170,7 @@ generateHLSGhc :: ( MonadFail m
                -> m ExitCode
 generateHLSGhc format output = do
   GHCupInfo { _ghcupDownloads = dls } <- getGHCupInfo
-  let hlses = dls M.! HLS
+  let hlses = dls M.! hls
   r <- forM hlses $ \(unMapIgnoreUnknownKeys  . _viArch -> archs) ->
          forM archs $ \plats ->
            forM (unMapIgnoreUnknownKeys plats) $ \(head . M.toList -> (_, dli)) -> do
@@ -155,18 +244,18 @@ generateTable output = do
               StdOut -> pure stdout
               FileOutput fp -> liftIO $ openFile fp WriteMode
 
-  forM_ [GHC,Cabal,HLS,Stack] $ \tool -> do
+  forM_ [ghc,cabal,hls,stack] $ \tool -> do
     case tool of
-      GHC -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://www.haskell.org/ghc/'>GHC</a> versions</summary>"
-      Cabal -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://cabal.readthedocs.io/en/stable/'>cabal-install</a> versions</summary>"
-      HLS -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://haskell-language-server.readthedocs.io/en/stable/'>HLS</a> versions</summary>"
-      Stack -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://docs.haskellstack.org/en/stable/README/'>Stack</a> versions</summary>"
+      Tool "ghc" -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://www.haskell.org/ghc/'>GHC</a> versions</summary>"
+      Tool "cabal" -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://cabal.readthedocs.io/en/stable/'>cabal-install</a> versions</summary>"
+      Tool "hls" -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://haskell-language-server.readthedocs.io/en/stable/'>HLS</a> versions</summary>"
+      Tool "stack" -> liftIO $ hPutStrLn handle $ "<details> <summary>Show all supported <a href='https://docs.haskellstack.org/en/stable/README/'>Stack</a> versions</summary>"
       _ -> fail "no"
     liftIO $ hPutStrLn handle $ "<table>"
     liftIO $ hPutStrLn handle $ "<thead><tr><th>" <> show tool <> " Version</th><th>Tags</th></tr></thead>"
     liftIO $ hPutStrLn handle $ "<tbody>"
-    vers <- reverse <$> listVersions (Just tool) [] False False (Nothing, Nothing)
-    forM_ (filter (\ListResult{..} -> not lStray) vers) $ \ListResult{..} -> do
+    (VRight vers) <- runE $ listVersions (Just tool) [] False False (Nothing, Nothing)
+    forM_ (filter (\ListResult{..} -> not lStray) (reverse vers)) $ \ListResult{..} -> do
       liftIO $ hPutStrLn handle $
           "<tr><td>"
         <> T.unpack (prettyVer lVer)
@@ -219,7 +308,7 @@ generateSystemInfo output = do
         , Windows
         ] $ \plat -> do
             GHCupInfo { .. } <- getGHCupInfo
-            (Just req) <- pure $ getCommonRequirements (PlatformResult plat Nothing) _toolRequirements
+            (Just req) <- pure $ getCommonRequirements ghc (PlatformResult plat Nothing) _toolRequirements
             liftIO $ hPutStrLn handle $ "### " <> (prettyPlat plat) <> "\n"
             liftIO $ hPutStrLn handle $ (T.unpack $ pretty' req) <> "\n"
   pure ExitSuccess
@@ -258,7 +347,7 @@ generateSystemInfoWithDistroVersion output = do
               FileOutput fp -> liftIO $ openFile fp WriteMode
 
   GHCupInfo { _toolRequirements = tr } <- getGHCupInfo
-  let ghcInfo = M.lookup Nothing <$> M.lookup GHC tr
+  let ghcInfo = M.lookup Nothing <$> M.lookup ghc tr
   liftIO $ traverse_ (\(key, value)  -> do
                         liftIO $ hPutStrLn handle $ "### " <> prettyPlat key <> "\n"
                         liftIO $ hPutStrLn handle $ T.unpack $ versionsAndRequirements value <> T.pack "\n")
