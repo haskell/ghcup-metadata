@@ -20,9 +20,9 @@ def inject_hls_install_info(metadata_file, json_file, out_file):
         seen_objects = []
         for myarch, v_plat in v_arch.items():
             for plat, ghc_vers in v_plat.items():
-                dl_install_info = CommentedMap()
+                dl_install_spec = CommentedMap()
                 if parse(hls_ver) < parse('1.7.0.0'):
-                    dl_install_info['bindistFiles'] = {
+                    dl_install_spec['dlInstallSpec'] = CommentedMap({
                         'dataRules': [],
                         'exeRules': [
                             {'installSource': 'haskell-language-server-wrapper'},
@@ -47,10 +47,12 @@ def inject_hls_install_info(metadata_file, json_file, out_file):
                             ]
                         ],
                         'preserveMtimes': False
-                    }
+                    })
                 else:
-                    dl_install_info['bindistMake'] = {
-                        'makeArgs': ['DESTDIR=${TMPDIR}', 'PREFIX=${PREFIX}', 'install'],
+                    dl_install_spec['dlInstallSpec'] = CommentedMap({
+                        'make': {
+                          'makeArgs': ['DESTDIR=${TMPDIR}', 'PREFIX=${PREFIX}', 'install']
+                        },
                         'exeSymLinked': [
                             {
                                 'linkName': 'haskell-language-server-wrapper-${PKGVER}',
@@ -67,24 +69,24 @@ def inject_hls_install_info(metadata_file, json_file, out_file):
                             ]
                         ],
                         'preserveMtimes': False
-                    }
+                    })
 
                 # possibly add a new install-info object at the top of the metadata file
-                if dl_install_info not in seen_objects:
+                if dl_install_spec not in seen_objects:
                     cute_ver = hls_ver.replace('.', '')
                     if seen_objects:
-                        anchor_name = f'hls-{cute_ver}-{myarch}-{plat}-install-info'
+                        anchor_name = f'hls-{cute_ver}-{myarch}-{plat}-install-spec'
                     else:
-                        anchor_name = f'hls-{cute_ver}-install-info'
-                    dl_install_info.yaml_set_anchor(anchor_name, always_dump=True)
+                        anchor_name = f'hls-{cute_ver}-install-spec'
+                    dl_install_spec['dlInstallSpec'].yaml_set_anchor(anchor_name, always_dump=True)
 
-                    metadata.insert(0, f'.{anchor_name}', {'dlInstallInfo': dl_install_info})
+                    metadata.insert(0, f'.{anchor_name}', dl_install_spec)
 
-                    seen_objects.append(dl_install_info)
+                    seen_objects.append(dl_install_spec)
 
-                    active_obj = dl_install_info
+                    active_obj = dl_install_spec
                 else:
-                    active_obj = seen_objects[seen_objects.index(dl_install_info)]
+                    active_obj = seen_objects[seen_objects.index(dl_install_spec)]
 
                 # now inject the dlInstallInfo in the HLS versions
                 # because the original object has an achor, ruamel.yaml will
@@ -99,7 +101,7 @@ def inject_hls_install_info(metadata_file, json_file, out_file):
                             break
 
                     if not is_alias:
-                        metadata['ghcupDownloads']['HLS'][hls_ver]['viArch'][myarch][plat][os_ver]['dlInstallInfo'] = active_obj
+                        metadata['ghcupDownloads']['HLS'][hls_ver]['viArch'][myarch][plat][os_ver]['dlInstallSpec'] = active_obj['dlInstallSpec']
 
     yaml.width = 4096
     yaml.dump(metadata, out_file)
@@ -107,3 +109,5 @@ def inject_hls_install_info(metadata_file, json_file, out_file):
 
 if __name__ == '__main__':
     inject_hls_install_info()
+
+# pylint: disable=C0301
