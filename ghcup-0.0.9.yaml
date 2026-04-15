@@ -13441,3 +13441,51 @@ ghcupDownloads:
               dlHash: b6d21e8f9c3b15744f5a7ab40248019157ed7793875dbe0383d4c82ff572b528
               dlSubdir: pandoc-3.9.0.2
               dlInstallSpec: *pandoc-install-spec1
+  agda:
+    2.8.0:
+      viTags:
+        - Latest
+        - Recommended
+      viPostInstall: &agda-post-install |
+        After installing agda, please run:
+          agda --setup
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-linux.tar.xz
+              dlHash: 824081b8dcbe431289a50ac6bd83e451f390c51c3884ac7a8c4a5c0df2632faf
+              dlInstallSpec: &agda-install-spec1
+                exeRules:
+                  - installSource: "agda"
+                    installDest: "bin/agda"
+                exeSymLinked:
+                 - linkName: "agda-${PKGVER}"
+                   pVPMajorLinks: true
+                   setName: "agda"
+                   target: "bin/agda"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-macOS-x64.tar.xz
+              dlHash: 9d3b4f376bc9469b5e0c684bf06053f7dae327f7e4314f31f3edc866a9bb3bc5
+              dlInstallSpec: *agda-install-spec1
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-win64.zip
+              dlHash: 5c97846c45dc8c43d79a5df3cc78ccf58bad710aac2182b70c4f5ede30af3cbc
+              dlInstallSpec:
+                exeRules:
+                  - installSource: "agda.exe"
+                    installDest: "bin/agda.exe"
+                exeSymLinked:
+                 - linkName: "agda-${PKGVER}.exe"
+                   pVPMajorLinks: false
+                   setName: "agda.exe"
+                   target: "bin/agda.exe"
+                preserveMtimes: false
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-macOS-arm64.tar.xz
+              dlHash: 9a35071eb9747f984177f48e1ba7008a9cebccfc259a40a0a84b29ffc2ec2db6
+              dlInstallSpec: *agda-install-spec1
