@@ -13489,3 +13489,62 @@ ghcupDownloads:
               dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-macOS-arm64.tar.xz
               dlHash: 9a35071eb9747f984177f48e1ba7008a9cebccfc259a40a0a84b29ffc2ec2db6
               dlInstallSpec: *agda-install-spec1
+  purescript:
+    0.15.16:
+      viTags:
+        - Latest
+        - Recommended
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/purescript/purescript/releases/download/v0.15.16/linux64.tar.gz
+              dlHash: 44da9efb8a4e14519e8fd5350acc377a4b981e42351a78c53e9f84045bf38e22
+              dlOutput: purescript-linux-x64-0.15.16.tar.gz
+              dlSubdir: purescript
+              dlInstallSpec: &purs-install-spec1
+                exeRules:
+                  - installSource: "purs"
+                    installDest: "bin/purs"
+                exeSymLinked:
+                 - linkName: "purs-${PKGVER}"
+                   pVPMajorLinks: true
+                   setName: "purs"
+                   target: "bin/purs"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/purescript/purescript/releases/download/v0.15.16/macos.tar.gz
+              dlHash: 9f5bfdb7a468241c7106660bc6bd0209ce3f19ad197516ccdcd5c17df81958b6
+              dlOutput: purescript-macos-0.15.16.tar.gz
+              dlSubdir: purescript
+              dlInstallSpec: *purs-install-spec1
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/purescript/purescript/releases/download/v0.15.16/win64.tar.gz
+              dlHash: 8b68ae1031f6aafda327672a424109ff28f8881b0ce00185a2b1445d32430df3
+              dlOutput: purescript-win64-0.15.16.tar.gz
+              dlSubdir: purescript
+              dlInstallSpec:
+                exeRules:
+                  - installSource: "purs.exe"
+                    installDest: "bin/purs.exe"
+                exeSymLinked:
+                 - linkName: "purs-${PKGVER}.exe"
+                   pVPMajorLinks: true
+                   setName: "purs.exe"
+                   target: "bin/purs.exe"
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/purescript/purescript/releases/download/v0.15.16/macos-arm64.tar.gz
+              dlHash: 63f15a13e226efc260fb025c4a4ad7f66429b6685da607040b7bcc209332fcc4
+              dlOutput: purescript-macos-arm64-0.15.16.tar.gz
+              dlSubdir: purescript
+              dlInstallSpec: *purs-install-spec1
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/purescript/purescript/releases/download/v0.15.16/linux-arm64.tar.gz
+              dlHash: b8d153c5c6e0d8c9618a90824eb342b5818e14a92b0b6cdff753d9b353a927f3
+              dlOutput: purescript-linux-arm64-0.15.16.tar.gz
+              dlSubdir: purescript
+              dlInstallSpec: *purs-install-spec1
