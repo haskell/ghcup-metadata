@@ -13407,7 +13407,6 @@ ghcupDownloads:
                    pVPMajorLinks: false
                    setName: "pandoc-server"
                    target: "bin/pandoc"
-                preserveMtimes: false
           Darwin:
             unknown_versioning:
               dlUri: https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.darwin.x86_64.tar.gz
@@ -13548,3 +13547,99 @@ ghcupDownloads:
               dlOutput: purescript-linux-arm64-0.15.16.tar.gz
               dlSubdir: purescript
               dlInstallSpec: *purs-install-spec1
+  cue:
+    0.16.1:
+      viTags:
+        - Latest
+        - Recommended
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_linux_amd64.tar.gz
+              dlHash: 5d644c1305a2b86504c8dcd2ec829cf5b4999efc2cf51ee375624e0455f774ae
+              dlInstallSpec: &cue-install-spec1
+                exeRules:
+                  - installSource: "cue"
+                    installDest: "bin/cue"
+                exeSymLinked:
+                 - linkName: "cue-${PKGVER}"
+                   pVPMajorLinks: true
+                   setName: "cue"
+                   target: "bin/cue"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_darwin_amd64.tar.gz
+              dlHash: 97b0d78e4c5ee49ff72145fd6ef4f4bab0bb332d55f29660de3fec2af5ec96a9
+              dlInstallSpec: *cue-install-spec1
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_windows_amd64.zip
+              dlHash: 2f24123f458229fcf283db534bd86692ad1074da806defee0f0cc62976c0397c
+              dlInstallSpec: &cue-install-win-spec1
+                exeRules:
+                  - installSource: "cue.exe"
+                    installDest: "bin/cue.exe"
+                exeSymLinked:
+                 - linkName: "cue-${PKGVER}.exe"
+                   pVPMajorLinks: true
+                   setName: "cue.exe"
+                   target: "bin/cue.exe"
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_darwin_arm64.tar.gz
+              dlHash: a72b0cddb377c52d1b003bed9a335d893b70cd75a182cd5e3fee8bae30ddb6d6
+              dlInstallSpec: *cue-install-spec1
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_linux_arm64.tar.gz
+              dlHash: 3cc715a9e969f87b93c4fa34cfaef5388b93e96efa20b248e8ad6826abd25a83
+              dlInstallSpec: *cue-install-spec1
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/cue-lang/cue/releases/download/v0.16.1/cue_v0.16.1_windows_arm64.zip
+              dlHash: e0c15ce53f73e8609b0e8ce6507298f3474b334ac5eb0c826c9497a811fd0cce
+              dlInstallSpec: *cue-install-win-spec1
+  dhall:
+    1.42.2:
+      viTags:
+        - Latest
+        - Recommended
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning:
+              dlUri: https://github.com/dhall-lang/dhall-haskell/releases/download/1.42.2/dhall-1.42.2-x86_64-linux.tar.bz2
+              dlHash: b2509bbe07772f268ef193d9c36b18aa13bd32ecec76fd4b21782715b38386a3
+              dlInstallSpec: &dhall-install-spec1
+                exeRules:
+                  - installSource: "bin/dhall"
+                exeSymLinked:
+                 - linkName: "dhall-${PKGVER}"
+                   pVPMajorLinks: true
+                   setName: "dhall"
+                   target: "bin/dhall"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/dhall-lang/dhall-haskell/releases/download/1.42.2/dhall-1.42.2-x86_64-darwin.tar.bz2
+              dlHash: b1c5fd87b018d13d3a07db0561d1ffb906b7b840151fdb8ce00dc9f2f8dffe4a
+              dlInstallSpec: *dhall-install-spec1
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/dhall-lang/dhall-haskell/releases/download/1.42.2/dhall-1.42.2-x86_64-windows.zip
+              dlHash: c2447b8406d11611f43c47366fc93baa8061961736b46b9822077625cbd8ff9e
+              dlInstallSpec: &dhall-install-win-spec1
+                exeRules:
+                  - installSource: "bin/dhall.exe"
+                exeSymLinked:
+                 - linkName: "dhall-${PKGVER}.exe"
+                   pVPMajorLinks: true
+                   setName: "dhall.exe"
+                   target: "bin/dhall.exe"
+        A_ARM64:
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/dhall-lang/dhall-haskell/releases/download/1.42.2/dhall-1.42.2-aarch64-darwin.tar.bz2
+              dlHash: fe146e5004fda01e06f4a29fa160f1e5518a54b149f4c416bcfb5c280c91190c
+              dlInstallSpec: *dhall-install-spec1
