@@ -5417,4 +5417,47 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
           Linux_Alpine:
             unknown_versioning: *stack-3901-arm64
+  GHCup:
+    0.2.0.0:
+      viTags:
+      - Latest
+      - Recommended
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &ghcup-64
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/x86_64-linux-ghcup-0.2.0.0-rc1
+              dlHash: fc499c851f63145dd548efdbe7c24c6107cba82f408428a707d0fcc2f3c178ac
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/x86_64-apple-darwin-ghcup-0.2.0.0-rc1
+              dlHash: 25543ea05b55c438cd7ff2ea7db25c35580702c144b76e4cd61e8f09c8a9b47e
+          FreeBSD:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/x86_64-portbld-freebsd-ghcup-0.2.0.0-rc1
+              dlHash: e9878c6e620be4a73fac81b6c70d6eb3f54bb089739928665a3f96bf4fe52774
+          Windows:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/x86_64-mingw64-ghcup-0.2.0.0-rc1.exe
+              dlHash: 2945a6e2824407995a2c503f16210d8919e9e0688879871bf491b8369cd4f6bb
+          Linux_Alpine:
+            unknown_versioning: *ghcup-64
+        A_32:
+          Linux_UnknownLinux:
+            unknown_versioning: &ghcup-32
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/i386-linux-ghcup-0.2.0.0-rc1
+              dlHash: 1e14c876097394736d156e389590ef47dbaa3c83e51c59a152edcd78691bf178
+          Linux_Alpine:
+            unknown_versioning: *ghcup-32
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning: &ghcup-aarch64
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/aarch64-linux-ghcup-0.2.0.0-rc1
+              dlHash: 7f9b8cbd6a8cc31452a4274d0519f1242a3fda2acccd1f08a5b2618cbd8e52d2
+          Linux_Alpine:
+            unknown_versioning: *ghcup-aarch64
+          Darwin:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~ghcup/0.2.0.0-rc1/aarch64-apple-darwin-ghcup-0.2.0.0-rc1
+              dlHash: 5afdaffe521166c34488e22df18a4c424201c8fb3f9038052e85524590b6baf9
 # Bec

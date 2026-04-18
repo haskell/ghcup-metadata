@@ -157,19 +157,16 @@ jobs:
 
   bindist-install-arm:
     name: Build ARM binary
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-24.04-arm
     strategy:
       fail-fast: false
       matrix:
         include:
-          - os: [self-hosted, Linux, ARM64, maerwald]
-            ARCH: ARM
+          - ARCH: ARM
             DISTRO: Debian
-          - os: [self-hosted, Linux, ARM64, maerwald]
-            ARCH: ARM64
+          - ARCH: ARM64
             DISTRO: Debian
-          - os: [self-hosted, Linux, ARM64, maerwald]
-            ARCH: ARM64
+          - ARCH: ARM64
             DISTRO: Alpine
     steps:
       - uses: docker://arm64v8/ubuntu:focal
@@ -191,13 +188,13 @@ jobs:
           args: sh -c '.github/workflows/install-bindist.sh'
 
       - if: matrix.ARCH == 'ARM64' && matrix.DISTRO == 'Debian'
-        uses: docker://hasufell/arm64v8-ubuntu-haskell:focal
+        uses: docker://hasufell/arm64v8-debian-haskell:11
         name: Run build (aarch64 linux)
         with:
           args: sh -c '.github/workflows/install-bindist.sh'
 
       - if: matrix.ARCH == 'ARM64' && matrix.DISTRO == 'Alpine'
-        uses: docker://hasufell/arm64v8-alpine-haskell:3.20
+        uses: docker://hasufell/arm64v8-alpine-haskell:3.21
         name: Run build (aarch64 alpine)
         with:
           args: sh -c '.github/workflows/install-bindist.sh'
