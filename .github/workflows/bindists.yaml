@@ -43,18 +43,15 @@ jobs:
           - image: alpine:latest
             installCmd: apk update && apk add
             toolRequirements: binutils-gold curl gcc g++ gmp-dev libc-dev libffi-dev make musl-dev ncurses-dev perl tar xz
-          - image: debian:11
+          - image: debian:12
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
-          - image: debian:12
+          - image: debian:13
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5 libnuma-dev
           - image: debian:unstable
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev  libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6 libnuma-dev
-          - image: ubuntu:20.04
-            installCmd: apt-get update && apt-get install -y
-            toolRequirements: build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
           - image: ubuntu:22.04
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential curl libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
@@ -64,12 +61,6 @@ jobs:
           - image: archlinux:latest
             installCmd: pacman -Syu --noconfirm
             toolRequirements: which gcc gmp libffi make ncurses perl tar xz
-          - image: fedora:37
-            installCmd: dnf install -y
-            toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
-          - image: fedora:40
-            installCmd: dnf install -y
-            toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
           - image: fedora:42
             installCmd: dnf install -y
             toolRequirements: which gcc g++ gmp gmp-devel make ncurses ncurses-compat-libs xz perl
@@ -88,7 +79,7 @@ jobs:
           - image: linuxmintd/mint21.3-amd64
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential libffi-dev libffi7 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
-          - image: linuxmintd/mint22.2-amd64
+          - image: linuxmintd/mint22.3-amd64
             installCmd: apt-get update && apt-get install -y
             toolRequirements: build-essential libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses6 libtinfo6
           - image: ghcr.io/void-linux/void-glibc-full:latest
