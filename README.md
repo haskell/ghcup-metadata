@@ -12,6 +12,7 @@ on architecture (e.g. X86_64), platform (e.g Linux) and possibly distro (e.g. Fe
 * `ghcup-vanilla-A.B.C.yaml`: this is similar to `ghcup-A.B.C.yaml`, but only uses upstream bindists (no patches/fixes are applied, no missing platforms added)
 * `ghcup-prereleases-A.B.C.yaml`: this contains pre-releases of all tools
 * `ghcup-cross-A.B.C.yaml`: this contains experimental cross compilers. See https://www.haskell.org/ghcup/guide/#cross-support for details.
+* `ghcup-3rdparty-A.B.C.yaml`: this contains various other tools that are not part of the core toolchain
 
 For use with the latest version of `ghcup`, pick the latest `A.B.C` versions of these metadata files.
 
