@@ -10131,7 +10131,6 @@ ghcupDownloads:
                 dlInstallSpec: *hls-install-spec
       2.13.0.0:
         viTags:
-        - Latest
         - Recommended
         viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
         viPostInstall: *hls-post-install
