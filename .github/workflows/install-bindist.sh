@@ -16,10 +16,10 @@ which ghcup | grep foobarbaz
 ghcup_fun() {
 	case "$(uname -s)" in
 		MSYS_*|MINGW*)
-			ghcup -v --url-source="file:${GITHUB_WORKSPACE//\\//}/$METADATA_FILE" "$@"
+			ghcup -v --metadata-caching=0 --url-source="file:${GITHUB_WORKSPACE//\\//}/$METADATA_FILE" "$@"
 			;;
 		*)
-			ghcup -v --url-source="file://${GITHUB_WORKSPACE}/$METADATA_FILE" "$@"
+			ghcup -v --metadata-caching=0 --url-source="file://${GITHUB_WORKSPACE}/$METADATA_FILE" "$@"
 			;;
 	esac
 }
