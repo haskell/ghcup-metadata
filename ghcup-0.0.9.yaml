@@ -2210,6 +2210,7 @@
       setName: haskell-language-server-8.8.4
       target: haskell-language-server-8.8.4
     preserveMtimes: false
+metadataUpdate: https://raw.githubusercontent.com/haskell/ghcup-metadata/refs/heads/master/ghcup-0.1.0.yaml
 toolRequirements:
   GHC:
     unknown_version:
