@@ -189,16 +189,11 @@ ghcupDownloads:
                      pVPMajorLinks: false
                      setName: "pandoc-server"
                      target: "bin/pandoc"
-            Darwin:
-              unknown_versioning:
-                dlUri: https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.darwin.x86_64.tar.gz
-                dlHash: c2c15e08df0e8fbc374c335b230a7ee958c313fa5714817a59aa59f1aa594f51
-                dlSubdir: pandoc-3.9.0.2
-                dlInstallSpec: *pandoc-install-spec1
             Windows:
               unknown_versioning:
                 dlUri: https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-windows-x86_64.zip
                 dlHash: c97542f2800f446e788d9f74237856d995421ad1bb3cc8324286840c5f272d3a
+                dlSubdir: pandoc-3.9.0.2
                 dlInstallSpec:
                   exeRules:
                     - installSource: "pandoc.exe"
@@ -214,7 +209,7 @@ ghcupDownloads:
               unknown_versioning:
                 dlUri: https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-arm64-macOS.zip
                 dlHash: 6e9eca844076bcbb599bbeebbba78a70f93b5307782b85c2c272872812c88875
-                dlSubdir: pandoc-3.9.0.2
+                dlSubdir: pandoc-3.9.0.2-arm64
                 dlInstallSpec: *pandoc-install-spec1
             Linux_UnknownLinux:
               unknown_versioning:
