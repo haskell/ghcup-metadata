@@ -7548,57 +7548,57 @@ ghcupDownloads:
       toolContact: "hasufell@posteo.de"
       toolLicense: "LGPL-3.0"
     toolVersions:
-      0.2.4.0:
+      0.2.5.0:
         viTags:
         - Recommended
         - Latest
         viChangeLog: https://github.com/haskell/ghcup-hs/blob/master/CHANGELOG.md
         viSourceDL:
-          dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/ghcup-0.2.4.0-src.tar.gz
-          dlSubdir: ghcup-0.2.4.0
-          dlHash: 146b37284899adf19ba533f115898290158def34e837b08a7f29a538b97667ef
+          dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/ghcup-0.2.5.0-src.tar.gz
+          dlSubdir: ghcup-0.2.5.0
+          dlHash: d2f790c4a181b23e1a34653459a090065cc7bf409d6ac8d138edc0687e77131f
         viArch:
           A_64:
             Linux_UnknownLinux:
               unknown_versioning: &ghcup-64
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/x86_64-linux-ghcup-0.2.4.0
-                dlHash: 0822172704c046cdd3b0936ac9e3b85656db779f21af2e1fc289b191a18a883b
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/x86_64-linux-ghcup-0.2.5.0
+                dlHash: 480e05e414d2efa5abbda0006984a3343cd4973ead7b5c48d65a55a47b40ce59
             Darwin:
               unknown_versioning:
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/x86_64-apple-darwin-ghcup-0.2.4.0
-                dlHash: 211af98ee20036b471bb9b44910a0b24a21287615755103c6998533b73bb7772
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/x86_64-apple-darwin-ghcup-0.2.5.0
+                dlHash: 5be10b4c6bf4b0fdbc79e27319702196de429bd9624d931eee6d7664c03cebc7
             FreeBSD:
               unknown_versioning:
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/x86_64-portbld-freebsd-ghcup-0.2.4.0
-                dlHash: 12fb87d39f6b054133076eae2fb8a273ea22f3d1ef97e57f9fd95eb30e0f1a4c
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/x86_64-portbld-freebsd-ghcup-0.2.5.0
+                dlHash: 9f46cf1d373cd9ad6f43905c0ac2ba467070615c180eb8c4a72688d365f7cab0
             OpenBSD:
               unknown_versioning:
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/x86_64-openbsd-ghcup-0.2.4.0
-                dlHash: f2778abca4c24407ac49b72ebd29c478faae2ae9e2fb17ef12cfa9461d1b54b1
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/x86_64-openbsd-ghcup-0.2.5.0
+                dlHash: 8c22a0a0e8a25c6b68da1bf50cf3bc5ea093e795fa05fb4f2b80d1f9357df5bc
             Windows:
               unknown_versioning:
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/x86_64-mingw64-ghcup-0.2.4.0.exe
-                dlHash: 5b0a6c0b4a4b3243e60b5a4a021e9497d1c73f7bb9655820bfaec82720a54459
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/x86_64-mingw64-ghcup-0.2.5.0.exe
+                dlHash: 1e045accf766c0a6865ac6574a797ca5ace47a6f90a217ff8afdf875c2e78fb3
             Linux_Alpine:
               unknown_versioning: *ghcup-64
           A_32:
             Linux_UnknownLinux:
               unknown_versioning: &ghcup-32
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/i386-linux-ghcup-0.2.4.0
-                dlHash: 9d7cf9cd749bbd846b58cc46e3137153dc22eabd0a1efbca732dd77825b8e38a
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/i386-linux-ghcup-0.2.5.0
+                dlHash: 3d13fefbd524691daaa1080d18fa3189613db11a995f2f8eedd32568a3677832
             Linux_Alpine:
               unknown_versioning: *ghcup-32
           A_ARM64:
             Linux_UnknownLinux:
               unknown_versioning: &ghcup-aarch64
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/aarch64-linux-ghcup-0.2.4.0
-                dlHash: 0395b795fcd208673264f7226f146b0b18b7be7b78b66a2c589b8b21737d5818
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/aarch64-linux-ghcup-0.2.5.0
+                dlHash: 9bb60d249057bdef9ba3792e6a4a7201163eafbbe4939c7cf6ed3f9c6d4bca02
             Linux_Alpine:
               unknown_versioning: *ghcup-aarch64
             Darwin:
               unknown_versioning:
-                dlUri: https://downloads.haskell.org/~ghcup/0.2.4.0/aarch64-apple-darwin-ghcup-0.2.4.0
-                dlHash: 6d845cb76d7e527725d8c31ce6c978912c46e23ae678d8db1575a7f3c7128063
+                dlUri: https://downloads.haskell.org/~ghcup/0.2.5.0/aarch64-apple-darwin-ghcup-0.2.5.0
+                dlHash: ead4a5d59ceda98325b70746cccce60998cc6453cf85e5a2613fb76c99c31e8e
   HLS:
     toolDetails:
       toolHomepage: "https://haskell-language-server.readthedocs.io"
