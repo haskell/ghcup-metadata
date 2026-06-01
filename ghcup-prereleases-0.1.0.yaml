@@ -4943,6 +4943,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.9.2.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -4976,7 +4977,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.11/ChangeLog.md#v21101-release-candidate
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.11.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5016,7 +5017,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.13/ChangeLog.md#v21301-release-candidate
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.13.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5056,7 +5057,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.15/ChangeLog.md#v21501-release-candidate---2024-01-27
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.15.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5096,7 +5097,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.15/ChangeLog.md#v21541-release-candidate---2024-30-20
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.15.4.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5136,7 +5137,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.15/ChangeLog.md#v21561-release-candidate
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.15.6.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5176,7 +5177,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v2.15/ChangeLog.md#v21563-release-candidate
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v2.15.6.3
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5216,7 +5217,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.1/ChangeLog.md#v3101-release-candidate
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.1.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5256,7 +5257,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.3/ChangeLog.md#v3301-release-candidate---2024-12-13
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.3.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5296,7 +5297,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.5/ChangeLog.md#v3501-release-candidate---2025-03-15
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.5.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5338,7 +5339,7 @@ ghcupDownloads:
       viTags:
         - Prerelease
         - old
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.7/ChangeLog.md#v3701-release-candidate---2025-06-15
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.7.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5378,8 +5379,9 @@ ghcupDownloads:
             unknown_versioning: *stack-3701-arm64
     3.9.0.1:
       viTags:
-        - LatestPrerelease
-      viChangeLog: https://github.com/commercialhaskell/stack/blob/rc/v3.9/ChangeLog.md#v3901-release-candidate
+        - Prerelease
+        - old
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.9.0.1
       viArch:
         A_64:
           Linux_UnknownLinux:
@@ -5417,4 +5419,45 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
           Linux_Alpine:
             unknown_versioning: *stack-3901-arm64
+    3.11.0.1:
+      viTags:
+        - LatestPrerelease
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v3.11.0.1
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-31101-64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.11.0.1/stack-3.11.0.1-linux-x86_64.tar.gz
+              dlHash: f2d4bc6cbc1a840f92c783716e718720131d6f27690ee6ad42125a71fd77d58a
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.11.0.1/stack-3.11.0.1-osx-x86_64.tar.gz
+              dlHash: b8cbdb250df40a730ff20118aedd0c0f7f9a4347ead86d72acf7be1588719236
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.11.0.1/stack-3.11.0.1-windows-x86_64.tar.gz
+              dlHash: aaca0f84c932252d01730e3a20f479b716c3e2cbb389efa79c58a0aa6cf74a32
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-31101-64
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-31101-arm64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.11.0.1/stack-3.11.0.1-linux-aarch64.tar.gz
+              dlHash: b9dc60060a2db9817fce4dc7af4cb57d216b0e943ef38d353acf737c418220fd
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v3.11.0.1/stack-3.11.0.1-osx-aarch64.tar.gz
+              dlHash: d702e68c51ab489f7c23409d0c92ecc2793040890fc54037ae77d66541df400c
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-31101-arm64
 # Bec
