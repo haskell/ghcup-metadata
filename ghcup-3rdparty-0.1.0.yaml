@@ -81,7 +81,7 @@ ghcupDownloads:
                   preserveMtimes: false
             Windows:
               unknown_versioning:
-                dlUri: https://github.com/ndmitchell/hlint/releases/download/v3.10/hlint-3.10-x86_64-windows.zip
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.8.0.2/ormolu-x86_64-windows.zip
                 dlHash: 3e484422d68260083fcb7841433a9fa172ff01131f8610d750c1902fba4f2b7e
                 dlInstallSpec: &ormolu-install-spec1
                   exeRules:
