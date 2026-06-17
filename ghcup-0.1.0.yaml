@@ -4556,7 +4556,6 @@ ghcupDownloads:
       9.6.7:
         viTags:
         - base-4.18.3.0
-        - Recommended
         viTestDL:
           dlHash: c9b78315c924fcced2cc99e9bc8c6e91fcbb7e0aedfdd10246a91e663f21b5c0
           dlSubdir: ghc-9.6.7/testsuite
@@ -5470,6 +5469,7 @@ ghcupDownloads:
           dlUri: https://downloads.haskell.org/~ghc/9.10.3/ghc-9.10.3-src.tar.xz
         viTags:
         - base-4.20.1.0
+        - Recommended
         viTestDL:
           dlHash: 9bba4fbbe56e76f9f0cc1e35f5d01b82018e1e96d37706e4d339ecdd62ff3f80
           dlSubdir: ghc-9.10.3/testsuite
