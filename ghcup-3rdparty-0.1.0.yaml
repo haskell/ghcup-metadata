@@ -104,6 +104,53 @@ ghcupDownloads:
                 dlUri: https://github.com/tweag/ormolu/releases/download/0.8.0.2/ormolu-aarch64-darwin.zip
                 dlHash: 942bc1cf11a0589f262a3306062f4eee59b7bcccacb5ade3851bfc3c448115a0
                 dlInstallSpec: *ormolu-install-spec1
+  fourmolu:
+    toolDetails:
+      toolHomepage: "https://fourmolu.github.io/"
+      toolRepository: "https://github.com/fourmolu/fourmolu"
+      toolDescription: "A formatter for Haskell source code, fork of ormolu"
+      toolLicense: "BSD-3"
+    toolVersions:
+      0.20.0.0:
+        viTags:
+          - Latest
+          - Recommended
+        viArch:
+          A_64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/fourmolu/fourmolu/releases/download/v0.20.0.0/fourmolu-0.20.0.0-linux-x86_64.zip
+                dlHash: c1e290f504087a6fa1a647b9c19546512fee018e465f7ec4842c985ab9e29abc
+                dlSubdir: fourmolu-0.20.0.0-linux-x86_64
+                dlInstallSpec: &fourmolu-install-spec1
+                  exeRules:
+                    - installSource: "fourmolu"
+                      installDest: "bin/fourmolu"
+                  exeSymLinked:
+                   - linkName: "fourmolu-${PKGVER}"
+                     pVPMajorLinks: false
+                     setName: "fourmolu"
+                     target: "bin/fourmolu"
+                  preserveMtimes: false
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/fourmolu/fourmolu/releases/download/v0.20.0.0/fourmolu-0.20.0.0-darwin-x86_64.zip
+                dlHash: 33e656e42110ae85d6709567237cd8699f059f7642a147a0487d20353c2135c0
+                dlSubdir: fourmolu-0.20.0.0-darwin-x86_64
+                dlInstallSpec: *fourmolu-install-spec1
+          A_ARM64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/fourmolu/fourmolu/releases/download/v0.20.0.0/fourmolu-0.20.0.0-linux-arm64.zip
+                dlHash: 11ec841cd63fcf62d2866335a1bc17388ba83f87f22acde22fce281bb6d87994
+                dlSubdir: fourmolu-0.20.0.0-linux-arm64
+                dlInstallSpec: *fourmolu-install-spec1
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/fourmolu/fourmolu/releases/download/v0.20.0.0/fourmolu-0.20.0.0-darwin-arm64.zip
+                dlHash: ada23d9a0a370d4467e7310f729fef3bff6ee527d32e62b5c37ea66e688bf3da
+                dlSubdir: fourmolu-0.20.0.0-darwin-arm64
+                dlInstallSpec: *fourmolu-install-spec1
   shellcheck:
     toolDetails:
       toolHomepage: "https://www.shellcheck.net/"
