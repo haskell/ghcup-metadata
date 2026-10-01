@@ -6831,8 +6831,7 @@ ghcupDownloads:
           Linux_UnknownLinux:
             unknown_versioning: *cabal-31600-arm64
     3.16.1.0:
-      viTags:
-        - Recommended
+      viTags: []
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.16.1.0.md
       viArch:
         A_64:
@@ -6933,6 +6932,7 @@ ghcupDownloads:
     3.18.2.0:
       viTags:
         - Latest
+        - Recommended
       viChangeLog: https://github.com/haskell/cabal/blob/master/release-notes/cabal-install-3.18.2.0.md
       viArch:
         A_64:
