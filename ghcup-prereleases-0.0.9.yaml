@@ -5857,7 +5857,8 @@ ghcupDownloads:
             unknown_versioning: *stack-31101-arm64
     4.1.0.1:
       viTags:
-        - LatestPrerelease
+        - Prerelease
+        - old
       viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.1
       viArch:
         A_64:
@@ -5896,4 +5897,45 @@ ghcupDownloads:
                 RegexDir: "stack-.*"
           Linux_Alpine:
             unknown_versioning: *stack-4101-arm64
+    4.1.0.3:
+      viTags:
+        - LatestPrerelease
+      viChangeLog: https://github.com/commercialhaskell/stack/releases/tag/rc/v4.1.0.3
+      viArch:
+        A_64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-4103-64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v4.1.0.3/stack-4.1.0.3-linux-x86_64.tar.gz
+              dlHash: c95a7639b63862812ee45ca6f25b5c1ae61f9f2903f35e321fda5bd1a3a71000
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v4.1.0.3/stack-4.1.0.3-osx-x86_64.tar.gz
+              dlHash: 3dcb250a2d0309ac81851b32dc6462a803657c83cbdd3928f88ee6ca1f34a3ca
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Windows:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v4.1.0.3/stack-4.1.0.3-windows-x86_64.tar.gz
+              dlHash: f93970d9beecc77c28ea5f2ee59e720d8608b1af6edf529f5bc78dadfbc7ae8d
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-4103-64
+        A_ARM64:
+          Linux_UnknownLinux:
+            unknown_versioning: &stack-4103-arm64
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v4.1.0.3/stack-4.1.0.3-linux-aarch64.tar.gz
+              dlHash: 6041956992ef243ca2ec8389388fa1ab8c4d546400b29db1cfb197dabe351bf7
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Darwin:
+            unknown_versioning:
+              dlUri: https://github.com/commercialhaskell/stack/releases/download/rc/v4.1.0.3/stack-4.1.0.3-osx-aarch64.tar.gz
+              dlHash: 31345bf87a18e763be036c483fc9474f2652f5574e4079ce86575ae20aebd821
+              dlSubdir:
+                RegexDir: "stack-.*"
+          Linux_Alpine:
+            unknown_versioning: *stack-4103-arm64
 # Bec
