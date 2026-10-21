@@ -10459,7 +10459,6 @@ ghcupDownloads:
                 dlInstallSpec: *hls-install-spec-make
       2.14.0.0:
         viTags:
-          - Latest
           - Recommended
         viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
         viPostInstall: *hls-post-install
@@ -10561,6 +10560,110 @@ ghcupDownloads:
                 dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.14.0.0/haskell-language-server-2.14.0.0-aarch64-apple-darwin.tar.xz
                 dlSubdir: haskell-language-server-2.14.0.0
                 dlHash: 2f887247e53c8f941cbcb9c41fce4aca9113f5da6db9e4a2dca6a9c8f3a79a94
+                dlInstallSpec: *hls-install-spec-make
+      2.15.0.0:
+        viTags:
+          - Latest
+        viChangeLog: https://github.com/haskell/haskell-language-server/blob/master/ChangeLog.md
+        viPostInstall: *hls-post-install
+        viSourceDL:
+          dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-src.tar.gz
+          dlSubdir: haskell-language-server-2.15.0.0
+          dlHash: a2e90f011b2691924663c6658395ab6e7eed74d9a2a9f52fa8bca8242d7872d8
+        viArch:
+          A_64:
+            Linux_Debian:
+              '(>= 12 && < 13)': &hls-21500-64-deb12
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-deb12.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 2ef0cbf0682febde0c9730706916a761bfb22da98f48ca71064ac03398a54d51
+                dlInstallSpec: *hls-install-spec-make
+              '(>= 13 && < 14)': &hls-21500-64-deb13
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-deb13.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 1192d31d7d337056acc5ca0e7d584715c2da929fcdcd5cba12081eaa0c789633
+                dlInstallSpec: *hls-install-spec-make
+              unknown_versioning: *hls-21500-64-deb13
+            Linux_Ubuntu:
+              '( >= 22 && < 23 )': &hls-21500-64-ubuntu22
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-ubuntu22.04.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 66bc491483396421694e193c848b7d53d8e6674a56cb05745bd5dca09d55056b
+                dlInstallSpec: *hls-install-spec-make
+              '( >= 24 && < 25 )': &hls-21500-64-ubuntu24
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-ubuntu24.04.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 0201a8067d210c3c206f6a0764eb421fe1b3ddc1b75cf3b12baa24adf6f04b0a
+                dlInstallSpec: *hls-install-spec-make
+              unknown_versioning: *hls-21500-64-ubuntu24
+            Linux_Mint:
+              '(>= 21 && < 22)': &hls-21500-64-mint21
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-mint21.3.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: f06c59e064af79a1fafa09120c5712a19f2520d9b3472e8f9532d566cb1c5f7e
+                dlInstallSpec: *hls-install-spec-make
+              '(>= 22 && < 23)': &hls-21500-64-mint22
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-mint22.3.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: a11ddb7f4dee92ee27b7c3bc8bc5e06afba3e524bc76b024697c95c34b1671e9
+                dlInstallSpec: *hls-install-spec-make
+              unknown_versioning: *hls-21500-64-mint22
+            Linux_Fedora:
+              '>= 42': &hls-21500-64-fedora42
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-fedora42.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 4fc4af8cd62dbc9fd8e232bd2016de487e0dc151a09e54ace2f92eabee263f12
+                dlInstallSpec: *hls-install-spec-make
+              unknown_versioning: *hls-21500-64-fedora42
+            Linux_Rocky:
+              '( >= 8 && < 9 )': &hls-21500-64-rocky8
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-rocky8.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: bc5497d5cc0ce2632cd660b3896953cfaef8e33db6ed0d6132bba74d3c5ae34e
+                dlInstallSpec: *hls-install-spec-make
+              '( >= 9 && < 10 )': &hls-21500-64-rocky9
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-rocky9.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 3a37ad2379c568d100661dfcb34f4a0442ec5bece3151984245ebb333c9a0801
+                dlInstallSpec: *hls-install-spec-make
+              unknown_versioning: *hls-21500-64-rocky9
+            Linux_UnknownLinux:
+              unknown_versioning: *hls-21500-64-rocky8
+            Linux_Alpine:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-linux-alpine323.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 28a0d490154a605df5b6c1f04b3700487f48428374351f30c30716bd57b93b8d
+                dlInstallSpec: *hls-install-spec-make
+            Darwin:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-apple-darwin.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: a8a151bbd8698fefca73a4c35b7b564c9fb8bd2cca43035ce88fe7ddf8cca02a
+                dlInstallSpec: *hls-install-spec-make
+            Windows:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-mingw64.zip
+                dlHash: 32c3911f21c57c6f950851b2f640b8bb493ec0a34f8e3b83948592f77a86270f
+                dlInstallSpec: *hls-install-spec-bin
+            FreeBSD:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-x86_64-portbld-freebsd.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 6d45a926f165188afe4138676f96c68fcf0e1088183f0e9da37c5d13a76b2a6b
+                dlInstallSpec: *hls-install-spec-make
+          A_ARM64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-aarch64-linux-deb12.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: 7e5e5ed1ed1479164a172aa27c95d1c373c1b6de4f0ca4f1781333147951211a
+                dlInstallSpec: *hls-install-spec-make
+            Darwin:
+              unknown_versioning:
+                dlUri: https://downloads.haskell.org/~ghcup/unofficial-bindists/haskell-language-server/2.15.0.0/haskell-language-server-2.15.0.0-aarch64-apple-darwin.tar.xz
+                dlSubdir: haskell-language-server-2.15.0.0
+                dlHash: b6f48e0f2a384959d88b94a4986990a1fcbcd204c9fd2f22dce04305df4fab51
                 dlInstallSpec: *hls-install-spec-make
   Stack:
     toolDetails:
