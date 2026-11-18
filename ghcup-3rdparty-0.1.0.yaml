@@ -60,9 +60,7 @@ ghcupDownloads:
       toolLicense: "BSD-3"
     toolVersions:
       0.8.0.2:
-        viTags:
-          - Latest
-          - Recommended
+        viTags: []
         viArch:
           A_64:
             Linux_UnknownLinux:
@@ -103,6 +101,76 @@ ghcupDownloads:
               unknown_versioning:
                 dlUri: https://github.com/tweag/ormolu/releases/download/0.8.0.2/ormolu-aarch64-darwin.zip
                 dlHash: 942bc1cf11a0589f262a3306062f4eee59b7bcccacb5ade3851bfc3c448115a0
+                dlInstallSpec: *ormolu-install-spec1
+      0.8.2.0:
+        viTags: []
+        viArch:
+          A_64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.8.2.0/ormolu-x86_64-linux.zip
+                dlHash: 0aec8bee1165a392c6e537c26e5730bb5f523cd1b2031fb22a6b2223a090c9fa
+                dlInstallSpec: *ormolu-install-spec1
+            Windows:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.8.2.0/ormolu-x86_64-windows.zip
+                dlHash: bb90616928a13624eed7adf390d0bc341a7daaba8a21de46efacf37694980592
+                dlInstallSpec:
+                  exeRules:
+                    - installSource: "ormolu.exe"
+                      installDest: "bin/ormolu.exe"
+                  exeSymLinked:
+                   - linkName: "ormolu-${PKGVER}.exe"
+                     pVPMajorLinks: false
+                     setName: "ormolu.exe"
+                     target: "bin/ormolu.exe"
+                  preserveMtimes: false
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.8.2.0/ormolu-x86_64-darwin.zip
+                dlHash: 1cb1c344854d977f72ddebdf9dd6f9bc815bc3ed5c25dd784b6c0be8a99eb9b3
+                dlInstallSpec: *ormolu-install-spec1
+          A_ARM64:
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.8.2.0/ormolu-aarch64-darwin.zip
+                dlHash: 3a67b2845e555e6a50d3677a50e0c269040c73ad037a42f240a224e933ef1d61
+                dlInstallSpec: *ormolu-install-spec1
+      0.9.0.0:
+        viTags:
+          - Latest
+          - Recommended
+        viArch:
+          A_64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.9.0.0/ormolu-x86_64-linux.zip
+                dlHash: 367eb4969986504cf171f71f91e24ea5d7d9d97c41701e8e6eef9b642fd0d201
+                dlInstallSpec: *ormolu-install-spec1
+            Windows:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.9.0.0/ormolu-x86_64-windows.zip
+                dlHash: afcde0c0a9bace9c8ae9bd98d027620b2901947670dfc54f63fa44c221d5b19d
+                dlInstallSpec:
+                  exeRules:
+                    - installSource: "ormolu.exe"
+                      installDest: "bin/ormolu.exe"
+                  exeSymLinked:
+                   - linkName: "ormolu-${PKGVER}.exe"
+                     pVPMajorLinks: false
+                     setName: "ormolu.exe"
+                     target: "bin/ormolu.exe"
+                  preserveMtimes: false
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.9.0.0/ormolu-x86_64-darwin.zip
+                dlHash: 6d098117122b10d26c0a2976beeb729b322a23825789b7f1817541dc6041ab19
+                dlInstallSpec: *ormolu-install-spec1
+          A_ARM64:
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/tweag/ormolu/releases/download/0.9.0.0/ormolu-aarch64-darwin.zip
+                dlHash: 39efe03a0f41385bd5a1a7f874acf195fb5f6d09673be96a24f708508bb86a20
                 dlInstallSpec: *ormolu-install-spec1
   fourmolu:
     toolDetails:
@@ -266,9 +334,7 @@ ghcupDownloads:
       toolLicense: "GPL-2.0"
     toolVersions:
       3.9.0.2:
-        viTags:
-          - Latest
-          - Recommended
+        viTags: []
         viArch:
           A_64:
             Linux_UnknownLinux:
@@ -322,6 +388,52 @@ ghcupDownloads:
                 dlHash: b6d21e8f9c3b15744f5a7ab40248019157ed7793875dbe0383d4c82ff572b528
                 dlSubdir: pandoc-3.9.0.2
                 dlInstallSpec: *pandoc-install-spec1
+      3.13:
+        viTags:
+          - Latest
+          - Recommended
+        viArch:
+          A_64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-linux-amd64.tar.gz
+                dlHash: 38aa33b325a2bc96a4c39409631212db55702f564250bcdbead180b3bf646389
+                dlSubdir: pandoc-3.13
+                dlInstallSpec: *pandoc-install-spec1
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-x86_64-macOS.zip
+                dlHash: 1823278715aa405aaf21b59cde5dc789346aa8d4fc307467f9a9ee84162bedc5
+                dlSubdir: pandoc-3.13-x86_64
+                dlInstallSpec: *pandoc-install-spec1
+            Windows:
+              unknown_versioning:
+                dlUri: https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-windows-x86_64.zip
+                dlHash: 23e1f2e978a3df80db8bf65c9c59534f41a23140480cfb4f783a882ab7dc6a4e
+                dlSubdir: pandoc-3.13
+                dlInstallSpec:
+                  exeRules:
+                    - installSource: "pandoc.exe"
+                      installDest: "bin/pandoc.exe"
+                  exeSymLinked:
+                   - linkName: "pandoc-${PKGVER}.exe"
+                     pVPMajorLinks: false
+                     setName: "pandoc.exe"
+                     target: "bin/pandoc.exe"
+                  preserveMtimes: false
+          A_ARM64:
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-arm64-macOS.zip
+                dlHash: f436d18bebbfb3ddd326597686dacab9fac5dc23bd060495020f35a28a43a7c3
+                dlSubdir: pandoc-3.13-arm64
+                dlInstallSpec: *pandoc-install-spec1
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/jgm/pandoc/releases/download/3.13/pandoc-3.13-linux-arm64.tar.gz
+                dlHash: 21e1d4ba09bd0b334590d204580fd4f6629b21be4ab6a32b26cc98982e9e0c68
+                dlSubdir: pandoc-3.13
+                dlInstallSpec: *pandoc-install-spec1
   agda:
     toolDetails:
       toolHomepage: "http://agda.readthedocs.io/"
@@ -331,9 +443,7 @@ ghcupDownloads:
       toolLicense: "MIT"
     toolVersions:
       2.8.0:
-        viTags:
-          - Latest
-          - Recommended
+        viTags: []
         viPostInstall: &agda-post-install |
           After installing agda, please run:
             agda --setup
@@ -376,6 +486,43 @@ ghcupDownloads:
               unknown_versioning:
                 dlUri: https://github.com/agda/agda/releases/download/v2.8.0/Agda-v2.8.0-macOS-arm64.tar.xz
                 dlHash: 9a35071eb9747f984177f48e1ba7008a9cebccfc259a40a0a84b29ffc2ec2db6
+                dlInstallSpec: *agda-install-spec1
+      2.8.0.2:
+        viTags:
+          - Latest
+          - Recommended
+        viPostInstall: *agda-post-install
+        viArch:
+          A_64:
+            Linux_UnknownLinux:
+              unknown_versioning:
+                dlUri: https://github.com/agda/agda/releases/download/v2.8.0.2/Agda-v2.8.0.2-linux.tar.xz
+                dlHash: 2bcf24bb561b1be859bba841e5d67962d1616b3251bc147f878e4f60a2fbd9f7
+                dlInstallSpec: *agda-install-spec1
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/agda/agda/releases/download/v2.8.0.2/Agda-v2.8.0.2-macOS-x64.tar.xz
+                dlHash: 5aa46697c292a4ab2270e81a863c2c2be1b9afdee8eb09845f68ac25192ba40e
+                dlInstallSpec: *agda-install-spec1
+            Windows:
+              unknown_versioning:
+                dlUri: https://github.com/agda/agda/releases/download/v2.8.0.2/Agda-v2.8.0.2-win64.zip
+                dlHash: 755e19a9244019a3b08a67104dc5a93bd662a7634c4f02a1f34e06b59251b7fc
+                dlInstallSpec:
+                  exeRules:
+                    - installSource: "agda.exe"
+                      installDest: "bin/agda.exe"
+                  exeSymLinked:
+                   - linkName: "agda-${PKGVER}.exe"
+                     pVPMajorLinks: false
+                     setName: "agda.exe"
+                     target: "bin/agda.exe"
+                  preserveMtimes: false
+          A_ARM64:
+            Darwin:
+              unknown_versioning:
+                dlUri: https://github.com/agda/agda/releases/download/v2.8.0.2/Agda-v2.8.0.2-macOS-arm64.tar.xz
+                dlHash: 6ee796a0cb70a0cd80edfc7d2aec24a93aa22558fb3e99caaaeadf33dbb64be7
                 dlInstallSpec: *agda-install-spec1
   purescript:
     toolDetails:
